@@ -1,50 +1,6 @@
-/* Downloaded fonts */
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins/Poppins-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Rubik';
-    src: url('/fonts/Rubik/static/Rubik-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Variables */
-
-:root {
-    --body-font: Poppins;
-    --price-font: Rubik;
-}
-
-/* Universal style rules */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-}
-
-/* Body style rules */
-
-body {
-    height: 200vh;
-    width: 100%;
-    min-width: 820px;
-    background-color: #e8e8e8;
-}
-
 /* -------------- Nav Section Starts ------------ */
 
-nav {
+header {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -55,7 +11,7 @@ nav {
     background-color: white;
 }
 
-.nav-upper-section {
+.header-upper-section {
     width: 70%;
     height: 50px;
     display: flex;
@@ -63,7 +19,7 @@ nav {
     align-items: center;
 }
 
-.nav-upper-left-section {
+.header-upper-left-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +37,7 @@ nav {
     bottom: 6px;
 }
 
-.nav-upper-right-section {
+.header-upper-right-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +45,7 @@ nav {
     margin-right: 5px;
 }
 
-.nav-search-box {
+.header-search-box {
     height: 45px;
     width: 250px;
     display: flex;
@@ -101,42 +57,42 @@ nav {
     padding-left: 12px;
 }
 
-.nav-search-box>input {
+.header-search-box>input {
     width: 200px;
     height: 40px;
     border: none;
     background-color: #e8e8e8;
 }
 
-.nav-search-box>input:focus {
+.header-search-box>input:focus {
     border: none;
     outline: none;
 }
 
-.nav-cart {
+.header-cart {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.nav-cart>img {
+.header-cart>img {
     margin-bottom: 3px;
 }
 
-.nav-menu {
+.header-menu {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav>hr {
+header>hr {
     width: 70%;
     color: gray;
     opacity: 0.3;
 }
 
-.nav-lower-section {
+nav {
     background-color: white;
     height: 70px;
     width: 100%;

@@ -1,0 +1,34 @@
+/* Downloaded fonts */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/static/Rubik-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font Variables */
+
+:root {
+    --body-font: Poppins;
+    --price-font: Rubik;
+}
+
+/* Universal style rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
