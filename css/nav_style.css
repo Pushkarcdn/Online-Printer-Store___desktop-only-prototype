@@ -27,7 +27,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* Body style rules */
