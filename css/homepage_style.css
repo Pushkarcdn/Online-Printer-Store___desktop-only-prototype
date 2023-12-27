@@ -1,0 +1,42 @@
+/* -------------  Hero Section Starts ------------- */
+
+.hero-section {
+    /* width: 100%; */
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vid-container {
+    /* border: 2px solid red; */
+    position: relative;
+    width: 90%;
+    top: 0px;
+
+}
+
+#bg-video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.black-overlay {
+    background-color: black;
+    width: 100%;
+    height: 99.2%;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
