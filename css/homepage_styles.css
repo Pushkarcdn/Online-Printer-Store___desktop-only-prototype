@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    ;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.nav-left-section {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.nav-middle-section {
+    
+}
+
+.nav-right-section {
+    display: flex;
+    gap: 10px;
+    margin-right: 15px;
+}
