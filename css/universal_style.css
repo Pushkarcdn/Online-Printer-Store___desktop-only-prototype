@@ -8,6 +8,13 @@
 }
 
 @font-face {
+    font-family: 'Poppins-bold';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Rubik';
     src: url('../fonts/Rubik/static/Rubik-Light.ttf');
     font-weight: normal;
@@ -19,6 +26,7 @@
 :root {
     --body-font: Poppins;
     --price-font: Rubik;
+    --body-bold-font: Poppins-bold;
 }
 
 /* Universal style rules */
@@ -31,4 +39,8 @@
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+}
+
+body{
+    min-width: 865px;
 }

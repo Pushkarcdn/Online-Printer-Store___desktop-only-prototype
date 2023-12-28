@@ -16,6 +16,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/universal_style.css">
     <link rel="stylesheet" href="css/nav_style.css">
+    <link rel="stylesheet" href="css/contact_style.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/icons/fav-icon.png" type="image/x-icon">
@@ -24,63 +25,28 @@
 
 <body>
 
-    <header>
+    <div id="navbar-container">
+        <!-- Content of navbar comes dynamically from navbar.js script -->
+    </div>
 
-        <div class="header-upper-section">
+    <section id="contact-section">
 
-            <div class="header-upper-left-section">
+        <div id="contact-upper">
 
-                <img src="images/homepage_images/logo.png" height="50px" alt="">
-
-                <div class="logo-text">
-                    <span>Prime</span>
-                    <span>Print Creativity</span>
-                </div>
-
-            </div>
-
-            <div class="header-upper-right-section">
-
-                <div class="header-search-box">
-                    <img src="icons/search.png" alt="" height="23px">
-                    <input type="text" name="search" placeholder="Search Printers">
-                </div>
-
-                <div class="header-cart">
-                    <img src="icons/cart.png" alt="" height="20px">
-                    <span>Cart (0)</span>
-                </div>
-
-                <div class="header-menu">
-                    <img src="icons/menu.png" alt="" height="20px">
-                </div>
-
-            </div>
+            <p>Have Some Question ?</p>
+            <p>Thank you for your interest in our products. Please fill out the form below or e-mail us at <span
+                    id="contact-email">mail@primestore.com</span>and we will get back to you promptly regarding your
+                request.</p>
 
         </div>
 
-        <hr>
+        <div id="contact-lower">
 
-    </header>
+        </div>
 
-    <nav>
+    </section>
 
-        <span id="nav-home-button">Home</span>
-
-        <span id="nav-products-button">Products<img src="icons/down-arrow.png" alt="" height="20"></span>
-
-        <span id="nav-blog-button">Blog<img src="icons/down-arrow.png" alt="" height="20"></span>
-
-        <span id="nav-research-button">Research<img src="icons/down-arrow.png" alt="" height="20"></span>
-
-        <span id="nav-about-button">About Us<img src="icons/down-arrow.png" alt="" height="20"></span>
-
-        <span id="nav-contact-button">Contact Us</span>
-
-    </nav>
-
-    <!-- scripts -->
-    <script src="js/nav.js"></script>
+    <script src="js/navbar.js"></script>
 
 </body>
 
