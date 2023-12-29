@@ -1,13 +1,14 @@
 body {
-    height: 150vh;
+    /* height: 100vh; */
+    padding-bottom: 50px;
     background-image: url('../images/contact_images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 #contact-section {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,4 +18,99 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+}
+
+#contact-upper>p:first-child {
+    color: white;
+    font-size: 3.5rem;
+    font-family: Poppins-bold, Arial, Helvet;
+}
+
+#contact-upper>p:nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    color: white;
+    font-size: 0.9rem;
+    font-family: Poppins, Arial, Helvet;
+    text-align: center;
+}
+
+#contact-upper>p>span {
+    display: inline-block;
+    color: rgb(3, 21, 160);
+}
+
+#contact-lower {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 50px; */
+    width: 90%;
+}
+
+/* #contact-lower-first {
+    border: 2px solid blue;
+} */
+
+#contact-lower-second {
+    /* height: 500px; */
+    width: 350px;
+    padding: 35px 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px 0px #058bed;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-inner-div {
+    width: 100%;
+    padding-left: 11px;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    gap: 12px;
+}
+
+form input {
+    height: 44px;
+    width: 90%;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    padding-left: 5px;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+form input::placeholder {
+    font-size: 0.85rem;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+form textarea {
+    background-color: #f6f6f6;
+    padding: 10px 5px 10px 5px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    resize: none;
+}
+
+.form-submit-button {
+    width: 100%;
 }
