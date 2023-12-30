@@ -1,6 +1,6 @@
 body {
     padding-bottom: 100px;
-    background-image: url('../images/contact_images/bg.jpg');
+    /* background-image: url('../images/contact_images/bg.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -48,8 +48,36 @@ body {
     width: 90%;
 }
 
+#contact-lower-first {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#contact-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#contact-details-container>p {
+    font-size: 1.4rem;
+    margin-bottom: -10px;
+}
+
+#contact-details-container>hr {
+    opacity: 0.35;
+    width: 80%;
+}
+
+#contact-details-container>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
 #contact-lower-second {
-    /* height: 500px; */
     width: 350px;
     padding: 35px 40px;
     background-color: white;

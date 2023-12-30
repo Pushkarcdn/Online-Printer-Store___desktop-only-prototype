@@ -36,9 +36,10 @@
     padding: 0;
     box-sizing: border-box;
     cursor: default;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     -webkit-user-drag: none;
+    font-family: poppins , Arial, Helvetica, sans-serif;
 }
 
 body{
