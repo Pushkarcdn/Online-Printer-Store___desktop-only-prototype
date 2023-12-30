@@ -1,6 +1,5 @@
 body {
-    /* height: 100vh; */
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     background-image: url('../images/contact_images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,18 +41,12 @@ body {
 }
 
 #contact-lower {
-    /* border: 2px solid red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    /* gap: 50px; */
     width: 90%;
 }
-
-/* #contact-lower-first {
-    border: 2px solid blue;
-} */
 
 #contact-lower-second {
     /* height: 500px; */
@@ -110,6 +103,13 @@ form textarea {
     overflow: hidden;
     resize: none;
 }
+
+.form-message>img {
+    align-self: flex-start;
+    margin-top: 12px;
+    margin-right: -3px;
+}
+
 
 .form-submit-button {
     width: 100%;
