@@ -1,5 +1,5 @@
 body {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     background-image: url('../images/contact_images/bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 #contact-upper {
