@@ -1,7 +1,7 @@
 /* -------------- Nav Section Starts ------------ */
 
 :root {
-    --min-nav-width: 860px;
+    --min-nav-width: 400px;
 }
 
 header {
@@ -141,3 +141,27 @@ nav>span {
 }
 
 /* -------------- Nav Section Ends ------------ */
+
+/* --------------- Media Queries ---------------*/
+
+@media screen and (max-width:860px) {
+    .header-search-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #nav-home-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width:455px) {
+    .header-cart {
+        display: none;
+    }
+
+    #nav-contact-button {
+        display: none;
+    }
+}
