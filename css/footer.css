@@ -102,7 +102,9 @@ footer>hr {
 .footer-lower-section {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
     color: aliceblue;
 }
 
