@@ -1,40 +1,35 @@
 footer {
-    height: 400px;
     width: 100%;
     background-color: #0083dd;
     border-radius: 6px;
+    padding-top: 15px;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .footer-upper-section {
-    /* border: 2px solid red; */
     height: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .footer-upper-section>div {
-    /* border: 2px solid green; */
-    height: 100%;
-    width: 300px;
-    padding-top: 30px;
+    width: 250px;
+    padding-top: 50px;
     padding-bottom: 25px;
-}
-
-.footer-store-details {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 70px;
 }
 
 .footer-store-details img {
     margin-bottom: 15px;
-    margin-left: 15px;
-    align-self: flex-start;
-    position: relative;
 }
 
 .footer-store-details>div>span:first-child {
@@ -51,7 +46,6 @@ footer {
 .footer-upper-section>div {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .footer-upper-section span {
@@ -63,4 +57,53 @@ footer {
 
 .footer-upper-section ul {
     list-style-type: none;
+    font-size: 0.9rem;
+}
+
+.footer-upper-section>div:last-child {
+    width: 340px;
+}
+
+.footer-newsletter-section input:first-child {
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 220px;
+    padding-left: 20px;
+    align-self: flex-start;
+    background-color: transparent;
+}
+
+.footer-newsletter-section input::placeholder {
+    color: aliceblue;
+}
+
+.footer-newsletter-section {
+    color: aliceblue;
+    font-size: 0.9rem;
+}
+
+#newsletter-submit-button {
+    width: 120px;
+    border-radius: 30px;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+footer>hr {
+    width: 80%;
+    opacity: 0.6;
+}
+
+.footer-lower-section {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
 }
