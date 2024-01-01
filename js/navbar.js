@@ -34,4 +34,39 @@ function handleNavbarEvents() {
         });
     });
 
+    // Adding responsivness
+
+    adjustStyles();
+
+    function adjustStyles() {
+
+        if (window.innerWidth < 480) {
+            document.querySelector('nav').style.display = 'none';
+            document.querySelector('.header-cart').style.display = 'none';
+        } else {
+            document.querySelector('nav').style.display = 'flex';
+            document.querySelector('.header-cart').style.display = 'flex';
+        }
+
+        if (window.innerWidth < 830) {
+            document.querySelector('.header-search-box').style.display = 'none';
+        }
+        else {
+            document.querySelector('.header-search-box').style.display = 'flex';
+        }
+
+        if (window.innerWidth < 550) {
+            document.querySelector('#nav-home-button').style.display = 'none';
+        }
+        else {
+            document.querySelector('#nav-home-button').style.display = 'flex';
+        }
+
+    }
+
+    adjustStyles();
+
+    // Adjust styles when the window is resized
+    window.addEventListener('resize', adjustStyles);
+
 }

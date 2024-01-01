@@ -1,5 +1,4 @@
 body {
-    /* padding-bottom: 100px; */
     background-image: url('../images/contact_images/bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,7 +6,6 @@ body {
 }
 
 #contact-section {
-    /* border: 2px solid red; */
     width: 100%;
     margin-top: 40px;
     display: flex;
@@ -28,6 +26,8 @@ body {
     color: white;
     font-size: 2.5rem;
     font-family: Poppins-bold, Arial, Helvet;
+    padding: 15px;
+    text-align: center;
 }
 
 #contact-upper>p:nth-child(2) {
@@ -37,6 +37,7 @@ body {
     font-size: 0.8rem;
     font-family: Poppins, Arial, Helvet;
     text-align: center;
+    padding: 20px;
 }
 
 #contact-upper>p>span {
@@ -56,13 +57,14 @@ body {
 #contact-lower-first {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
 }
 
 #contact-details-container {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    text-align: center;
 }
 
 #contact-details-container>p {
@@ -95,7 +97,6 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     gap: 20px;
 }
 
