@@ -43,12 +43,16 @@ function handleNavbarEvents() {
         if (window.innerWidth < 480) {
             document.querySelector('nav').style.display = 'none';
             document.querySelector('.header-cart').style.display = 'none';
+            document.querySelector('.header-line').style.display = 'none';
+            document.querySelector('.header-upper-section').style.width = '94%';
         } else {
             document.querySelector('nav').style.display = 'flex';
             document.querySelector('.header-cart').style.display = 'flex';
+            document.querySelector('.header-line').style.display = 'flex';
+            document.querySelector('.header-upper-section').style.width = '70%';
         }
 
-        if (window.innerWidth < 830) {
+        if (window.innerWidth < 860) {
             document.querySelector('.header-search-box').style.display = 'none';
         }
         else {
