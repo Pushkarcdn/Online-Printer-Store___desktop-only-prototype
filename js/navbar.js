@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function handleNavbarEvents() {
 
+    adjustStyles();
+
     var pageName = document.title;
     pageName = pageName.split(' ')[0];
     pageName = pageName.toLowerCase();
@@ -42,6 +44,7 @@ function handleNavbarEvents() {
 
         if (window.innerWidth < 480) {
             document.querySelector('nav').style.display = 'none';
+            document.querySelector('header').classList.add('nav-shadow');
             document.querySelector('.header-cart').style.display = 'none';
             document.querySelector('.header-line').style.display = 'none';
             document.querySelector('.header-upper-section').style.width = '94%';

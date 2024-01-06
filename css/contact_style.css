@@ -1,5 +1,6 @@
 body {
-    background-image: url('../images/contact_images/bg2.jpg');
+    /* background-image: url('../images/contact_images/bg2.jpg'); */
+    background-color: #f6f6f6;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -23,7 +24,7 @@ body {
 }
 
 #contact-upper>p:first-child {
-    color: white;
+    /* color: white; */
     font-size: 2.5rem;
     font-family: Poppins-bold, Arial, Helvet;
     padding: 15px;
@@ -33,7 +34,7 @@ body {
 #contact-upper>p:nth-child(2) {
     margin-top: 10px;
     margin-bottom: 70px;
-    color: rgb(222, 222, 222);
+    /* color: rgb(222, 222, 222); */
     font-size: 0.8rem;
     font-family: Poppins, Arial, Helvet;
     text-align: center;
@@ -42,7 +43,7 @@ body {
 
 #contact-upper>p>span {
     display: inline-block;
-    color: rgb(255, 255, 255);
+    color: rgb(64, 64, 206);
 }
 
 #contact-lower {
@@ -64,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #contact-details-container>p {
@@ -74,7 +75,7 @@ body {
 
 #contact-details-container>hr {
     opacity: 0.35;
-    width: 80%;
+    width: 90%;
 }
 
 #contact-details-container>div {
@@ -89,7 +90,7 @@ body {
     padding: 35px 40px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0px 5px 15px 0px #058bed;
+    box-shadow: 0px 5px 15px 0px #a1a1a1;
 }
 
 form {
@@ -110,7 +111,7 @@ form {
     gap: 12px;
 }
 
-form input {
+#contact-lower-second form input {
     height: 44px;
     width: 90%;
     border: none;

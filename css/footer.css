@@ -1,123 +1,149 @@
 footer {
+    /* border: 2px solid red; */
     width: 100%;
-    background-color: #0083dd;
+    background-color: #85858519;
     border-radius: 6px;
-    padding-top: 15px;
-    padding-bottom: 45px;
+    /* padding: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .footer-upper-section {
-    height: 70%;
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 50px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.footer-upper-section>div {
-    width: 220px;
-    padding-top: 50px;
-    padding-bottom: 25px;
+.footer-upper-inner-div {
+    /* border: 2px solid blue; */
+    width: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
 }
 
-.footer-store-details img {
-    margin-bottom: 15px;
-}
-
-.footer-store-details>div>span:first-child {
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: 1.7px;
-    font-family: poppins-bold, Arial, Helvetica, sans-serif;
-}
-
-.footer-store-details>div>p {
-    font-size: 0.8rem;
-}
-
-.footer-upper-section span {
-    color: white;
-    font-size: 1rem;
-    letter-spacing: 1.7px;
-    font-family: poppins-bold, Arial, Helvetica, sans-serif;
-}
-
-.footer-upper-section ul {
+footer ul {
     list-style-type: none;
-    font-size: 0.9rem;
 }
 
-.footer-newsletter-section {
-    color: aliceblue;
-    font-size: 0.9rem;
-    width: auto;
-    min-width: 290px;
-    text-align:center;
-    padding: 15px;
+footer ul>li {
+    opacity: 0.77;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+    line-height: 1.8;
+    transition: color 0.3s ease-in-out;
 }
 
-.footer-newsletter-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-newsletter-section input:focus {
-    outline: none;
-    color: aliceblue;
-}
-
-.footer-newsletter-section input:first-child {
-    border: 1px solid white;
-    border-radius: 30px;
-    min-width: 220px;
-    height: 40px;
-    padding-left: 20px;
-    align-self: flex-start;
-    background-color: transparent;
-}
-
-.footer-newsletter-section input::placeholder {
-    color: aliceblue;
-}
-
-
-
-#newsletter-submit-button {
-    width: 120px;
-    height: 40px;
-    border: transparent;
-    border-radius: 30px;
-    padding: 0;
-    background-color: aliceblue;
+footer ul>li:hover {
+    color: #bd8448;
 }
 
 footer>hr {
-    width: 80%;
-    opacity: 0.6;
+    width: 75%;
+    opacity: 0.4;
 }
 
 .footer-lower-section {
-    width: 80%;
+    width: 90%;
+    padding-top: 70px;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    color: aliceblue;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-logo-section {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-comapny-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 20px;
+}
+
+.footer-comapny-details>span:first-child {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.footer-comapny-details>span:nth-child(2) {
+    opacity: 0.5;
+    font-size: 0.77rem;
+    position: relative;
+    left: 28px;
+}
+
+.footer-comapny-details>span:nth-child(3) {
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+}
+
+.footer-contact-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.footer-talk-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .footer-social-links {
     display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-subscribe-section>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-subscribe-section>form>input:first-child {
+    width: 220px;
+    height: 35px;
+    border: 1.4px solid black;
+    border-radius: 20px;
+    padding-left: 15px;
+    background: transparent;
+}
+
+.footer-subscribe-section>form>input:nth-child(2) {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: #058bed;
+    color: rgb(255, 255, 255);
+}
+
+#footer-second-hr {
+    width: 95%;
+    opacity: 0.7;
+}
+
+.footer-copyright-section {
+    height: 50px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 17px;
+    font-size: 0.8rem;
 }
