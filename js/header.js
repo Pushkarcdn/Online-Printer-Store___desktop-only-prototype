@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch the navigation bar content
-    fetch("header.html")
+    fetch("../html/header.html")
         .then(response => response.text())
         .then(data => {
 

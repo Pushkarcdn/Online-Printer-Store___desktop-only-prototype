@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch the navigation bar content
-    fetch("navbar.html")
+    fetch("../html/navbar.html")
         .then(response => response.text())
         .then(data => {
             // Insert the navigation bar into the specified container
@@ -23,7 +23,7 @@ function handleNavbarEvents() {
     document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
 
     document.querySelector('#nav-home-button').addEventListener('click', function () {
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
     });
 
     // Assigning link to each buttons on navbar:
@@ -32,7 +32,7 @@ function handleNavbarEvents() {
 
     arrOfNavButtons.forEach(function arrOfNavButtons(value) {
         document.querySelector('#nav-' + value + '-button').addEventListener('click', function () {
-            window.location.href = value + '.html';
+            window.location.href = '/html/' + value + '.html';
         });
     });
 
@@ -47,12 +47,12 @@ function handleNavbarEvents() {
             document.querySelector('header').classList.add('nav-shadow');
             document.querySelector('.header-cart').style.display = 'none';
             document.querySelector('.header-line').style.display = 'none';
-            document.querySelector('.header-upper-section').style.width = '94%';
+            document.querySelector('.header-menu').style.display='flex';
         } else {
             document.querySelector('nav').style.display = 'flex';
             document.querySelector('.header-cart').style.display = 'flex';
             document.querySelector('.header-line').style.display = 'flex';
-            document.querySelector('.header-upper-section').style.width = '70%';
+            document.querySelector('.header-menu').style.display='none';
         }
 
         if (window.innerWidth < 860) {
