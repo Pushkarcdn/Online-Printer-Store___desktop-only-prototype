@@ -7,38 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("navbar").innerHTML = data;
 
             // Run JavaScript code for the injected content
-            handleNavbarEvents();
+            handleNavEvents();
         })
         .catch(error => console.error("Error fetching navigation bar:", error));
 });
 
-function handleNavbarEvents() {
 
+function handleNavEvents() {
+
+    boldCurrentPageName();
     adjustStyles();
 
-    var pageName = document.title;
-    pageName = pageName.split(' ')[0];
-    pageName = pageName.toLowerCase();
-
-    document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
-
-    document.querySelector('#nav-home-button').addEventListener('click', function () {
-        window.location.href = '/index.html';
-    });
-
-    // Assigning link to each buttons on navbar:
-
-    var arrOfNavButtons = ["products", "blog", "research", "about", "contact"];
-
-    arrOfNavButtons.forEach(function arrOfNavButtons(value) {
-        document.querySelector('#nav-' + value + '-button').addEventListener('click', function () {
-            window.location.href = '/html/' + value + '.html';
-        });
-    });
-
-    // Adding responsivness
-
-    adjustStyles();
+    function boldCurrentPageName() {
+        var pageName = document.title;
+        pageName = pageName.split(' ')[0];
+        pageName = pageName.toLowerCase();
+        document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
+    }
 
     function adjustStyles() {
 
@@ -47,12 +32,12 @@ function handleNavbarEvents() {
             document.querySelector('header').classList.add('nav-shadow');
             document.querySelector('.header-cart').style.display = 'none';
             document.querySelector('.header-line').style.display = 'none';
-            document.querySelector('.header-menu').style.display='flex';
+            document.querySelector('.header-menu').style.display = 'flex';
         } else {
             document.querySelector('nav').style.display = 'flex';
             document.querySelector('.header-cart').style.display = 'flex';
             document.querySelector('.header-line').style.display = 'flex';
-            document.querySelector('.header-menu').style.display='none';
+            document.querySelector('.header-menu').style.display = 'none';
         }
 
         if (window.innerWidth < 860) {
@@ -71,9 +56,13 @@ function handleNavbarEvents() {
 
     }
 
+    boldCurrentPageName();
     adjustStyles();
 
     // Adjust styles when the window is resized
     window.addEventListener('resize', adjustStyles);
+
+    boldCurrentPageName();
+    adjustStyles();
 
 }
