@@ -27,7 +27,7 @@ function handleNavEvents() {
 
     function adjustStyles() {
 
-        if (window.innerWidth < 480) {
+        if (window.innerWidth < 525) {
             document.querySelector('nav').style.display = 'none';
             document.querySelector('header').classList.add('nav-shadow');
             document.querySelector('.header-cart').style.display = 'none';
@@ -47,7 +47,7 @@ function handleNavEvents() {
             document.querySelector('.header-search-box').style.display = 'flex';
         }
 
-        if (window.innerWidth < 550) {
+        if (window.innerWidth < 570) {
             document.querySelector('#nav-home-button').style.display = 'none';
         }
         else {
