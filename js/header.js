@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Run JavaScript code for the injected content
             // handleNavbarEvents();
         })
-        .catch(error => console.error("Error fetching navigation bar:", error));
+        .catch(error => console.error("Error fetching header:", error));
 });
 
 // function handleNavbarEvents() {
