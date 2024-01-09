@@ -38,253 +38,89 @@
 
     <section id="products-section">
 
-        <div class="products-card">
-
-            <div class="product-upper-details">
-                <span class="paper-detail">A4 Colour</span>
-                <span class="launch-date">New</span>
-            </div>
-
-            <img src="../images/products_images/canon1.png" alt="" height="200px">
-
-            <div class="product-lower-details">
-
-                <p class="product-name">PIXMA G4770</p>
-
-                <div>
-
-                    <img src="/icons/rating-star.png" alt="" height="10px">
-
-                    <span class="rating-text">4.5/5(166) - 792 Sold</span>
-
-                </div>
-
-                <hr>
-
-                <div class="product-price">
-                    <p>₹ 19,900 &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
-                    <p>inclusive of all taxes</p>
-                </div>
-
-                <hr>
-
-            </div>
-
-            <div class="product-buttons">
-
-                <div class="compare-div">
-
-                    <input type="checkbox">
-
-                    <span>Compare</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="products-card">
-
-            <div class="product-upper-details">
-                <span class="paper-detail">A4 Colour</span>
-                <span class="launch-date">New</span>
-            </div>
-
-            <img src="../images/products_images/canon1.png" alt="" height="200px">
-
-            <div class="product-lower-details">
-
-                <p class="product-name">PIXMA G4770</p>
-
-                <div>
-
-                    <img src="/icons/rating-star.png" alt="" height="10px">
-
-                    <span class="rating-text">4.5/5(166) - 792 Sold</span>
-
-                </div>
-
-                <hr>
-
-                <div class="product-price">
-                    <p>₹ 19,900 &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
-                    <p>inclusive of all taxes</p>
-                </div>
-
-                <hr>
-
-            </div>
-
-            <div class="product-buttons">
-
-                <div class="compare-div">
-
-                    <input type="checkbox">
-
-                    <span>Compare</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="products-card">
-
-            <div class="product-upper-details">
-                <span class="paper-detail">A4 Colour</span>
-                <span class="launch-date">New</span>
-            </div>
-
-            <img src="../images/products_images/canon1.png" alt="" height="200px">
-
-            <div class="product-lower-details">
-
-                <p class="product-name">PIXMA G4770</p>
-
-                <div>
-
-                    <img src="/icons/rating-star.png" alt="" height="10px">
-
-                    <span class="rating-text">4.5/5(166) - 792 Sold</span>
-
-                </div>
-
-                <hr>
-
-                <div class="product-price">
-                    <p>₹ 19,900 &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
-                    <p>inclusive of all taxes</p>
-                </div>
-
-                <hr>
-
-            </div>
-
-            <div class="product-buttons">
-
-                <div class="compare-div">
-
-                    <input type="checkbox">
-
-                    <span>Compare</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="products-card">
-
-            <div class="product-upper-details">
-                <span class="paper-detail">A4 Colour</span>
-                <span class="launch-date">New</span>
-            </div>
-
-            <img src="../images/products_images/canon1.png" alt="" height="200px">
-
-            <div class="product-lower-details">
-
-                <p class="product-name">PIXMA G4770</p>
-
-                <div>
-
-                    <img src="/icons/rating-star.png" alt="" height="10px">
-
-                    <span class="rating-text">4.5/5(166) - 792 Sold</span>
-
-                </div>
-
-                <hr>
-
-                <div class="product-price">
-                    <p>₹ 19,900 &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
-                    <p>inclusive of all taxes</p>
-                </div>
-
-                <hr>
-
-            </div>
-
-            <div class="product-buttons">
-
-                <div class="compare-div">
-
-                    <input type="checkbox">
-
-                    <span>Compare</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="products-card">
-
-            <div class="product-upper-details">
-                <span class="paper-detail">A4 Colour</span>
-                <span class="launch-date">New</span>
-            </div>
-
-            <img src="../images/products_images/canon1.png" alt="" height="200px">
-
-            <div class="product-lower-details">
-
-                <p class="product-name">PIXMA G4770</p>
-
-                <div>
-
-                    <img src="/icons/rating-star.png" alt="" height="10px">
-
-                    <span class="rating-text">4.5/5(166) - 792 Sold</span>
-
-                </div>
-
-                <hr>
-
-                <div class="product-price">
-                    <p>₹ 19,900 &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
-                    <p>inclusive of all taxes</p>
-                </div>
-
-                <hr>
-
-            </div>
-
-            <div class="product-buttons">
-
-                <div class="compare-div">
-
-                    <input type="checkbox">
-
-                    <span>Compare</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
+
+    <script>
+
+        function createProductCard(title, price) {
+
+            const card = document.createElement('div');
+            card.innerHTML = `
+
+            <div class="products-card">
+
+                <div class="product-upper-details">
+
+                    <span class="paper-detail">A4 Colour</span>
+
+                    <span class="launch-date">New</span>
+                
+                </div>
+
+                <img src="../images/products_images/canon1.png" alt="" height="200px">
+
+                <div class="product-lower-details">
+
+                    <p class="product-name">${title}</p>
+
+                    <div>
+
+                        <img src="/icons/rating-star.png" alt="" height="10px">
+
+                        <span class="rating-text">4.5/5(166) - 792 Sold</span>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="product-price">
+
+                        <p>₹ ${price} &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
+
+                        <p>inclusive of all taxes</p>
+                    
+                    </div>
+
+                    <hr>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <div class="compare-div">
+
+                        <input type="checkbox">
+
+                        <span>Compare</span>
+
+                    </div>
+
+                </div>
+
+            </div>   
+            
+            `;
+
+            return card;
+
+        }
+
+        var productsName = ["MX101", "MX102", "MW221", "WA307", "MW221", "WA307"];
+        var productsPrice = [20000, 30000, 40000, 50000, 60000, 70000];
+
+        const productContainer = document.getElementById('products-section');
+
+        for (let i = 0; i < productsName.length; i++) {
+
+            const productCard = createProductCard(productsName[i], productsPrice[i]);
+            productContainer.appendChild(productCard);
+
+        }
+
+    </script>
+
+
+
 
     <footer id="footer">
 
