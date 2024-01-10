@@ -110,6 +110,14 @@ footer>hr {
     gap: 12px;
 }
 
+.footer-social-links>img {
+    transition: all 0.35s ease-in-out;
+}
+
+.footer-social-links>img:hover {
+    scale: 1.1;
+}
+
 .footer-subscribe-section>form {
     display: flex;
     flex-direction: column;

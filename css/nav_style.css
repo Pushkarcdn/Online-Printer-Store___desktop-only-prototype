@@ -122,14 +122,16 @@ header span {
 nav a {
     font-size: 0.9rem;
     letter-spacing: 0.8px;
-    opacity: 0.7;
+    opacity: 0.6;
     color: black;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 nav a:hover {
     color: #bd8448;
+    opacity: 0.77;
+    scale: 1.025;
 }
 
 .nav-lower-section>span:first-child {
