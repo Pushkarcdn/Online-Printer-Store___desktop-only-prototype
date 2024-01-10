@@ -3,9 +3,9 @@ body {
 }
 
 #hero-section {
+    background-image: url(../images/products_images/hero.jpg);
     height: 500px;
     width: 100%;
-    background-image: url(../images/products_images/hero.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,15 +20,15 @@ body {
     gap: 30px;
 }
 
-.products-text{
-    margin: 50px 0px 0px 0px; 
+.products-text {
+    margin: 50px 0px 0px 0px;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
 
-.products-text > p > span{
+.products-text>p>span {
     color: #e41920;
 }
 
