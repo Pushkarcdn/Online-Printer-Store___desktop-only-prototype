@@ -1,4 +1,4 @@
-function createProductCard(name, price, image) {
+function createProductCard(name, price, image, randomNumber) {
 
     const card = document.createElement('div');
     card.innerHTML = `
@@ -23,7 +23,7 @@ function createProductCard(name, price, image) {
 
                 <img src="/icons/rating-star.png" alt="" height="10px">
 
-                <span class="rating-text">4.5/5(166) - 792 Sold</span>
+                <span class="rating-text">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber*100 + 100))}) - ${Math.floor(randomNumber*500 + 200)} Sold</span>
 
             </div>
 
@@ -31,7 +31,7 @@ function createProductCard(name, price, image) {
 
             <div class="product-price">
 
-                <p>₹ ${price} &nbsp;<span id="old-price">₹24900</span>&nbsp;<span id="discount">21% off</span> </p>
+                <p>रू ${Math.floor(price - (50 / 100 * price))} &nbsp;<span id="old-price">₹${price}</span>&nbsp;<span id="discount">50% off</span> </p>
 
                 <p>inclusive of all taxes</p>
             
@@ -80,28 +80,29 @@ var productsName = [
 ];
 
 var productsPrice = [
-    19000,
+    29000,
+    19900,
+    18990,
+    12999,
+    21999,
+    37999,
+    24999,
+    19999,
+    24999,
+    12999,
+    29999,
     14999,
-    11999,
-    12999,
-    29999,
-    17999,
-    34999,
-    99999,
-    44999,
-    12999,
-    29999,
+    25999,
     24999,
-    15999,
-    24999,
-    449999
+    149999
 ];
 
 const productContainer = document.getElementById('products-section');
 
 for (let i = 0; i < productsName.length; i++) {
 
-    const productCard = createProductCard(productsName[i], productsPrice[i], "canon" + [i]);
+    var randomNum = Math.random();
+    const productCard = createProductCard(productsName[i], productsPrice[i], "canon" + [i], randomNum);
     productContainer.appendChild(productCard);
 
 }

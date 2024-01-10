@@ -1,68 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Fetch the navigation bar content
-    fetch("../html/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            // Insert the navigation bar into the specified container
-            document.getElementById("navbar").innerHTML = data;
+function createNavbar() {
 
-            // Run JavaScript code for the injected content
-            handleNavEvents();
-        })
-        .catch(error => console.error("Error fetching navbar:", error));
-});
+    const nav = document.querySelector("nav")
+    nav.innerHTML = `
 
+    <span><a id="nav-home-button" href="/index.html">Home</a></span>
 
-function handleNavEvents() {
+    <span><a id="nav-products-button" href="/html/products.html">Products</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
 
-    boldCurrentPageName();
-    adjustStyles();
+    <span><a id="nav-blog-button" href="/html/blog.html">Blog</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
 
-    function boldCurrentPageName() {
-        var pageName = document.title;
-        pageName = pageName.split(' ')[0];
-        pageName = pageName.toLowerCase();
-        document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
-    }
+    <span><a id="nav-research-button" href="/html/research.html">Research</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
 
-    function adjustStyles() {
+    <span><a id="nav-about-button" href="/html/about.html">About Us</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
 
-        if (window.innerWidth < 525) {
-            document.querySelector('nav').style.display = 'none';
-            document.querySelector('header').classList.add('nav-shadow');
-            document.querySelector('.header-cart').style.display = 'none';
-            document.querySelector('.header-line').style.display = 'none';
-            document.querySelector('.header-menu').style.display = 'flex';
-        } else {
-            document.querySelector('nav').style.display = 'flex';
-            document.querySelector('.header-cart').style.display = 'flex';
-            document.querySelector('.header-line').style.display = 'flex';
-            document.querySelector('.header-menu').style.display = 'none';
-        }
-
-        if (window.innerWidth < 860) {
-            document.querySelector('.header-search-box').style.display = 'none';
-        }
-        else {
-            document.querySelector('.header-search-box').style.display = 'flex';
-        }
-
-        if (window.innerWidth < 570) {
-            document.querySelector('#nav-home-button').style.display = 'none';
-        }
-        else {
-            document.querySelector('#nav-home-button').style.display = 'flex';
-        }
-
-    }
+    <span><a id="nav-contact-button" href="/html/contact.html">Contact</a></span>
+    
+    `;
 
     boldCurrentPageName();
-    adjustStyles();
-
-    // Adjust styles when the window is resized
-    window.addEventListener('resize', adjustStyles);
-
-    boldCurrentPageName();
-    adjustStyles();
 
 }
+
+function boldCurrentPageName() {
+    var pageName = document.title;
+    pageName = pageName.split(' ')[0];
+    pageName = pageName.toLowerCase();
+    document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
+}
+
+createNavbar();

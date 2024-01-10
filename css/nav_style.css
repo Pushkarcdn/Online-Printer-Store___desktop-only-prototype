@@ -141,9 +141,11 @@ nav a:hover {
 }
 
 .current-page {
-    opacity: 0.88;
+    opacity: 1;
+    padding: 0px 5px 4px 5px;
     font-family: 'Poppins-bold';
     color: #bd8448;
+    border-bottom: 2px solid;
 }
 
 /* -------------- Nav Section Ends ------------ */
