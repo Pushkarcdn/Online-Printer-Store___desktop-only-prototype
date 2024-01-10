@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     // Fetch the navigation bar content
     fetch("../html/footer.html")
         .then(response => response.text())
@@ -7,14 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Insert the navigation bar into the specified container
             document.getElementById("footer").innerHTML = data;
 
-            // Run JavaScript code for the injected content
-            // handleNavbarEvents();
+            // JS code for the injected html
         })
         .catch(error => console.error("Error fetching navigation bar:", error));
 });
-
-// function handleNavbarEvents() {
-
-//     // add javascript for footer here
-
-// }

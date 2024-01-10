@@ -1,7 +1,6 @@
 function createNavbar() {
 
-    const nav = document.querySelector("nav")
-    nav.innerHTML = `
+    document.querySelector("nav").innerHTML = `
 
     <span><a id="nav-home-button" href="/index.html">Home</a></span>
 
@@ -21,8 +20,6 @@ function createNavbar() {
     
     `;
 
-    boldCurrentPageName();
-
 }
 
 function boldCurrentPageName() {
@@ -33,3 +30,4 @@ function boldCurrentPageName() {
 }
 
 createNavbar();
+boldCurrentPageName();

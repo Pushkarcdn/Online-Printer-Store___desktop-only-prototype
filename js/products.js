@@ -1,4 +1,6 @@
-function createProductCard(name, price, image, randomNumber) {
+function createProductCard(name, price, image) {
+
+    var randomNumber = Math.random();
 
     const card = document.createElement('div');
     card.innerHTML = `
@@ -23,7 +25,7 @@ function createProductCard(name, price, image, randomNumber) {
 
                 <img src="/icons/rating-star.png" alt="" height="10px">
 
-                <span class="rating-text">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber*100 + 100))}) - ${Math.floor(randomNumber*500 + 200)} Sold</span>
+                <span class="rating-text">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber * 100 + 100))}) - ${Math.floor(randomNumber * 500 + 200)} Sold</span>
 
             </div>
 
@@ -76,7 +78,7 @@ var productsName = [
     "imageCLASS LBP6230dw",
     "imagePROGRAF PRO-1000",
     "imageFORMULA DR-C225 II",
-    "imageRUNNER ADVANCE C5540i"
+    "imageRUNNER C5540i"
 ];
 
 var productsPrice = [
@@ -97,12 +99,10 @@ var productsPrice = [
     149999
 ];
 
-const productContainer = document.getElementById('products-section');
 
 for (let i = 0; i < productsName.length; i++) {
 
-    var randomNum = Math.random();
-    const productCard = createProductCard(productsName[i], productsPrice[i], "canon" + [i], randomNum);
-    productContainer.appendChild(productCard);
+    const productCard = createProductCard(productsName[i], productsPrice[i], "canon" + [i]);
+    document.getElementById('products-section').appendChild(productCard);
 
 }
