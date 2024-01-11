@@ -1,8 +1,24 @@
-function createProductCard(name, price, image) {
+function createProductCard(i) {
 
+    // defining different name, image, price for each printer
+    var name = productsName[i];
+    var price = productsPrice[i];
+    var image = "canon" + [i];
+
+    // generating a random number
+    // it is used to randomly add different ratings to each product
     var randomNumber = Math.random();
 
+    // creating a div for product card
     const card = document.createElement('div');
+
+    // assigning each div a unique id
+    card.id = "products-card" + i;
+
+    // assigning an onclick function to each card according to the id
+    card.setAttribute("onclick", "createProductPage(" + i + ")");
+
+    // creating the actual product card
     card.innerHTML = `
 
     <div class="products-card">
@@ -63,6 +79,10 @@ function createProductCard(name, price, image) {
 
 }
 
+function createProductPage(i) {
+    alert("This is card " + i)
+}
+
 var productsName = [
     "PIXMA MG3620",
     "PIXMA Pro-100",
@@ -102,7 +122,7 @@ var productsPrice = [
 
 for (let i = 0; i < productsName.length; i++) {
 
-    const productCard = createProductCard(productsName[i], productsPrice[i], "canon" + [i]);
+    const productCard = createProductCard(i);
     document.getElementById('products-section').appendChild(productCard);
 
 }
