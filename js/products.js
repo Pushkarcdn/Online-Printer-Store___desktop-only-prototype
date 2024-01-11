@@ -126,3 +126,4 @@ for (let i = 0; i < productsName.length; i++) {
     document.getElementById('products-section').appendChild(productCard);
 
 }
+

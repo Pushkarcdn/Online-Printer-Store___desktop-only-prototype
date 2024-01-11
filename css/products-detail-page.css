@@ -1,0 +1,200 @@
+#product-details-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#product-details-section>div {
+    background-color: #fff;
+    box-shadow: rgba(147, 147, 147, 0.5) 0px 1px 15px 1px;
+    width: 80%;
+    margin: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 10px 10px 10px;
+    margin: 25px 0px;
+}
+
+.product-details-upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-details-upper-left {
+    height: 60vh;
+    width: 100vw;
+    max-width: 500px;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-details-upper-right {
+    padding: 20px 10px;
+    height: 75vh;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-general-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pr-id {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    /* font-weight: ; */
+    opacity: 0.67;
+    font-size: 0.75rem;
+    margin-bottom: -5px;
+}
+
+.brand-name {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.model-name {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+
+}
+
+.breif-details {
+    max-width: 400px;
+    opacity: 0.67;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.description {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
+    opacity: 0.8;
+    max-width: 450px;
+    text-align: justify;
+}
+
+.rating-details {
+    letter-spacing: 0.2px;
+    font-size: 0.8rem;
+    opacity: 0.67;
+}
+
+.price-details {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+}
+
+.price-details>div {
+    display: flex;
+    align-items: center;
+}
+
+.current-price {
+    font-size: 1.3rem;
+    color: red;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.old-price {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+.discount-percent {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    color: green;
+    font-size: 0.8rem;
+}
+
+.tax-details {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.quantity-div>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-div span {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.quantity-changing-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.product-quantity-div {
+    border: 1px solid rgba(0, 0, 0, 0.312);
+    width: 32px;
+    height: 32px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    /* margin-left: 4px; */
+    /* padding: 5px 12px 5px 10px; */
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart-div{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 169);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    hanging-punctuation: 5px;
+    margin-left: 20px;
+}
+
+.add-to-cart-button{
+    /* width: ; */
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+}
+
+.buy-now-button-div {
+    background-color: #fb641b;
+    width: 280px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    gap: 5px;
+}
+
+.buy-now-button-div>input {
+    height: 100%;
+    outline: none;
+    color: white;
+    font-size: 0.9rem;
+    background: transparent;
+    border: none;
+}
