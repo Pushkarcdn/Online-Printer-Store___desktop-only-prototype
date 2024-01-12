@@ -1,18 +1,9 @@
-body {
+body,
+html {
     background-color: #fafafa;
 }
 
-#hero-section {
-    /* background-image: url(../images/products_images/hero2.jpg); */
-    /* height: 550px; */
-    /* width: 100%; */
-    /* background-position: center; */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-}
-
 #products-section {
-    /* border: 2px solid; */
     padding: 50px 10px 50px 10px;
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +35,13 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.products-card:hover{
+    scale: 1.025;
+    translate: 0px -5px;
+    box-shadow: rgba(147, 147, 147, 0.49) 0 1px 35px 1px;
 }
 
 .product-upper-details {

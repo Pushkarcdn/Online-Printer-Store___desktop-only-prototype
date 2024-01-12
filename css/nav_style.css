@@ -9,6 +9,7 @@ header {
 }
 
 .header-upper-section {
+    height: 65px;
     width: 97%;
     padding: 5px 0px 0px 15px;
     display: flex;
@@ -78,6 +79,15 @@ header {
 
 .header-cart>img {
     margin-bottom: 3px;
+}
+
+
+.header-cart>span{
+    transition: all 0.3s ease-in-out; 
+}
+
+.header-cart>span:hover{
+    color: #bd8448;
 }
 
 .header-menu {

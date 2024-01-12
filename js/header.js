@@ -24,7 +24,7 @@ function createHeader() {
 
             <div class="header-cart">
                 <img src="../icons/cart.png" alt="" height="20px">
-                <span>Cart (0)</span>
+                <span>Cart (<span id="cart-items-amount">0</span>)</span>
             </div>
 
             <div class="header-menu">
