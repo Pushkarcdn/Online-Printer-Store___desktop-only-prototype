@@ -245,13 +245,14 @@ background-color: rgb(198, 196, 196);
     position: fixed;
     bottom: 20px;
     right: 20px;
-    height: 65px;
-    width: 260px;
+    min-height: 65px;
+    min-width: 290px;
     background-color: rgb(27, 27, 27);
     color: white;
-    text-align: center;
+    /* text-align: center; */
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 3;
+    padding: 10px 20px;
 }

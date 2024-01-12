@@ -1,3 +1,7 @@
+document.querySelector("#hero-section").addEventListener("click", function(){
+    document.querySelector(".products-text").scrollIntoView({ behavior: 'smooth' });
+});
+
 function createProductCard(i) {
 
     // defining different name, image, price for each printer
@@ -12,12 +16,6 @@ function createProductCard(i) {
     // creating a div for product card
     const card = document.createElement('div');
 
-    // assigning each div a unique id
-    card.id = "products-card" + i;
-
-    // assigning an onclick function to each card according to the id
-    card.setAttribute("onclick", "createProductPage(" + i + ")");
-
     // creating the actual product card
     card.innerHTML = `
 
@@ -31,7 +29,7 @@ function createProductCard(i) {
         
         </div>
 
-        <img src="../images/products_images/${image}.png" alt="" height="200px">
+        <img src="../images/products_images/${image}.png" alt="" height="200px" id="product-image">
 
         <div class="product-lower-details">
 
@@ -74,6 +72,11 @@ function createProductCard(i) {
     </div>   
     
     `;
+
+    card.querySelector('#product-image').setAttribute("onclick", "createProductPage(" + i + ")");
+    card.querySelector('.product-lower-details').setAttribute("onclick", "createProductPage(" + i + ")");
+    card.querySelector('input[type="checkbox"]').setAttribute("onclick", "updateCheckboxCount()");
+
 
     return card;
 
@@ -122,6 +125,8 @@ for (let i = 0; i < productsName.length; i++) {
     document.getElementById('products-section').appendChild(productCard);
 
 }
+
+
 
 document.querySelector("#product-details-section").innerHTML = `
 
@@ -324,3 +329,45 @@ function goBackToProducts() {
     element.scrollIntoView({ behavior: "instant" });
 
 }
+
+function updateCheckboxCount() {
+
+    // Get all compareCheckBoxes
+    var compareCheckBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Count the checked compareCheckBoxes
+    checkedCount = 0;
+    compareCheckBoxes.forEach(function (checkbox) {
+
+        if (checkbox.checked) {
+
+            checkedCount++;
+
+        }
+
+    })
+
+    if (checkedCount <= 1) {
+
+        document.querySelector("#compare-button-div").style.display = "none";
+
+    }
+    else {
+
+        document.querySelector("#compare-items-number").innerHTML = `Compare ( ` + checkedCount + ` )`;
+        document.querySelector("#compare-button-div").style.display = "flex";
+
+    }
+
+}
+
+document.querySelector("#compare-button-div").addEventListener("click", function () {
+ 
+    document.querySelector("#message-right-bottom-div").style.display = 'flex';
+    document.querySelector("#message-right-bottom-div").innerHTML = `You need to sign in to compare these items`;
+
+    setTimeout(function () {
+        document.querySelector("#message-right-bottom-div").style.display = 'none';
+    }, 3000);
+
+});
