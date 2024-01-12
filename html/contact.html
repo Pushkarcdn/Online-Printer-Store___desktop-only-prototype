@@ -85,11 +85,11 @@
 
             <div id="contact-lower-second">
 
-                <form action="https://fabform.io/f/Bd1piKB" method="post">
+                <form name="contactForm" onsubmit="formValidate(event)">
 
                     <div class="form-inner-div">
                         <img src="../icons/person.png" width="7%">
-                        <input type="text" name="Fname" placeholder="First Name *" required>
+                        <input type="text" name="Fname" placeholder="First Name *">
                     </div>
 
                     <div class="form-inner-div">
@@ -104,7 +104,7 @@
 
                     <div class="form-inner-div">
                         <img src="../icons/email.png" width="7%">
-                        <input type="text" name="Email" placeholder="Email *" required>
+                        <input type="text" name="Email" placeholder="Email *">
                     </div>
 
                     <div class="form-inner-div form-message">
@@ -116,8 +116,13 @@
                         <input type="submit" value="Send Message">
                     </div>
 
+                    <div id="form-submitted-message">
+                        <p>Form submitted successfully.</p>
+                    </div>
+
                     <div class="form-bottomText">
-                        <p>We do not sell, share, or trade customer information. Your privacy is very important to us.
+                        <p>We do not sell, share, or trade customer information. Your privacy is very important to
+                            us.
                         </p>
                     </div>
 
@@ -125,6 +130,8 @@
 
 
             </div>
+
+
 
 
         </div>
@@ -140,6 +147,7 @@
 
     <!-- Scripts -->
     <script src="../js/universal.js"></script>
+    <script src="/js/contact.js"></script>
 
 </body>
 

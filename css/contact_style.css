@@ -85,6 +85,20 @@ body {
     gap: 20px;
 }
 
+#form-submitted-message {
+    padding-top: 5px;
+    letter-spacing: 1px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(28, 75, 28);
+}
+
+#form-submitted-message >p{
+    font-size: 14px;
+}
+
 #contact-lower-second {
     width: 350px;
     padding: 35px 40px;
