@@ -130,7 +130,7 @@ for (let i = 0; i < productsName.length; i++) {
 
 document.querySelector("#product-details-section").innerHTML = `
 
-<div>
+        <div>
 
             <div class="product-details-upper">
 
@@ -219,7 +219,7 @@ document.querySelector("#product-details-section").innerHTML = `
         </div>
 
 
-`;
+        `;
 
 function createProductPage(i) {
 
