@@ -46,7 +46,345 @@ body {
     min-width: 300px;
 }
 
-/* Login section starts */
+/* ------------------------------------------------------ Header Section Starts -------------------------------------------------------- */
+
+header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-upper-section {
+    height: 65px;
+    width: 97%;
+    padding: 5px 0px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.header-upper-left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text>span:first-child {
+    font-size: 1.8rem;
+    font-family: rubik, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo-text>span:nth-child(2) {
+    font-size: 0.8rem;
+    opacity: 0.4;
+    position: relative;
+    bottom: 6px;
+}
+
+.header-upper-right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-right: 5px;
+}
+
+.header-search-box {
+    height: 40px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding-left: 12px;
+}
+
+.header-search-box>input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: #e8e8e8;
+}
+
+.header-search-box>input:focus {
+    border: none;
+    outline: none;
+}
+
+.header-cart,
+.header-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header-cart>img {
+    margin-bottom: 3px;
+}
+
+
+.header-cart>span,
+.header-login>span {
+    transition: all 0.3s ease-in-out;
+}
+
+.header-cart>span:hover,
+.header-login>span:hover {
+    color: #bd8448;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>hr {
+    width: 97%;
+    color: gray;
+    opacity: 0.3;
+}
+
+/* ------------------------------------------------------ Header Section Ends -------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Nav Section Starts -------------------------------------------------------- */
+
+nav {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-shadow {
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+nav span,
+header span {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+}
+
+nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    opacity: 0.6;
+    color: black;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+nav a:hover {
+    color: #bd8448;
+    opacity: 0.77;
+    scale: 1.025;
+}
+
+.nav-lower-section>span:first-child {
+    margin-right: 15px;
+}
+
+.nav-lower-section>span:last-child {
+    margin-left: 12px;
+}
+
+.current-page {
+    opacity: 1;
+    padding: 0px 5px 4px 5px;
+    font-family: 'Poppins-bold';
+    color: #bd8448;
+    border-bottom: 2px solid;
+}
+
+/* -------------------------------------------------------- Nav Section Ends ----------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Footer Section Starts -------------------------------------------------------- */
+
+
+footer {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 100%;
+    background-color: #e2e2e2;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    /* gap: 30px; */
+}
+
+.footer-upper-section {
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footer-upper-inner-div {
+    /* border: 2px solid blue; */
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul>li {
+    opacity: 0.77;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+    line-height: 1.8;
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul>li:hover {
+    color: #bd8448;
+}
+
+footer>hr {
+    width: 75%;
+    opacity: 0.4;
+}
+
+.footer-lower-section {
+    width: 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-logo-section {
+    /* border: 2px solid red; */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-comapny-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 20px;
+}
+
+.footer-comapny-details>span:first-child {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.footer-comapny-details>span:nth-child(2) {
+    /* border: 2px solid; */
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+}
+
+.footer-contact-section {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.footer-talk-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-social-links>img {
+    transition: all 0.35s ease-in-out;
+}
+
+.footer-social-links>img:hover {
+    scale: 1.1;
+}
+
+.footer-subscribe-section>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-subscribe-section>form>input:first-child {
+    width: 220px;
+    height: 35px;
+    border: 1.4px solid black;
+    border-radius: 20px;
+    padding-left: 15px;
+    background: transparent;
+}
+
+.footer-subscribe-section>form>input:nth-child(2) {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: #058bed;
+    color: rgb(255, 255, 255);
+}
+
+#footer-second-hr {
+    width: 95%;
+    opacity: 0.7;
+}
+
+.footer-copyright-section {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* ------------------------------------------------------ Footer Section Ends -------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Login Section Starts -------------------------------------------------------- */
 
 #login-section {
     width: 100%;
@@ -167,4 +505,4 @@ body {
     gap: 8px;
 }
 
-/* login section ends  */
+/* ------------------------------------------------------ Login Section Ends -------------------------------------------------------- */
