@@ -70,7 +70,8 @@ header {
     outline: none;
 }
 
-.header-cart {
+.header-cart,
+.header-login {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,11 +83,13 @@ header {
 }
 
 
-.header-cart>span{
-    transition: all 0.3s ease-in-out; 
+.header-cart>span,
+.header-login>span {
+    transition: all 0.3s ease-in-out;
 }
 
-.header-cart>span:hover{
+.header-cart>span:hover,
+.header-login>span:hover {
     color: #bd8448;
 }
 

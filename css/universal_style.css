@@ -45,3 +45,126 @@
 body {
     min-width: 300px;
 }
+
+/* Login section starts */
+
+#login-section {
+    width: 100%;
+    padding: 60px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section-inner-div {
+    width: 75%;
+    height: 550px;
+    padding: 50px;
+    background-color: white;
+    box-shadow: rgba(147, 147, 147, 0.3) 0px 1px 15px 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-section-inner-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 90%;
+}
+
+.login-section-inner-right {
+    width: 50%;
+    height: 90%;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.log-in-text {
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#login-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-input-div {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid black;
+    padding-bottom: 7px;
+}
+
+.login-input-field {
+    border: none;
+    outline: none;
+}
+
+.login-remember-checkbox-div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-remember-checkbox-div>input {
+    scale: 1.17;
+}
+
+.login-form-submit-button {
+    background-color: rgba(0, 183, 255, 0.61);
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+}
+
+.login-button-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.forgot-password-text {
+    font-size: 12px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.forgot-password-text:hover {
+    color: rgba(0, 47, 255, 0.488);
+}
+
+.social-login-options-div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 3px;
+}
+
+.login-with-text {
+    font-size: 14px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+}
+
+.social-login-icons-div {
+    display: flex;
+    gap: 8px;
+}
+
+/* login section ends  */

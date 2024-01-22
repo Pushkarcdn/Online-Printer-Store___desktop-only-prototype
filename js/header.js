@@ -27,7 +27,10 @@ function createHeader() {
                 <span>Cart (<span id="cart-items-amount">0</span>)</span>
             </div>
                 
-            <img src="../icons/person.png" alt="" height="25px">
+            <div class = "header-login" onclick="loginHandler()">
+                <img src="../icons/person.png" alt="" height="25px">
+                <span> Sign in</span>
+            </div>
             
             <div class="header-menu">
                 <img src="../icons/menu.png" alt="" height="20px">
@@ -38,7 +41,7 @@ function createHeader() {
     </div>
 
     <hr class="header-line">
-    
+
     `;
 
 }
