@@ -1,3 +1,215 @@
+/* ------------------------------------------------------ Header Section Starts -------------------------------------------------------- */
+
+function createHeader() {
+
+    document.querySelector("header").innerHTML = `
+
+    <div class="header-upper-section">
+
+        <div class="header-upper-left-section">
+
+            <img src="../images/homepage_images/logo.png" height="45px" alt="">
+
+            <div class="logo-text">
+                <span>Prime</span>
+                <span>Print Creativity</span>
+            </div>
+
+        </div>
+
+        <div class="header-upper-right-section">
+
+            <div class="header-search-box">
+                <img src="../icons/search.png" alt="" height="23px">
+                <input type="text" name="search" placeholder="Search Printers">
+            </div>
+
+            <div class="header-cart">
+                <img src="../icons/cart.png" alt="" height="20px">
+                <span>Cart (<span id="cart-items-amount">0</span>)</span>
+            </div>
+                
+            <div class = "header-login" onclick="loginHandler()">
+                <img src="../icons/person.png" alt="" height="25px">
+                <span> Sign in</span>
+            </div>
+            
+            <div class="header-menu">
+                <img src="../icons/menu.png" alt="" height="20px">
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr class="header-line">
+
+    `;
+
+}
+
+createHeader();
+
+/* ------------------------------------------------------ Header Section Ends -------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Navbar Section Starts -------------------------------------------------------- */
+
+function createNavbar() {
+
+    document.querySelector("nav").innerHTML = `
+
+    <span><a id="nav-home-button" href="/index.html">Home</a></span>
+
+    <span><a id="nav-products-button" href="/html/products.html">Products</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
+
+    <span><a id="nav-blog-button" href="/html/blog.html">Blog</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
+
+    <span><a id="nav-research-button" href="/html/research.html">Research</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
+
+    <span><a id="nav-about-button" href="/html/about.html">About Us</a><img src="../icons/down-arrow.png" alt=""
+        height="20"></span>
+
+    <span><a id="nav-contact-button" href="/html/contact.html">Contact</a></span>
+    
+    `;
+
+}
+
+function boldCurrentPageName() {
+    var pageName = document.title;
+    pageName = pageName.split(' ')[0];
+    pageName = pageName.toLowerCase();
+    document.querySelector('#nav-' + pageName + '-button').classList.add('current-page');
+}
+
+createNavbar();
+boldCurrentPageName();
+
+/* ------------------------------------------------------ Navbar Section Ends -------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Footer Section Starts -------------------------------------------------------- */
+
+document.querySelector('footer').innerHTML = `
+
+<div class="footer-upper-section">
+
+    <div class="footer-upper-inner-div">
+        <ul>
+            <li>ALL PRINTERS</li>
+            <li>BUSINESS PRINTERS</li>
+            <li>REGULAR PRINTERS</li>
+            <li>PORTABLE PRINTERS</li>
+            <li>CLASSIC PRINTERS</li>
+        </ul>
+    </div>
+
+    <div class="footer-upper-inner-div">
+        <ul>
+            <li>SMART PRINTERS</li>
+            <li>WIRELESS PRINTERS</li>
+            <li>All In One PRINTERS</li>
+        </ul>
+    </div>
+
+    <div class="footer-upper-inner-div">
+        <ul>
+            <li>SUPERTANK PRINTERS</li>
+            <li>EcoTANK PRINTERS</li>
+            <li>OFFICE PRINTERS</li>
+            <li>PORTABLE PRINTERS</li>
+        </ul>
+    </div>
+
+    <div class="footer-upper-inner-div">
+        <ul>
+            <li>3D PRINTERS</li>
+            <li>PHOTO PRINTERS</li>
+            <li>LABEL Printers</li>
+            <li>UV PRINTERS</li>
+        </ul>
+    </div>
+
+    <div class="footer-upper-inner-div">
+
+        <ul>
+            <li>ABOUT US</li>
+            <li>CONTACT US</li>
+            <li>AFFILIATES</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<hr>
+
+<div class="footer-lower-section">
+
+    <div class="footer-logo-section">
+
+        <img src="../images/homepage_images/logo.png" alt="" width="90px">
+
+        <div class="footer-comapny-details">
+            <span>PRIME</span>
+            <span>PRINT DREAMS <br> PRINT CREATIVITY <br>SINCE 1995</span>
+        </div>
+
+    </div>
+
+    <div class="footer-contact-section">
+
+        <div class="footer-talk-section">
+
+            <span>TALK WITH US</span>
+
+            <ul>
+                <li>+977 9844187887</li>
+                <li>support@primestore.com</li>
+            </ul>
+
+            <div class="footer-social-links">
+                <img src="../icons/facebook.png" alt="" height="20px">
+                <img src="../icons/insta.png" alt="" height="20px">
+                <img src="../icons/linkedin.png" alt="" height="20px">
+                <img src="../icons/github.png" alt="" height="23px">
+                <img src="../icons/feed.png" alt="" height="18px">
+            </div>
+
+        </div>
+
+        <div class="footer-subscribe-section">
+            <span>SUBSCRIBE US</span>
+            <form action="">
+                <input type="email" name="Email" placeholder="YOUR EMAIL" required>
+                <input type="submit" value="SUBSCRIBE">
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<hr id="footer-second-hr">
+
+<div class="footer-copyright-section">
+
+    <p>Copyright &copy; Prime Stores. All rights reserved.</p>
+
+</div>
+
+`;
+
+/* ------------------------------------------------------ Footer Section Ends -------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------ Responsivness Section Starts -------------------------------------------------------- */
+
 function adjustStyles() {
 
     if (window.innerWidth < 525) {
@@ -48,9 +260,10 @@ window.onload = function () {
 adjustStyles();
 window.addEventListener('resize', adjustStyles);
 
+/* ------------------------------------------------------ Responsivness Section Ends -------------------------------------------------------- */
 
 
-// Login System
+/* ------------------------------------------------------ Login Section Starts -------------------------------------------------------- */
 
 function loginHandler() {
 
@@ -197,3 +410,5 @@ if (typeof (Storage) !== "undefined") {
 } else {
     loggedIn = "false";
 }
+
+/* ------------------------------------------------------ Login Section Ends -------------------------------------------------------- */
