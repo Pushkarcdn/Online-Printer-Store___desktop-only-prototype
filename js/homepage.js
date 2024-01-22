@@ -6,20 +6,24 @@ var productsSeries = [
 
 var productsName = [
     "PIXMA MG3620",
+    "MAXIFY MB2720",
+    "imageCLASS MF236n",
     "PIXMA Pro-100",
     "PIXMA TS9120",
     "PIXMA iP8720",
+    "imagePROGRAF PRO-1000",
     "PIXMA G6020",
-    "PIXMA MX922",
-    "PIXMA TR8520",
-    "MAXIFY MB2720",
+    "imageFORMULA DR-C225 II",
     "SELPHY CP1300",
-    "imageCLASS MF236n",
+    "imageCLASS MF733Cdw",
     "imageCLASS MF733Cdw",
     "imageCLASS LBP6230dw",
+    "PIXMA TR8520",
     "imagePROGRAF PRO-1000",
     "imageFORMULA DR-C225 II",
-    "imageRUNNER C5540i"
+    "PIXMA MX922",
+    "imageRUNNER C5540i",
+    "ADVANCE DX 8705/8795/8786 Series"
 ];
 
 var productsPrice = [
@@ -29,15 +33,19 @@ var productsPrice = [
     12999,
     21999,
     37999,
+    12999,
+    14999,
     24999,
     19999,
+    37999,
     24999,
     12999,
     29999,
     14999,
     25999,
     24999,
-    149999
+    149999,
+    310900
 ];
 
 // Hero section Image Slider
@@ -89,6 +97,17 @@ function createBestSellingSeries(i) {
         </div>
 
     `
+
+    card.addEventListener('click', function () {
+
+        document.getElementById('products-slider-section').scrollIntoView({
+
+            behavior: 'smooth',
+            block: 'start'
+
+        });
+
+    })
 
     return card;
 
@@ -157,11 +176,13 @@ function createSliderProducts(i) {
     
     `
 
+    card.querySelector('.slider-product').setAttribute("onclick", "createProductPage(" + i + ")");
+
     return card;
 
 }
 
-for (let i = 0; i < productsName.length; i++) {
+for (let i = 0; i < productsName.length - 1; i++) {
 
     const productCard = createSliderProducts(i);
     document.getElementById('products-slider-container').appendChild(productCard);
@@ -174,5 +195,226 @@ for (let i = 2; i >= 0; i--) {
 
     const productCard = createBestSellingSeries(i);
     document.getElementById('top-deal-products').appendChild(productCard);
+
+}
+
+// Products details page
+
+document.querySelector("#product-details-section").innerHTML = `
+
+        <div>
+
+            <div class="product-details-upper">
+
+                <div class="product-details-upper-left">
+
+                    <img src="/images/products_images/canon0.png" alt="" id="product-detail-image" width="100%">
+
+                </div>
+
+                <div class="product-details-upper-right">
+
+                    <div class="product-general-details">
+
+                        <p class="pr-id">Pr.ID: 506250</p>
+
+                        <p class="brand-name">CANON&reg;</p>
+
+                        <p class="model-name" id="product-title">Image MX20221</p>
+
+                    </div>
+
+                    <p class="breif-details">"Print brilliance, pronto. Effortless, vibrant, perfection."</p>
+
+                    <p class="description" id="product-description">Unleash efficiency with our sleek printer: fast,
+                        vibrant, and user-friendly.
+                        Maximize productivity with cost-effective, energy-efficient printing. Elevate your workspace
+                        now.</p>
+
+                    <p class="rating-details"> <img src="/icons/rating-star.png" height="10px" alt=""> 4.2/5 (153
+                        reviews) -
+                        216 sold</p>
+
+                    <div class="price-details">
+                        <div>
+
+                            <span class="current-price">रु 19900</span>&nbsp;&nbsp;<span class="old-price"> रु 39900
+                            </span> &nbsp; <span class="discount-percent"> 50%
+                                off</span>
+                        </div>
+                        <p class="tax-details">Shipping and taxes extra</p>
+                    </div>
+
+                    <div class="quantity-div">
+
+                        <div id="quantity-div-inner">
+
+                            <span>Quantity</span>
+
+                            <div class="product-quantity-div">1</div>
+
+                            <div class="quantity-changing-buttons">
+                                <img src="/icons/up-arrow.png" alt="" height="10px" onclick="increaseQuantity()">
+                                <img src="/icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
+                            </div>
+
+                            <div class="add-to-cart-div" onclick="addedToCart()">
+                                <img src="/icons/electricity.png" height="20px" alt="">
+                                Add to cart
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="buy-now-button-div" onclick="buyNow()">
+                        <img src="/icons/electricity.png" width="20px" alt="">
+                        <input type="button" value="Buy Now" class="">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="product-details-lower">
+
+            </div>
+
+            <div class="products-back-button-div" onclick="goBackToProducts()">
+
+                <img src="/icons/back.png" alt="" height="12px">
+                <button id="goBackToProductsButton">Products</button>
+
+            </div>
+
+        </div>
+
+
+        `;
+
+function createProductPage(i) {
+
+    const productDetails = getProductDetails(i);  // multiple details are stored in productDetails
+
+    document.querySelector("#product-title").innerHTML = productDetails.title;
+    document.querySelector(".old-price").innerHTML = productDetails.price;
+
+    document.querySelector('#product-detail-image').setAttribute("src", "/images/products_images/canon" + i + ".png")
+
+    if (i == 18) {
+        document.querySelector(".current-price").innerHTML = "रु " + (productDetails.price - (36 / 100 * productDetails.price));
+    }
+    else {
+        document.querySelector(".current-price").innerHTML = "रु " + (productDetails.price - (50 / 100 * productDetails.price));
+    }
+
+    // Hide the products page and show the product details page
+
+    var sections = document.querySelectorAll('section');
+
+    for (i = 0; i < sections.length; i++) {
+        document.querySelectorAll('section')[i].style.display = 'none';
+    }
+
+
+    document.querySelector('#product-details-section').style.display = 'flex';
+
+    window.scrollTo({
+        top: 67,
+    });
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key == "Escape") {
+            goBackToProducts();
+        }
+
+    });
+
+}
+
+function getProductDetails(i) {
+
+    var title = productsName[i];
+    var price = productsPrice[i];
+    var image = "canon" + i + ".png";
+
+    return {
+
+        title: `${title}`,
+        price: `${price}`,
+        image: `${image}`,
+
+    };
+}
+
+function increaseQuantity() {
+
+    var quantity = parseInt(document.querySelector(".product-quantity-div").innerHTML);
+    quantity = quantity + 1;
+    document.querySelector(".product-quantity-div").innerHTML = quantity;
+
+}
+
+function decreaseQuantity() {
+
+    var quantity = parseInt(document.querySelector(".product-quantity-div").innerHTML);
+
+    if (quantity > 0) {
+
+        quantity = quantity - 1;
+        document.querySelector(".product-quantity-div").innerHTML = quantity;
+
+    }
+
+}
+
+function addedToCart() {
+
+    var cartItems = parseInt(document.querySelector("#cart-items-amount").innerHTML);
+
+    var numberOfItems = parseInt(document.querySelector(".product-quantity-div").innerHTML);
+
+    console.log(cartItems, typeof (cartItems));
+    console.log(numberOfItems, typeof (numberOfItems));
+
+    cartItems = cartItems + numberOfItems;
+    document.querySelector("#cart-items-amount").innerHTML = cartItems;
+
+    document.querySelector("#message-right-bottom-div").style.display = 'flex';
+    document.querySelector("#message-right-bottom-div").innerHTML = numberOfItems + ` items added to cart. <br> Please sign in to buy.`;
+
+    setTimeout(function () {
+        document.querySelector("#message-right-bottom-div").style.display = 'none';
+    }, 3000);
+
+}
+
+function buyNow() {
+
+    document.querySelector("#message-right-bottom-div").style.display = 'flex';
+    document.querySelector("#message-right-bottom-div").innerHTML = `Please sign in to make any purchases. `;
+
+    setTimeout(function () {
+        document.querySelector("#message-right-bottom-div").style.display = 'none';
+    }, 3000);
+}
+
+function goBackToProducts() {
+
+    var sections = document.querySelectorAll('section');
+
+    for (i = 0; i < sections.length; i++) {
+        document.querySelectorAll('section')[i].style.display = 'flex';
+    }
+
+    document.querySelector('#product-details-section').style.display = 'none';
+
+    document.getElementById('products-slider-section').scrollIntoView({
+
+        block: 'start'
+
+    });
 
 }
