@@ -142,6 +142,45 @@ header {
     color: #bd8448;
 }
 
+.header-logged-in-div {
+    padding: 4px 15px 4px 8px; 
+    border-radius: 5px;
+    box-shadow: rgba(147, 147, 147, 0.2) 0px 1px 15px 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logged-user-detail-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.header-logged-user-detail1 {
+    letter-spacing: 0.4px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.header-logged-user-detail2 {
+    font-size: 12px;
+}
+
+.header-sign-out-text {
+    padding: 3px 10px;
+    /* border-radius: 4px; */
+    margin: 0px 0px 0px 20px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    /* box-shadow: rgba(147, 147, 147, 0.3) 0px 1px 15px 0px; */
+}
+
+.header-sign-out-text:hover{
+    color: #bd8448;
+}
+
 .header-menu {
     display: flex;
     justify-content: center;

@@ -50,7 +50,6 @@ var productsPrice = [
 
 
 
-
 /* ------------------------------------------------------ Header Section Starts -------------------------------------------------------- */
 
 function createHeader() {
@@ -76,15 +75,28 @@ function createHeader() {
                 <img src="../icons/search.png" alt="" height="23px">
                 <input type="text" name="search" placeholder="Search Printers">
             </div>
+                
+            <div class = "header-login" onclick="loginHandler()" style="display:none;">
+                <img src="../icons/person.png" alt="" height="25px">
+                <span> Sign in</span>
+            </div>
+
+            <div class = "header-logged-in-div" style="display:none;">
+
+                <img src="/images/login_images/pushkar.png" height="40px" alt="">
+        
+                <div class="header-logged-user-detail-div">
+                    <span class="header-logged-user-detail1">Pushkar Sah</span>
+                    <span class="header-logged-user-detail2">Kathmandu</span>
+                </div>
+        
+                <span class="header-sign-out-text">Sign out</span>
+                        
+            </div>
 
             <div class="header-cart">
                 <img src="../icons/cart.png" alt="" height="20px">
                 <span>Cart (<span id="cart-items-amount">0</span>)</span>
-            </div>
-                
-            <div class = "header-login" onclick="loginHandler()">
-                <img src="../icons/person.png" alt="" height="25px">
-                <span> Sign in</span>
             </div>
             
             <div class="header-menu">
@@ -388,7 +400,6 @@ document.querySelector('footer').innerHTML = `
 /* ------------------------------------------------------ Footer Section Ends -------------------------------------------------------- */
 
 
-
 /* --------------------------------------------------- Responsivness Section Starts ------------------------------------------------------ */
 
 function adjustStyles() {
@@ -417,7 +428,7 @@ function adjustStyles() {
     }
     else {
 
-        document.querySelector('.header-search-box').style.display = 'flex';
+        document.querySelector('.header-search-box').style.display = 'none';
 
     }
 
@@ -599,11 +610,11 @@ if (typeof (Storage) !== "undefined") {
 
         loggedIn = "true";
 
-        document.querySelector('.header-login').removeAttribute('onclick');
+        // document.querySelector('.header-login').removeAttribute('onclick');
 
-        document.querySelector('.header-login>span').innerHTML = 'Sign out';
+        // document.querySelector('.header-login>span').innerHTML = 'Sign out';
 
-        document.querySelector('.header-login>span').addEventListener('click', function () {
+        document.querySelector('.header-sign-out-text').addEventListener('click', function () {
 
             loggedIn = "false";
             localStorage.setItem("loggedIn", "false");
@@ -614,7 +625,7 @@ if (typeof (Storage) !== "undefined") {
 
             setTimeout(() => {
                 location.reload();
-            }, 1500);
+            }, 1000);
 
         });
 
@@ -622,6 +633,12 @@ if (typeof (Storage) !== "undefined") {
 
 } else {
     loggedIn = "false";
+}
+
+if (loggedIn == "true") {
+    document.querySelector('.header-logged-in-div').style.display = 'flex';
+} else {
+    document.querySelector('.header-login').style.display = 'flex';
 }
 
 /* ------------------------------------------------------ Login Section Ends -------------------------------------------------------- */

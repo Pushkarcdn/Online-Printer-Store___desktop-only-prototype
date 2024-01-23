@@ -192,7 +192,7 @@ body {
 #products-slider-container {
     height: 100%;
     width: 96%;
-    padding: 0px 0px 20px 20px;
+    padding: 20px 0px 20px 20px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -397,7 +397,7 @@ body {
     font-size: 35px;
     line-height: 52px;
     color: #353535ce;
-    transition: all 0.4s ease; 
+    transition: all 0.4s ease;
 }
 
 .featured-product-brief {
