@@ -1,54 +1,4 @@
-var productsSeries = [
-    "IMAGE",
-    "MAXIFY",
-    "PIXMA",
-];
-
-var productsName = [
-    "PIXMA MG3620",
-    "MAXIFY MB2720",
-    "imageCLASS MF236n",
-    "PIXMA Pro-100",
-    "PIXMA TS9120",
-    "PIXMA iP8720",
-    "imagePROGRAF PRO-1000",
-    "PIXMA G6020",
-    "imageFORMULA DR-C225 II",
-    "SELPHY CP1300",
-    "imageCLASS MF733Cdw",
-    "imageCLASS MF733Cdw",
-    "imageCLASS LBP6230dw",
-    "PIXMA TR8520",
-    "imagePROGRAF PRO-1000",
-    "imageFORMULA DR-C225 II",
-    "PIXMA MX922",
-    "imageRUNNER C5540i",
-    "ADVANCE DX 8705/8795/8786 Series"
-];
-
-var productsPrice = [
-    29000,
-    19900,
-    18990,
-    12999,
-    21999,
-    37999,
-    12999,
-    14999,
-    24999,
-    19999,
-    37999,
-    24999,
-    12999,
-    29999,
-    14999,
-    25999,
-    24999,
-    149999,
-    310900
-];
-
-// Hero section Image Slider
+// --------------------------- Image slider section starts ------------------------------------------
 
 var totalSliderImages = document.querySelectorAll("#slider-images>img").length;
 var sliderCurrentIndex = 0;
@@ -69,7 +19,10 @@ function sliderPrevious() {
 
 }
 
-// Best selling products
+// --------------------------- Image slider section ends ------------------------------------------
+
+
+// --------------------------- Best selling section starts  ------------------------------------------
 
 function createBestSellingSeries(i) {
 
@@ -120,7 +73,10 @@ for (let i = 0; i < 3; i++) {
 
 }
 
-// Products Slider
+// --------------------------- Best selling section ends  ------------------------------------------
+
+
+// --------------------------- Products slider section starts  ------------------------------------------
 
 function createSliderProducts(i) {
 
@@ -189,16 +145,22 @@ for (let i = 0; i < productsName.length - 1; i++) {
 
 }
 
-// Top Deals
+// --------------------------- Products slider section ends  ------------------------------------------
+
+
+// ----------------------------- Top deals section starts --------------------------------------------
 
 for (let i = 2; i >= 0; i--) {
-
+    
     const productCard = createBestSellingSeries(i);
     document.getElementById('top-deal-products').appendChild(productCard);
-
+    
 }
 
-// Products details page
+// ----------------------------- Top deals section ends --------------------------------------------
+
+
+// --------------------------- Products detailed section starts  ------------------------------------------
 
 document.querySelector("#product-details-section").innerHTML = `
 
@@ -258,7 +220,7 @@ document.querySelector("#product-details-section").innerHTML = `
                                 <img src="/icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
                             </div>
 
-                            <div class="add-to-cart-div" onclick="addedToCart()">
+                            <div class="add-to-cart-div" onclick="updateCart()">
                                 <img src="/icons/electricity.png" height="20px" alt="">
                                 Add to cart
                             </div>
@@ -295,7 +257,10 @@ document.querySelector("#product-details-section").innerHTML = `
 
 function createProductPage(i) {
 
+    clickedProductIndex = i;
     const productDetails = getProductDetails(i);  // multiple details are stored in productDetails
+
+    document.querySelector(".product-quantity-div").innerHTML = '1';
 
     document.querySelector("#product-title").innerHTML = productDetails.title;
     document.querySelector(".old-price").innerHTML = productDetails.price;
@@ -370,36 +335,6 @@ function decreaseQuantity() {
 
 }
 
-function addedToCart() {
-
-    var cartItems = parseInt(document.querySelector("#cart-items-amount").innerHTML);
-
-    var numberOfItems = parseInt(document.querySelector(".product-quantity-div").innerHTML);
-
-    console.log(cartItems, typeof (cartItems));
-    console.log(numberOfItems, typeof (numberOfItems));
-
-    cartItems = cartItems + numberOfItems;
-    document.querySelector("#cart-items-amount").innerHTML = cartItems;
-
-    document.querySelector("#message-right-bottom-div").style.display = 'flex';
-    document.querySelector("#message-right-bottom-div").innerHTML = numberOfItems + ` items added to cart. <br> Please sign in to buy.`;
-
-    setTimeout(function () {
-        document.querySelector("#message-right-bottom-div").style.display = 'none';
-    }, 3000);
-
-}
-
-function buyNow() {
-
-    document.querySelector("#message-right-bottom-div").style.display = 'flex';
-    document.querySelector("#message-right-bottom-div").innerHTML = `Please sign in to make any purchases. `;
-
-    setTimeout(function () {
-        document.querySelector("#message-right-bottom-div").style.display = 'none';
-    }, 3000);
-}
 
 function goBackToProducts() {
 
@@ -418,3 +353,5 @@ function goBackToProducts() {
     });
 
 }
+
+// --------------------------- Products detailed section ends  ------------------------------------------

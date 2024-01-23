@@ -278,6 +278,9 @@ body {
 .product-name {
     font-size: 22px;
     transition: all 0.4s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .product-rating {

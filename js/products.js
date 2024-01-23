@@ -82,44 +82,7 @@ function createProductCard(i) {
 
 }
 
-var productsName = [
-    "PIXMA MG3620",
-    "PIXMA Pro-100",
-    "PIXMA TS9120",
-    "PIXMA iP8720",
-    "PIXMA G6020",
-    "PIXMA MX922",
-    "PIXMA TR8520",
-    "MAXIFY MB2720",
-    "SELPHY CP1300",
-    "imageCLASS MF236n",
-    "imageCLASS MF733Cdw",
-    "imageCLASS LBP6230dw",
-    "imagePROGRAF PRO-1000",
-    "imageFORMULA DR-C225 II",
-    "imageRUNNER C5540i"
-];
-
-var productsPrice = [
-    29000,
-    19900,
-    18990,
-    12999,
-    21999,
-    37999,
-    24999,
-    19999,
-    24999,
-    12999,
-    29999,
-    14999,
-    25999,
-    24999,
-    149999
-];
-
-
-for (let i = 0; i < productsName.length; i++) {
+for (let i = 0; i < productsName.length - 1; i++) {
 
     const productCard = createProductCard(i);
     document.getElementById('products-section').appendChild(productCard);
@@ -141,7 +104,7 @@ function updateCheckboxCount() {
 
         }
 
-    })
+    });
 
     if (checkedCount <= 1) {
 
@@ -159,18 +122,25 @@ function updateCheckboxCount() {
 
 document.querySelector("#compare-button-div").addEventListener("click", function () {
 
-    document.querySelector("#message-right-bottom-div").style.display = 'flex';
-    document.querySelector("#message-right-bottom-div").innerHTML = `You need to sign in to compare these items`;
 
-    setTimeout(function () {
-        document.querySelector("#message-right-bottom-div").style.display = 'none';
-    }, 3000);
+    if (loggedIn == "true") {
+        document.querySelector('.warning-message-text').innerHTML = 'This feature is comming soon';
+        document.querySelector('.warning-message-div').style.display = 'flex';
+
+        setTimeout(function () {
+            document.querySelector('.warning-message-div').style.display = 'none';
+        }, 3000);
+
+    } else {
+        document.querySelector('.warning-message-text').innerHTML = 'Please sign in to compare different items.';
+        document.querySelector('.warning-message-div').style.display = 'flex';
+
+        setTimeout(function () {
+            document.querySelector('.warning-message-div').style.display = 'none';
+        }, 3000);
+    }
 
 });
-
-
-
-
 
 document.querySelector("#product-details-section").innerHTML = `
 
@@ -180,7 +150,7 @@ document.querySelector("#product-details-section").innerHTML = `
 
                 <div class="product-details-upper-left">
 
-                    <img src="/images/products_images/canon0.png" alt="">
+                    <img id="product-detail-image" src="/images/products_images/canon0.png" alt="">
 
                 </div>
 
@@ -230,7 +200,7 @@ document.querySelector("#product-details-section").innerHTML = `
                                 <img src="/icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
                             </div>
 
-                            <div class="add-to-cart-div" onclick="addedToCart()">
+                            <div class="add-to-cart-div" onclick="updateCart()">
                                 <img src="/icons/electricity.png" height="20px" alt="">
                                 Add to cart
                             </div>
@@ -262,12 +232,16 @@ document.querySelector("#product-details-section").innerHTML = `
 
         </div>
 
-
         `;
 
 function createProductPage(i) {
 
+    clickedProductIndex = i;
     const productDetails = getProductDetails(i);  // multiple details are stored in productDetails
+
+    document.querySelector(".product-quantity-div").innerHTML = '1';
+
+    document.querySelector('#product-detail-image').setAttribute("src", "/images/products_images/canon" + i + ".png")
 
     document.querySelector("#product-title").innerHTML = productDetails.title;
     document.querySelector(".old-price").innerHTML = productDetails.price;
@@ -308,6 +282,7 @@ function getProductDetails(i) {
         // image: `${image}`,
 
     };
+
 }
 
 function increaseQuantity() {
@@ -331,36 +306,22 @@ function decreaseQuantity() {
 
 }
 
+
+// Depreciated
 function addedToCart() {
 
     var cartItems = parseInt(document.querySelector("#cart-items-amount").innerHTML);
 
     var numberOfItems = parseInt(document.querySelector(".product-quantity-div").innerHTML);
 
-    console.log(cartItems, typeof (cartItems));
-    console.log(numberOfItems, typeof (numberOfItems));
-
     cartItems = cartItems + numberOfItems;
     document.querySelector("#cart-items-amount").innerHTML = cartItems;
 
-    document.querySelector("#message-right-bottom-div").style.display = 'flex';
-    document.querySelector("#message-right-bottom-div").innerHTML = numberOfItems + ` items added to cart. <br> Please sign in to buy.`;
-
-    setTimeout(function () {
-        document.querySelector("#message-right-bottom-div").style.display = 'none';
-    }, 3000);
+    alert("Hehhee");
 
 }
 
-function buyNow() {
 
-    document.querySelector("#message-right-bottom-div").style.display = 'flex';
-    document.querySelector("#message-right-bottom-div").innerHTML = `Please sign in to make any purchases. `;
-
-    setTimeout(function () {
-        document.querySelector("#message-right-bottom-div").style.display = 'none';
-    }, 3000);
-}
 
 function goBackToProducts() {
 

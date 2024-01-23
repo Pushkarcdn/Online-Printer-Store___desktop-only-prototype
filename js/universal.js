@@ -1,3 +1,56 @@
+var productsSeries = [
+    "IMAGE",
+    "MAXIFY",
+    "PIXMA",
+];
+
+var productsName = [
+    "PIXMA MG3620",
+    "MAXIFY MB2720",
+    "imageCLASS MF236n",
+    "PIXMA Pro-100",
+    "PIXMA TS9120",
+    "PIXMA iP8720",
+    "imagePROGRAF PRO-1000",
+    "PIXMA G6020",
+    "imageFORMULA DR-C225 II",
+    "SELPHY CP1300",
+    "imageCLASS MF733Cdw",
+    "imageCLASS MF733Cdw",
+    "imageCLASS LBP6230dw",
+    "PIXMA TR8520",
+    "imagePROGRAF PRO-1000",
+    "imageFORMULA DR-C225 II",
+    "PIXMA MX922",
+    "imageRUNNER C5540i",
+    "ADVANCE DX 8705/8795/8786 Series"
+];
+
+var productsPrice = [
+    29000,
+    19900,
+    18990,
+    12999,
+    21999,
+    37999,
+    12999,
+    14999,
+    24999,
+    19999,
+    37999,
+    24999,
+    12999,
+    29999,
+    14999,
+    25999,
+    24999,
+    149999,
+    310900
+];
+
+
+
+
 /* ------------------------------------------------------ Header Section Starts -------------------------------------------------------- */
 
 function createHeader() {
@@ -53,6 +106,83 @@ createHeader();
 /* ------------------------------------------------------ Header Section Ends -------------------------------------------------------- */
 
 
+/* --------------------------------------------------- Header Cart Section Starts ------------------------------------------------------ */
+
+var cartItems = [];
+var cartItemsQuantity = [];
+
+if (typeof (Storage) !== "undefined") {
+
+    var pastCart = JSON.parse(localStorage.getItem("cartItems"));
+    var pastCartQuantities = JSON.parse(localStorage.getItem("cartItemsQuantity"));
+
+    if (pastCart == "" || pastCart == " " || pastCart == null) {
+        cartItems = [];
+        cartItemsQuantity = [];
+    } else {
+        cartItems = pastCart;
+        cartItemsQuantity = pastCartQuantities;
+    }
+
+    // // Retrieving the array
+    // var retrievedArray = JSON.parse(localStorage.getItem('myArray'));
+    // console.log(retrievedArray); // Outputs: [1, 2, 3, 4, 5]
+
+}
+
+function updateCart() {
+
+    cartItems.push(clickedProductIndex);
+    clickedProductQuantity = parseInt(document.querySelector(".product-quantity-div").innerHTML);
+    cartItemsQuantity.push(clickedProductQuantity);
+
+    // storing the cart details inside browser local storage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cartItemsQuantity', JSON.stringify(cartItemsQuantity));
+
+    if (loggedIn == "true") {
+
+        document.querySelector(".success-message-text").innerHTML = clickedProductQuantity + ` items added to cart.`;
+        document.querySelector(".success-message-div").style.display = 'flex';
+
+        setTimeout(function () {
+            document.querySelector(".success-message-div").style.display = 'none';
+        }, 3000);
+
+    } else {
+
+        document.querySelector(".warning-message-text").innerHTML = clickedProductQuantity + ` items added to cart. Please sign in to place the order.`;
+        document.querySelector(".warning-message-div").style.display = 'flex';
+
+        setTimeout(function () {
+            document.querySelector(".warning-message-div").style.display = 'none';
+        }, 3000);
+
+
+    }
+
+    updateCartTotal();
+
+}
+
+function updateCartTotal() {
+
+    cartItemsTotal = 0;
+
+    for (i = 0; i < cartItems.length; i++) {
+        cartItemsTotal = cartItemsTotal + cartItemsQuantity[i];
+    }
+
+    document.querySelector('#cart-items-amount').innerHTML = cartItemsTotal;
+
+}
+
+updateCartTotal();
+
+
+/* ----------------------------------------------------- Header Cart Section Ends -------------------------------------------------------- */
+
+
 /* ------------------------------------------------------ Navbar Section Starts -------------------------------------------------------- */
 
 function createNavbar() {
@@ -90,6 +220,57 @@ createNavbar();
 boldCurrentPageName();
 
 /* ------------------------------------------------------ Navbar Section Ends -------------------------------------------------------- */
+
+
+/* --------------------------------------------------- Message div section Starts ----------------------------------------------------- */
+
+// Error message div
+var errorMessageDiv = document.createElement('div');
+errorMessageDiv.innerHTML = `
+
+<div class="error-message-div">
+
+    <img src = "/icons/error-circle.png" alt="" height = "60%">
+    <p class="error-message-text">Error Message box</p>
+
+</div>
+
+`;
+
+document.body.appendChild(errorMessageDiv);
+
+// Success message div
+var successMessageDiv = document.createElement('div');
+successMessageDiv.innerHTML = `
+
+<div class="success-message-div">
+
+    <img src = "/icons/success.png" alt="" height = "60%">
+    <p class="success-message-text">Success Message box</p>
+
+</div>
+
+`;
+
+document.body.appendChild(successMessageDiv);
+
+// Warning message div
+var warningMessageDiv = document.createElement('div');
+warningMessageDiv.innerHTML = `
+
+<div class="warning-message-div">
+
+    <img src = "/icons/warning2.png" alt="" height = "50%">
+    <p class="warning-message-text">Success Message box</p>
+
+</div>
+
+`;
+
+document.body.appendChild(warningMessageDiv);
+
+
+/* --------------------------------------------------- Message div section ends ------------------------------------------------------- */
 
 
 /* ------------------------------------------------------ Footer Section Starts -------------------------------------------------------- */
@@ -208,7 +389,7 @@ document.querySelector('footer').innerHTML = `
 
 
 
-/* ------------------------------------------------------ Responsivness Section Starts -------------------------------------------------------- */
+/* --------------------------------------------------- Responsivness Section Starts ------------------------------------------------------ */
 
 function adjustStyles() {
 
@@ -260,7 +441,7 @@ window.onload = function () {
 adjustStyles();
 window.addEventListener('resize', adjustStyles);
 
-/* ------------------------------------------------------ Responsivness Section Ends -------------------------------------------------------- */
+/* ---------------------------------------------------- Responsivness Section Ends ------------------------------------------------------ */
 
 
 /* ------------------------------------------------------ Login Section Starts -------------------------------------------------------- */
@@ -307,12 +488,12 @@ function loginHandler() {
                     <div class="login-input-div">
     
                         <img src="../icons/locked.png" height="16px" alt="">
-                        <input type="text" name="login-password" class="login-input-field" placeholder="Password">
+                        <input type="password" name="login-password" class="login-input-field" placeholder="Password">
     
                     </div>
     
                     <div class="login-remember-checkbox-div">
-                        <input type="checkbox" name="" id=""> <span>Remember me</span>
+                        <input type="checkbox" name="" checked> <span>Remember me</span>
                     </div>
     
                     <div class="login-button-div">
@@ -342,7 +523,6 @@ function loginHandler() {
     
     </section>
     
-    
     `;
 
         var footerSection = document.querySelector('footer');
@@ -356,22 +536,46 @@ function loginHandler() {
 // when the username and password is entered and login button is pressed
 function signIn() {
 
-    const username = "admin";
-    const password = "admin";
+    const username = "user";
+    const password = "user";
 
     // take entered username and password from the login form
     var enteredUsername = document.forms["login-form"]["login-username"].value;
     var enteredPassword = document.forms["login-form"]["login-password"].value;
 
-    if (enteredUsername === username && enteredPassword === password) {
+    if (enteredUsername === username) {
 
-        loggedIn = "true";
-        localStorage.setItem("loggedIn", "true");
-        location.reload();
+        if (enteredPassword === password) {
 
+            loggedIn = "true";
+            localStorage.setItem("loggedIn", "true");
+
+            document.querySelector('.success-message-text').innerHTML = 'You have successully signed in.';
+            document.querySelector('.success-message-div').style.display = 'flex';
+
+            setTimeout(() => {
+                location.reload();
+            }, 600);
+
+        } else {
+
+            document.querySelector('.error-message-text').innerHTML = 'Invalid password!';
+            document.querySelector('.error-message-div').style.display = 'flex';
+
+            setTimeout(() => {
+                document.querySelector('.error-message-div').style.display = 'none';
+            }, 3000);
+        }
     }
     else {
-        alert("Wrong Credentials");
+
+        document.querySelector('.error-message-text').innerHTML = "User '" + enteredUsername + "' does not exist!";
+        document.querySelector('.error-message-div').style.display = 'flex';
+
+        setTimeout(() => {
+            document.querySelector('.error-message-div').style.display = 'none';
+        }, 3000);
+
     }
 
 }
@@ -393,7 +597,9 @@ if (typeof (Storage) !== "undefined") {
     }
     else if (pastLoggedIn == "true") {
 
-        loggedIn = true;
+        loggedIn = "true";
+
+        document.querySelector('.header-login').removeAttribute('onclick');
 
         document.querySelector('.header-login>span').innerHTML = 'Sign out';
 
@@ -401,7 +607,14 @@ if (typeof (Storage) !== "undefined") {
 
             loggedIn = "false";
             localStorage.setItem("loggedIn", "false");
-            location.reload();
+            localStorage.clear();
+
+            document.querySelector('.warning-message-text').innerHTML = 'You have signed out of your account.';
+            document.querySelector('.warning-message-div').style.display = 'flex';
+
+            setTimeout(() => {
+                location.reload();
+            }, 1500);
 
         });
 
@@ -412,3 +625,32 @@ if (typeof (Storage) !== "undefined") {
 }
 
 /* ------------------------------------------------------ Login Section Ends -------------------------------------------------------- */
+
+
+/* -------------------------------------------------- Product inner Section Starts----------------------------------------------- */
+
+function buyNow() {
+
+    if (loggedIn == "true") {
+
+        document.querySelector(".success-message-text").innerHTML = `Congratulations! Your order has been placed. `;
+        document.querySelector(".success-message-div").style.display = 'flex'
+
+        setTimeout(function () {
+            document.querySelector(".success-message-div").style.display = 'none'
+        }, 3000);
+
+    } else {
+
+        document.querySelector(".warning-message-text").innerHTML = `Please sign in to place your order. `;
+        document.querySelector(".warning-message-div").style.display = 'flex'
+
+        setTimeout(function () {
+            document.querySelector(".warning-message-div").style.display = 'none'
+        }, 3000);
+
+    }
+
+}
+
+/* -------------------------------------------------- Product inner Section Ends ----------------------------------------------- */

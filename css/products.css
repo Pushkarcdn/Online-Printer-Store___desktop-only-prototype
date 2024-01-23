@@ -157,7 +157,7 @@ html {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
 
-input[type="checkbox"] {
+.compare-div input[type="checkbox"] {
     transform: scale(1.8);
 }
 
