@@ -94,7 +94,7 @@ function createHeader() {
                         
             </div>
 
-            <div class="header-cart">
+            <div class="header-cart" onclick="openCart()">
                 <img src="../icons/cart.png" alt="" height="20px">
                 <span>Cart (<span id="cart-items-amount">0</span>)</span>
             </div>
@@ -174,6 +174,7 @@ function updateCart() {
     }
 
     updateCartTotal();
+    updateCartDetails();
 
 }
 
@@ -671,3 +672,116 @@ function buyNow() {
 }
 
 /* -------------------------------------------------- Product inner Section Ends ----------------------------------------------- */
+
+
+/* ------------------------------------------------------ Cart detailed Section Starts -------------------------------------------------------- */
+
+var cartSection = document.createElement('div');
+cartSection.id = 'cart-detailed-section';
+
+cartSection.innerHTML = `
+
+<div class="cart-detailed-inner-div">
+
+<div class="cart-detailed-upper">
+
+    <div class="cart-detailed-upper-left">
+        <img src="/icons/cart.png" height="22px" alt="">
+        <span class="cart-detailed-title">Cart</span>
+    </div>
+
+    <img src="/icons/cross.png" height="35px" alt="" onclick="closeCart()">
+
+</div>
+
+<hr>
+
+<div class="cart-detailed-products-list-div">
+
+<div>
+</div>
+
+</div>
+
+</div>
+
+
+`;
+
+document.body.appendChild(cartSection);
+
+
+function updateCartDetails() {
+
+    document.querySelector('.cart-detailed-products-list-div').innerHTML = '';
+
+    for (i = 0; i < cartItems.length; i++) {
+
+        createCartDetailedItem(i);
+
+    }
+
+}
+
+function createCartDetailedItem(i) {
+
+    var j = cartItems[i];
+
+    var image = 'canon' + j + '.png';
+    var name = productsName[j];
+    var price = productsPrice[j];
+    var quantity = cartItemsQuantity[i];
+
+    var newCartItem = document.createElement('div');
+    newCartItem.innerHTML = `
+    
+    <div class="cart-product">
+
+            <div class="cart-product-detail-div">
+
+                <img src="/images/products_images/${image}"  height="75px" alt="">
+
+                <div class="cart-product-detail-inner">
+
+                    <span class="cart-product-name">${name}</span>
+                    <span class="cart-product-brand">Canon</span>
+
+                </div>
+
+            </div>
+
+            <span class="cart-product-price">रु ${price - (50 / 100 * price)}</span>
+
+            <div class="cart-product-quantity-div">
+                <span>-</span>
+                <span class="cart-product-quantity">${quantity}</span>
+                <span>+</span>
+            </div>
+
+        </div>
+
+
+    
+    `;
+
+    // document.querySelector('.cart-detailed-products-list-div').appendChild(newCartItem);
+
+    var firstItem = document.querySelector('.cart-detailed-products-list-div>div:first-child');
+
+    document.querySelector('.cart-detailed-products-list-div').insertBefore(newCartItem, firstItem);
+
+}
+
+
+function openCart() {
+    // document.querySelector('#cart-detailed-section').style.display='flex';
+    document.querySelector('#cart-detailed-section').style.right = '0px';
+
+}
+
+function closeCart() {
+    document.querySelector('#cart-detailed-section').style.right = '-550px';
+}
+
+
+updateCartDetails();

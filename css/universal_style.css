@@ -143,9 +143,9 @@ header {
 }
 
 .header-logged-in-div {
-    padding: 4px 15px 4px 8px; 
+    padding: 4px 15px 4px 8px;
     border-radius: 5px;
-    box-shadow: rgba(147, 147, 147, 0.2) 0px 1px 15px 0px; 
+    box-shadow: rgba(147, 147, 147, 0.2) 0px 1px 15px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,7 +177,7 @@ header {
     /* box-shadow: rgba(147, 147, 147, 0.3) 0px 1px 15px 0px; */
 }
 
-.header-sign-out-text:hover{
+.header-sign-out-text:hover {
     color: #bd8448;
 }
 
@@ -612,3 +612,91 @@ footer>hr {
 }
 
 /* ------------------------------------------------------ Login Section Ends -------------------------------------------------------- */
+
+
+/* ------------------------------------------------------ Cart detailed Section Starts -------------------------------------------------------- */
+
+#cart-detailed-section {
+    box-shadow: rgba(147, 147, 147, 0.5) 0px 1px 15px 1px;
+    background-color: #f9f9f9;
+    height: 100%;
+    width: 500px;
+    padding: 10px 30px;
+    position: fixed;
+    /* right: 0px; */
+    right: -550px;
+    bottom: 0px;
+    z-index: 10;
+    transition: all 0.4s ease-in-out;
+}
+
+.cart-detailed-upper {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cart-detailed-upper-left {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red ; */
+    gap: 12px;
+}
+
+.cart-detailed-title {
+    font-size: 18px;
+    margin-bottom: -2px;
+}
+
+.cart-detailed-products-list-div {
+    width: 100%;
+    height: 500px;
+    padding: 0px 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    white-space: wrap;
+}
+
+.cart-product {
+    width: 100%;
+    height: 100px;
+    padding: 2px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(147, 147, 147, 0.2) 0px 1px 15px 1px;
+    border-radius: 4px;
+}
+
+.cart-product-detail-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-product-detail-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-product-name {
+    /* border: 2px solid; */
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.cart-product-brand {
+    font-size: 12px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
