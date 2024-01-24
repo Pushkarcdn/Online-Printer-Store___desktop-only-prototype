@@ -548,8 +548,8 @@ function loginHandler() {
 // when the username and password is entered and login button is pressed
 function signIn() {
 
-    const username = "user";
-    const password = "user";
+    const username = "admin";
+    const password = "admin";
 
     // take entered username and password from the login form
     var enteredUsername = document.forms["login-form"]["login-username"].value;
