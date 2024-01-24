@@ -683,25 +683,41 @@ cartSection.innerHTML = `
 
 <div class="cart-detailed-inner-div">
 
-<div class="cart-detailed-upper">
+    <div class="cart-detailed-upper">
 
-    <div class="cart-detailed-upper-left">
-        <img src="/icons/cart.png" height="22px" alt="">
-        <span class="cart-detailed-title">Cart</span>
+        <div class="cart-detailed-upper-left">
+            <img src="/icons/cart.png" height="22px" alt="">
+            <span class="cart-detailed-title">Cart</span>
+        </div>
+
+        <img src="/icons/cross.png" height="35px" alt="" onclick="closeCart()">
+
     </div>
 
-    <img src="/icons/cross.png" height="35px" alt="" onclick="closeCart()">
+    <hr>
 
-</div>
+    <div class="cart-detailed-products-list-div">
 
-<hr>
+        <div></div>
 
-<div class="cart-detailed-products-list-div">
+    </div>
 
-<div>
-</div>
+    <div class = "cart-detailed-lower">
 
-</div>
+        <hr class="cart-detailed-lower-hr"> 
+    
+        <div class = "cart-detailed-lower-left">
+        
+            <span class = "cart-total-text"> Total </span>
+            <span class = "cart-total-price"></span>
+        
+        </div>
+
+        <div class="cart-detailed-buy-button" onclick="buyNow()"> 
+            Place order
+        </div>
+    
+    </div>
 
 </div>
 
@@ -713,6 +729,8 @@ document.body.appendChild(cartSection);
 
 function updateCartDetails() {
 
+    cartTotalPrice = 0;
+
     document.querySelector('.cart-detailed-products-list-div').innerHTML = '';
 
     for (i = 0; i < cartItems.length; i++) {
@@ -720,6 +738,28 @@ function updateCartDetails() {
         createCartDetailedItem(i);
 
     }
+
+    if (cartItems.length == 0) {
+
+        document.querySelector('.cart-detailed-products-list-div').innerHTML = `
+        
+            <p class="empty-cart-text"> Your cart is empty. <br> Continue shopping. </p>        
+        
+        `;
+
+        document.querySelector('.cart-detailed-lower').style.display = 'none';
+
+        document.querySelector('.cart-detailed-products-list-div').style.overflowY = 'hidden';
+
+    } else {
+
+        document.querySelector('.cart-detailed-lower').style.display = 'flex';
+
+        document.querySelector('.cart-detailed-products-list-div').style.overflowY = 'auto';
+
+    }
+
+    document.querySelector('.cart-total-price').innerHTML = 'रु ' + cartTotalPrice;
 
 }
 
@@ -730,7 +770,12 @@ function createCartDetailedItem(i) {
     var image = 'canon' + j + '.png';
     var name = productsName[j];
     var price = productsPrice[j];
+    price = price - (50 / 100 * price);
     var quantity = cartItemsQuantity[i];
+
+    for (i = 1; i <= quantity; i++) {
+        cartTotalPrice = cartTotalPrice + price;
+    }
 
     var newCartItem = document.createElement('div');
     newCartItem.innerHTML = `
@@ -750,7 +795,7 @@ function createCartDetailedItem(i) {
 
             </div>
 
-            <span class="cart-product-price">रु ${price - (50 / 100 * price)}</span>
+            <span class="cart-product-price">रु ${price}</span>
 
             <div class="cart-product-quantity-div">
                 <span>-</span>
@@ -774,14 +819,38 @@ function createCartDetailedItem(i) {
 
 
 function openCart() {
-    // document.querySelector('#cart-detailed-section').style.display='flex';
+
     document.querySelector('#cart-detailed-section').style.right = '0px';
+
+    setTimeout(function () {
+
+        document.addEventListener('click', clickOutsideHandler);
+
+    }, 500);
+
+}
+
+var clickOutsideHandler = clickOutside;
+
+function clickOutside(event) {
+
+    var cartDiv = document.querySelector('#cart-detailed-section');
+    const isClickInside = cartDiv.contains(event.target);
+
+    if (!isClickInside) {
+
+        closeCart();
+
+    }
 
 }
 
 function closeCart() {
-    document.querySelector('#cart-detailed-section').style.right = '-550px';
+
+    document.querySelector('#cart-detailed-section').style.right = '-600px';
+    document.removeEventListener('click', clickOutsideHandler);
+
 }
 
-
+var cartTotalPrice = 0;
 updateCartDetails();
