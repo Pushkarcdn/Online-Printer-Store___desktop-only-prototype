@@ -24,8 +24,8 @@ body {
 }
 
 .about-section-cover-div {
-    background-image: url('../images/about_page_images/pushkar-cover2.jpg');
-    background-position: center;
+    background-image: url('../images/about_page_images/pushkar-cover.jpg');
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
