@@ -1,0 +1,281 @@
+body {
+    background-color: #fafafa;
+}
+
+#about-left-section {
+    /* border: 2px solid red; */
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    left: 0px;
+    /* z-index: 10; */
+}
+
+#about-section {
+    /* border: 2px solid blueviolet; */
+    /* height: 100vh; */
+    width: calc(100% - 300px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    right: 0px;
+    padding: 20px 10px;
+}
+
+.about-section-cover-div {
+    background-image: url('../images/about_page_images/pushkar-cover2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+.about-cover-image {
+    height: 180px;
+    position: absolute;
+    bottom: -50px;
+    left: 35px;
+    border: 4px solid white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.about-general-details-div1 {
+    padding: 70px 100px 25px 40px;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(147, 147, 147, 0.4) 0px 1px 15px 1px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.about-general-details-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section-detailed-name-div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-section-detailed-name {
+    font-size: 24px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.4px;
+}
+
+.about-section-detailed-bio-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    opacity: 0.95;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+}
+
+.about-section-detailed-contact-div {
+    padding: 10px 0px;
+    font-size: 15px;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+    /* line-height: 1.5; */
+}
+
+.about-section-detailed-bio-website {
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.about-section-detailed-bio-website:hover {
+    color: #978f5d;
+}
+
+.about-section-bio-email {
+    transition: all 0.25s ease;
+}
+
+.about-section-bio-email:hover {
+    color: #978f5d;
+}
+
+.about-section-bio-lower-div {
+    opacity: 0.75;
+}
+
+.about-section-bio-contact-text {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    color: #06509a;
+}
+
+.about-section-bio-buttons-div {
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+}
+
+.about-section-bio-hire {
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A66C2;
+    color: white;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.about-section-bio-skills {
+    border: 1.8px solid #0A66C2;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0A66C2;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.about-section-bio-contact {
+    border: 1.8px solid rgba(0, 0, 0, 0.4);
+    height: 30px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    letter-spacing: 1px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.about-section-inner-div {
+    margin-top: 20px;
+    box-shadow: rgba(147, 147, 147, 0.4) 0px 1px 15px 1px;
+    border-radius: 13px;
+    background-color: white;
+    padding: 40px 45px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-section-inner-div-left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-section-inner-div-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-section-inner-heading {
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    /* font-weight: 700; */
+}
+
+.about-section-about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0.92;
+    letter-spacing: 0.4px;
+}
+
+.about-section-about-inner>p {
+    line-height: 1.75;
+}
+
+.about-section-about-div-website-link {
+    transition: all 0.25s ease;
+    border-bottom: 1px solid gray;
+    color: #09417a;
+}
+
+.about-section-about-div-website-link:hover {
+    color: #0054c3;
+}
+
+.about-section-personal-details-div {
+
+    flex-direction: row;
+
+}
+
+.about-section-personal-details-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-section-social-link-icons-div {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-section-social-link-icons-div>img {
+    transition: all 0.3s ease;
+}
+
+.about-section-social-link-icons-div>img:hover {
+    scale: 1.075;
+}
+
+.about-section-round-lists-div {
+    padding: 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.about-section-round-list {
+    border: 1.8px solid gray;
+    border-radius: 35px;
+    height: 50px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.about-section-round-list:hover {
+    background-color: rgb(78, 78, 78);
+    color: white;
+}
+
+.about-section-round-lists-div-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
