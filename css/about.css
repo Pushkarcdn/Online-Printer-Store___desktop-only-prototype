@@ -332,3 +332,8 @@ a {
     flex-direction: column;
     gap: 30px;
 }
+
+.contributions-list {
+    line-height: 2;
+    padding: 5px 0px 0px 40px;
+}
