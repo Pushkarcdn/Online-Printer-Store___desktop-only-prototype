@@ -32,13 +32,66 @@
         <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
     </nav>
 
-    <section id="about-left-section">
+    <aside id="about-left-section">
 
-    </section>
+        <div class="about-left-inner-list-div">
 
-    <section id="about-section">
+            <div class="about-left-inner-div" onclick="aboutDetails(1)" id="about-pushkar">
 
-        <div class="about-section-cover-div">
+                <img src="../images/login_images/pushkar.png" height="100px" alt="">
+
+                <div class="about-left-inner-right">
+                    <p class="about-left-inner-name-line"><span>Pushkar Kumar Sah</span> <img
+                            src="../icons/verified2.png" height="25px" alt=""></p>
+
+                    <p class="about-left-inner-work">Team Leader</p>
+                    <p class="about-left-inner-work">Full Stack Developer</p>
+                    <p class="about-left-inner-work">www.pushkar.com.np</p>
+                </div>
+
+            </div>
+
+
+            <div class="about-left-inner-div" onclick="aboutDetails(2)" id="about-shreya">
+
+                <img src="../images/about_page_images/shreya.jpg" height="100px" alt="" style="border-radius: 50%;">
+
+                <div class="about-left-inner-right">
+                    <p class="about-left-inner-name-line"><span>Shreya Shah</span> <img src="../icons/verified2.png"
+                            height="25px" alt=""></p>
+
+                    <p class="about-left-inner-work">Team Member</p>
+
+                </div>
+
+            </div>
+
+            <div class="about-left-inner-div" onclick="aboutDetails(3)" id="about-brijal">
+
+                <img src="../images/about_page_images/brijal.jpg" height="100px" alt="" style="border-radius: 50%;">
+
+                <div class="about-left-inner-right">
+
+                    <p class="about-left-inner-name-line"><span>Brijal Maharjan</span> <img src="../icons/verified2.png"
+                            height="25px" alt=""></p>
+
+                    <p class="about-left-inner-work">Team Member</p>
+                    <p class="about-left-inner-work">Businessman</p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- ------------------------------------ Pushkar Details ------------------------------------- -->
+
+    <section class="about-section" id="about-section-pushkar">
+
+        <div class="about-section-cover-div" style="background-image: url('../images/about_page_images/pushkar-cover.jpg');">
 
             <img src="../images/login_images/pushkar.png" alt="" class="about-cover-image">
 
@@ -50,6 +103,525 @@
 
                 <div class="about-section-detailed-name-div">
                     <span class="about-section-detailed-name">Pushkar Kumar Sah</span> <img src="../icons/verified.png"
+                        height="30px" alt="">
+                </div>
+
+                <div class="about-section-detailed-bio-div">
+                    <p>Full Stack Developer</p>
+                    <a href="https://pushkar.com.np" target="_blank"
+                        class="about-section-detailed-bio-website">www.pushkar.com.np</a>
+                </div>
+
+                <div class="about-section-detailed-contact-div">
+                    <p>Persuing Bachelors in Computing at LMU.</p>
+                    <p>Contact: <span class="about-section-bio-email">admin@pushkar.com.np</span></p>
+                </div>
+
+                <div class="about-section-bio-lower-div">
+                    <span>Kathmandu, Bagmati, Nepal</span>
+                    <a href="#contact-p" class="about-section-bio-contact-text">&nbsp;Contact info</a>
+                </div>
+
+                <div class="about-section-bio-buttons-div">
+
+                    <div class="about-section-bio-hire">
+                        <a href="https://pushkar.com.np" target="_blank"><span>Hire</span></a>
+                    </div>
+
+                    <div class="about-section-bio-skills">
+                        <a href="#p-skills"> <span>Skills</span> </a>
+                    </div>
+
+                    <div class="about-section-bio-contact">
+                        <a href="https://projects.pushkar.com.np" target="_blank"><span>Projects</span></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-general-details-university-card">
+                <img src="../images/about_page_images/lmu-logo.svg" height="40px" alt="">
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div">
+
+            <p class="about-section-inner-heading">About</p>
+
+            <div class="about-section-about-inner">
+
+                <p>I'm Pushkar, a Full Stack Developer with a passion for turning innovative ideas into high-impact
+                    digital solutions.
+                </p>
+
+                <p>
+                    Portfolio: <span class="about-section-about-div-website-link">www.pushkar.com.np</span>
+                </p>
+                <p>
+                    With a strong foundation in Python, JavaScript, JQuery, PHP, SQL, Git, I bring expertise in the
+                    end-to-end development of web applications. My commitment to code quality and user-centric design
+                    has driven successful projects in diverse industries.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div about-section-personal-details-div" id="contact-p">
+
+            <div class="about-section-inner-div-left">
+
+                <p class="about-section-inner-heading">Personal Details</p>
+
+                <div class="about-section-about-inner">
+
+                    <!-- <p>Here are some of my details:</p> -->
+
+                    <div class="about-section-personal-details-inner">
+
+                        <p>Full name: Pushkar Kumar Sah</p>
+
+                        <p>DOB: 15 Feb 2005 (A.D)</p>
+
+                        <p>Father's name: Mr. Navin Sah (Businessman)</p>
+
+                        <p>Mother's name: Mrs. Kiran Sah</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-section-inner-div-right">
+
+                <p class="about-section-inner-heading">Contact info</p>
+
+                <div class="about-section-personal-details-inner">
+
+                    <p>Email: pushkarcdn@gmail.com</p>
+                    <p>Work-email: admin@pushkar.com.np</p>
+                    <p>Phone: +977 9844187887</p>
+                    <p>Secondary: +977 9844187887</p>
+
+                    <div class="about-section-social-link-icons-div">
+
+                        <img src="../icons/linkedin2.png" height="26px" alt="">
+                        <img src="../icons/github2.png" height="26px" alt="">
+                        <img src="../icons/facebook2.png" height="26px" alt="">
+                        <img src="../icons/instagram2.png" height="26px" alt="">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div" id="p-skills">
+
+            <p class="about-section-inner-heading">Skills</p>
+
+            <div class="about-section-round-lists-div">
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Python
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Java
+                    </div>
+
+                    <div class="about-section-round-list">
+                        C
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Leadership
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        JavaScript
+                    </div>
+
+                    <div class="about-section-round-list">
+                        JQuery
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Git
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Problem Solving
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Node.js
+                    </div>
+
+                    <div class="about-section-round-list">
+                        PHP
+                    </div>
+
+                    <div class="about-section-round-list">
+                        CSS
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Communication
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Express.js
+                    </div>
+
+                    <div class="about-section-round-list">
+                        SQL
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Bootstrap
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div">
+
+            <p class="about-section-inner-heading">Education</p>
+
+            <div class="about-section-about-inner">
+
+                <p>
+                    <b>iii. Bachelors: </b>
+                    <br>
+                    Institution: Islington College, Kathmandu, Nepal
+                    <br>
+                    Affiliated to: London Metropolitan University, UK
+                    <br>
+                    Course: Bsc. (Hons) Computing
+                    <br>
+                    Enrolled Year: 2023 A.D
+                    <br>
+                    Duration: 3 Years
+                </p>
+
+                <p>
+                    <b>ii. Higher Secondary Education (Class 11-12): </b>
+                    <br>
+                    Institution: Dhanusha Science Campus, Nepal Education Board (NEB)
+                    <br>
+                    Completion Year: 2023 A.D
+                </p>
+
+                <p>
+                    <b>i. High School (Class 10): </b>
+                    <br>
+                    Institution: Siddhartha Shishu Sadan, Dhanusha, Nepal
+                    <br>
+                    Completion Year: 2021 A.D
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ------------------------------Shreya Details--------------------------------- -->
+
+    <section class="about-section" id="about-section-shreya">
+
+        <div class="about-section-cover-div" style="background-image: url('../images/about_page_images/cover.jpg');">
+
+            <img src="../images/about_page_images/shreya2.jpg" alt="" class="about-cover-image">
+
+        </div>
+
+        <div class="about-general-details-div1">
+
+            <div class="about-general-details-left">
+
+                <div class="about-section-detailed-name-div">
+                    <span class="about-section-detailed-name">Shreya Shah</span> <img src="../icons/verified.png"
+                        height="30px" alt="">
+                </div>
+
+                <div class="about-section-detailed-bio-div">
+                    <p>Student</p>
+                </div>
+
+                <div class="about-section-detailed-contact-div">
+                    <p> Currently in Bachelors (Computing) at LMU.</p>
+                    <p>Contact: <span class="about-section-bio-email">shreyashah@gmail.com</span></p>
+                </div>
+
+                <div class="about-section-bio-lower-div">
+                    <span>Kathmandu, Bagmati, Nepal</span>
+                    <a href="#about-section" class="about-section-bio-contact-text">&nbsp;Contact info</a>
+                </div>
+
+                <!-- <div class="about-section-bio-buttons-div">
+
+                    <div class="about-section-bio-hire">
+                        <span>Hire</span>
+                    </div>
+
+                    <div class="about-section-bio-skills">
+                        <span>Skills</span>
+                    </div>
+
+                    <div class="about-section-bio-contact">
+                        <span>Projects</span>
+                    </div>
+
+                </div> -->
+
+            </div>
+
+            <div class="about-general-details-university-card">
+                <img src="../images/about_page_images/lmu-logo.svg" height="40px" alt="">
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div">
+
+            <p class="about-section-inner-heading">About</p>
+
+            <div class="about-section-about-inner">
+
+                <p>I'm Shreya, student at Islington College, Kathmandu, Nepal
+                </p>
+
+                <p>
+                    Studying Bsc.(Computing)
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div about-section-personal-details-div">
+
+            <div class="about-section-inner-div-left">
+
+                <p class="about-section-inner-heading">Personal Details</p>
+
+                <div class="about-section-about-inner">
+
+                    <!-- <p>Here are some of my details:</p> -->
+
+                    <div class="about-section-personal-details-inner">
+
+                        <p>Full name: Pushkar Kumar Sah</p>
+
+                        <p>DOB: 15 / 01 / 2005 (A.D) / 02 / 10 / 2061 (B.S)</p>
+
+                        <p>Father's name: Mr. Suresh Shah</p>
+
+                        <p>Mother's name: Mrs. Sabita Shah</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-section-inner-div-right">
+
+                <p class="about-section-inner-heading">Contact info</p>
+
+                <div class="about-section-personal-details-inner">
+
+                    <p>Email: shreyashah@gmail.com</p>
+                    <p>College-email: np01cp41xxxx@islingtoncollege.edu.np</p>
+                    <p>Phone: +977 9812121212</p>
+
+                    <div class="about-section-social-link-icons-div">
+
+                        <img src="../icons/linkedin2.png" height="26px" alt="">
+                        <img src="../icons/github2.png" height="26px" alt="">
+                        <img src="../icons/facebook2.png" height="26px" alt="">
+                        <img src="../icons/instagram2.png" height="26px" alt="">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div">
+
+            <p class="about-section-inner-heading">Skills</p>
+
+            <div class="about-section-round-lists-div">
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Python
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Java
+                    </div>
+
+                    <div class="about-section-round-list">
+                        C
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Leadership
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        JavaScript
+                    </div>
+
+                    <div class="about-section-round-list">
+                        JQuery
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Git
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Problem Solving
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Node.js
+                    </div>
+
+                    <div class="about-section-round-list">
+                        PHP
+                    </div>
+
+                    <div class="about-section-round-list">
+                        CSS
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Communication
+                    </div>
+
+                </div>
+
+                <div class="about-section-round-lists-div-inner">
+
+                    <div class="about-section-round-list">
+                        Express.js
+                    </div>
+
+                    <div class="about-section-round-list">
+                        SQL
+                    </div>
+
+                    <div class="about-section-round-list">
+                        Bootstrap
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="about-section-inner-div">
+
+            <p class="about-section-inner-heading">Education</p>
+
+            <div class="about-section-about-inner">
+
+                <p>
+                    <b>iii. Bachelors: </b>
+                    <br>
+                    Institution: Islington College, Kathmandu, Nepal
+                    <br>
+                    Affiliated to: London Metropolitan University, UK
+                    <br>
+                    Course: Bsc. (Hons) Computing
+                    <br>
+                    Enrolled Year: 2023 A.D
+                    <br>
+                    Duration: 3 Years
+                </p>
+
+                <p>
+                    <b>ii. Higher Secondary Education (Class 11-12): </b>
+                    <br>
+                    Institution: Dhanusha Science Campus, Nepal Education Board (NEB)
+                    <br>
+                    Completion Year: 2023 A.D
+                </p>
+
+                <p>
+                    <b>i. High School (Class 10): </b>
+                    <br>
+                    Institution: Siddhartha Shishu Sadan, Dhanusha, Nepal
+                    <br>
+                    Completion Year: 2021 A.D
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ------------------------------- Brijal details ------------------------------------- -->
+
+    <section class="about-section" id="about-section-brijal">
+
+        <div class="about-section-cover-div" style="background-image: url('../images/about_page_images/cover.jpg');">
+
+            <img src="../images/about_page_images/brijal.jpg" alt="" class="about-cover-image">
+
+        </div>
+
+        <div class="about-general-details-div1">
+
+            <div class="about-general-details-left">
+
+                <div class="about-section-detailed-name-div">
+                    <span class="about-section-detailed-name">Brijal Maharjan</span> <img src="../icons/verified.png"
                         height="30px" alt="">
                 </div>
 
@@ -148,10 +720,9 @@
 
                 <div class="about-section-personal-details-inner">
 
-                    <p>Email: pushkarcdn@gmail.com</p>
-                    <p>Work-email: admin@pushkar.com.np</p>
-                    <p>Phone: +977 9844187887</p>
-                    <p>Secondary: +977 9844187887</p>
+                    <p>Email: azvenomop@gmail.com</p>
+                    <p>College-email: np01cp4a230276@islingtoncollege.edu.np</p>
+                    <p>Phone: +977 9861071229</p>
 
                     <div class="about-section-social-link-icons-div">
 

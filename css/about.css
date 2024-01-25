@@ -3,28 +3,62 @@ body {
 }
 
 #about-left-section {
-    /* border: 2px solid red; */
+    padding: 0px 20px 0px 10px;
     position: fixed;
-    height: 100%;
-    width: 300px;
-    left: 0px;
-    /* z-index: 10; */
+    top: 120px;
+    height: 80%;
+    width: 380px;
+    display: flex;
+    align-items: center;
 }
 
-#about-section {
-    /* border: 2px solid blueviolet; */
-    /* height: 100vh; */
-    width: calc(100% - 300px);
+.about-left-inner-list-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-left-inner-div {
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    box-shadow: rgba(147, 147, 147, 0.3) 0px 1px 15px 1px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+.about-left-current-person {
+    background: linear-gradient(to right, rgb(225, 225, 225), #fafafa);
+    box-shadow: none;
+    /* margin: 10px 0px 10px 0px; */
+    transform: translateX(10px);
+}
+
+.about-left-inner-name-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+}
+
+.about-left-inner-work {
+    font-size: 13px;
+}
+
+.about-section {
+    width: calc(100% - 380px);
     position: absolute;
     display: flex;
     flex-direction: column;
-    /* gap: 30px; */
     right: 0px;
-    padding: 20px 10px;
+    padding: 20px 10px 20px 0px;
 }
 
 .about-section-cover-div {
-    background-image: url('../images/about_page_images/pushkar-cover.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +109,6 @@ body {
 }
 
 .about-section-detailed-bio-div {
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +123,6 @@ body {
     font-size: 15px;
     opacity: 0.9;
     letter-spacing: 0.3px;
-    /* line-height: 1.5; */
 }
 
 .about-section-detailed-bio-website {
@@ -129,6 +161,15 @@ body {
     gap: 20px;
 }
 
+.about-section-bio-hire a {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
 .about-section-bio-hire {
     /* border: 2px solid red; */
     height: 30px;
@@ -156,6 +197,10 @@ body {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
 
+.about-section-bio-skills a {
+    color: #0A66C2;
+}
+
 .about-section-bio-contact {
     border: 1.8px solid rgba(0, 0, 0, 0.4);
     height: 30px;
@@ -167,6 +212,11 @@ body {
     border-radius: 30px;
     letter-spacing: 1px;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+}
+
+.about-section-bio-contact a {
+    color: rgba(0, 0, 0, 0.8);
+    ;
 }
 
 .about-section-inner-div {
