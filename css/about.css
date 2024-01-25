@@ -2,6 +2,10 @@ body {
     background-color: #fafafa;
 }
 
+a {
+    text-decoration: none;
+}
+
 #about-left-section {
     padding: 0px 20px 0px 10px;
     position: fixed;
@@ -161,17 +165,7 @@ body {
     gap: 20px;
 }
 
-.about-section-bio-hire a {
-    text-decoration: none;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
 .about-section-bio-hire {
-    /* border: 2px solid red; */
     height: 30px;
     width: 80px;
     display: flex;
@@ -182,6 +176,11 @@ a {
     border-radius: 30px;
     letter-spacing: 1px;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.about-section-bio-hire:hover {
+    background-color: #09417a;
 }
 
 .about-section-bio-skills {
@@ -195,11 +194,14 @@ a {
     border-radius: 30px;
     letter-spacing: 1px;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
 }
 
-.about-section-bio-skills a {
-    color: #0A66C2;
+.about-section-bio-skills:hover {
+    background-color: #0A66C2;
+    color: white;
 }
+
 
 .about-section-bio-contact {
     border: 1.8px solid rgba(0, 0, 0, 0.4);
@@ -212,11 +214,12 @@ a {
     border-radius: 30px;
     letter-spacing: 1px;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
 }
 
-.about-section-bio-contact a {
-    color: rgba(0, 0, 0, 0.8);
-    ;
+.about-section-bio-contact:hover {
+    border: 1.8px solid #0A66C2;
+    color: #0A66C2;
 }
 
 .about-section-inner-div {
@@ -232,14 +235,14 @@ a {
 }
 
 .about-section-inner-div-left {
-    width: 65%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .about-section-inner-div-right {
-    width: 35%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -293,11 +296,11 @@ a {
     gap: 12px;
 }
 
-.about-section-social-link-icons-div>img {
+.about-section-social-link-icons-div>a>img {
     transition: all 0.3s ease;
 }
 
-.about-section-social-link-icons-div>img:hover {
+.about-section-social-link-icons-div>a>img:hover {
     scale: 1.075;
 }
 

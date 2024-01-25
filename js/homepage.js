@@ -7,7 +7,7 @@ function sliderNext() {
 
     sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSliderImages;
 
-    document.querySelector("#slider-images").style.transform = `translateX(-${window.innerWidth * sliderCurrentIndex}px)`;
+    document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
 
 }
 
@@ -15,9 +15,13 @@ function sliderPrevious() {
 
     sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSliderImages) % totalSliderImages;
 
-    document.querySelector("#slider-images").style.transform = `translateX(-${window.innerWidth * sliderCurrentIndex}px)`;
+    document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
 
 }
+
+setInterval(() => {
+    sliderNext();
+}, 3000);
 
 // --------------------------- Image slider section ends ------------------------------------------
 
@@ -151,10 +155,10 @@ for (let i = 0; i < productsName.length - 1; i++) {
 // ----------------------------- Top deals section starts --------------------------------------------
 
 for (let i = 2; i >= 0; i--) {
-    
+
     const productCard = createBestSellingSeries(i);
     document.getElementById('top-deal-products').appendChild(productCard);
-    
+
 }
 
 // ----------------------------- Top deals section ends --------------------------------------------

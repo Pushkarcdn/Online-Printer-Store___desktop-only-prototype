@@ -4,27 +4,34 @@ body {
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 /* -------------  Hero Section Starts ------------- */
 
 #hero-section {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #slider-container {
+    width: 100%;
     position: relative;
     overflow: hidden;
+    height: auto;
 }
 
 #slider-images {
+    width: 100%;
+    height: auto;
     display: flex;
     transition: transform 0.7s ease-in-out;
 }
 
 #slider-images>img {
+    height: auto;
     width: 100%;
     flex-shrink: 0;
     z-index: 0;
