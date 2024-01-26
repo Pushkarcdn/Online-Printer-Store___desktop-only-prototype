@@ -797,9 +797,9 @@ function createCartDetailedItem(i) {
             <span class="cart-product-price">रु ${price}</span>
 
             <div class="cart-product-quantity-div">
-                <span>-</span>
-                <span class="cart-product-quantity">${quantity}</span>
-                <span>+</span>
+                
+                <span class="cart-product-quantity">${quantity} &nbsp;&nbsp;&nbsp;</span>
+                
             </div>
 
         </div>
