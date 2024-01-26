@@ -4,6 +4,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    min-width: 300px;
 }
 
 #contact-section {
@@ -95,7 +96,7 @@ body {
     color: rgb(28, 75, 28);
 }
 
-#form-submitted-message >p{
+#form-submitted-message>p {
     font-size: 14px;
 }
 

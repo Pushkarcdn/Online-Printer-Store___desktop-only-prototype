@@ -9,12 +9,15 @@ function formValidate(event) {
     var message = document.forms["contactForm"]["Message"].value.trim();
 
     if (fname == "" || lname == "" || phone == "" || email == "" || message == "") {
+
         document.querySelector("#form-submitted-message>p").innerHTML = `Please fill out all the fields.`;
         document.querySelector("#form-submitted-message").style.display = "flex";
-    }
-    else {
+
+    } else {
+
         document.querySelector("#form-submitted-message>p").innerHTML = `Form submitted successfully.`;
         document.querySelector("#form-submitted-message").style.display = "flex";
+
     }
 
 }

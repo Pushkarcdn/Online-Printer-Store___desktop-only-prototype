@@ -21,7 +21,7 @@ function sliderPrevious() {
 
 setInterval(() => {
     sliderNext();
-}, 3000);
+}, 5000);
 
 // --------------------------- Image slider section ends ------------------------------------------
 
@@ -50,7 +50,7 @@ function createBestSellingSeries(i) {
                     class="top-product-old-price">${price}</span></p>
                 <p class="top-product-description">Color | Efficient <br> Heavy Load</p>
             </div>
-            <img src="/images/products_images/${image}.png" alt="" height="150px">
+            <img src="images/products_images/${image}.png" alt="" height="150px">
         </div>
 
     `
@@ -113,13 +113,13 @@ function createSliderProducts(i) {
 
             </div>
 
-            <img src="/images/products_images/${image}.png" alt="" width="170px"> 
+            <img src="images/products_images/${image}.png" alt="" width="170px"> 
 
             <div class="slider-product-lower">
 
                 <div>
                     <p class="product-name">${name}</p>
-                    <p class="product-rating"><img src="/icons/rating-star.png" alt="" height="10px">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber * 100 + 100))}) - ${Math.floor(randomNumber * 500 + 200)} Sold</p>
+                    <p class="product-rating"><img src="icons/rating-star.png" alt="" height="10px">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber * 100 + 100))}) - ${Math.floor(randomNumber * 500 + 200)} Sold</p>
                 </div>
 
                 <hr>
@@ -174,7 +174,7 @@ document.querySelector("#product-details-section").innerHTML = `
 
                 <div class="product-details-upper-left">
 
-                    <img src="/images/products_images/canon0.png" alt="" id="product-detail-image" width="100%">
+                    <img src="images/products_images/canon0.png" alt="" id="product-detail-image" width="100%">
 
                 </div>
 
@@ -197,16 +197,16 @@ document.querySelector("#product-details-section").innerHTML = `
                         Maximize productivity with cost-effective, energy-efficient printing. Elevate your workspace
                         now.</p>
 
-                    <p class="rating-details"> <img src="/icons/rating-star.png" height="10px" alt=""> 4.2/5 (153
+                    <p class="rating-details"> <img src="icons/rating-star.png" height="10px" alt=""> 4.2/5 (153
                         reviews) -
                         216 sold</p>
 
                     <div class="price-details">
                         <div>
 
-                            <span class="current-price">रु 19900</span>&nbsp;&nbsp;<span class="old-price"> रु 39900
-                            </span> &nbsp; <span class="discount-percent"> 50%
-                                off</span>
+                            <span class="current-price">रु 0</span>&nbsp;&nbsp;
+                            <span class="old-price-home old-price"> रु 0 </span> &nbsp; 
+                            <span class="discount-percent"> 50% off</span>
                         </div>
                         <p class="tax-details">Shipping and taxes extra</p>
                     </div>
@@ -220,12 +220,12 @@ document.querySelector("#product-details-section").innerHTML = `
                             <div class="product-quantity-div">1</div>
 
                             <div class="quantity-changing-buttons">
-                                <img src="/icons/up-arrow.png" alt="" height="10px" onclick="increaseQuantity()">
-                                <img src="/icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
+                                <img src="icons/up-arrow.png" alt="" height="10px" onclick="increaseQuantity()">
+                                <img src="icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
                             </div>
 
                             <div class="add-to-cart-div" onclick="updateCart()">
-                                <img src="/icons/electricity.png" height="20px" alt="">
+                                <img src="icons/electricity.png" height="20px" alt="">
                                 Add to cart
                             </div>
 
@@ -235,7 +235,7 @@ document.querySelector("#product-details-section").innerHTML = `
                     </div>
 
                     <div class="buy-now-button-div" onclick="buyNow()">
-                        <img src="/icons/electricity.png" width="20px" alt="">
+                        <img src="icons/electricity.png" width="20px" alt="">
                         <input type="button" value="Buy Now" class="">
                     </div>
 
@@ -249,7 +249,7 @@ document.querySelector("#product-details-section").innerHTML = `
 
             <div class="products-back-button-div" onclick="goBackToProducts()">
 
-                <img src="/icons/back.png" alt="" height="12px">
+                <img src="icons/back.png" alt="" height="12px">
                 <button id="goBackToProductsButton">Products</button>
 
             </div>
@@ -267,15 +267,18 @@ function createProductPage(i) {
     document.querySelector(".product-quantity-div").innerHTML = '1';
 
     document.querySelector("#product-title").innerHTML = productDetails.title;
-    document.querySelector(".old-price").innerHTML = productDetails.price;
 
-    document.querySelector('#product-detail-image').setAttribute("src", "/images/products_images/canon" + i + ".png")
+    document.querySelector('#product-detail-image').setAttribute("src", "images/products_images/canon" + i + ".png")
+
+    var oldPrice = productsPrice[i];
+
+    document.querySelector('.old-price-home').innerHTML = oldPrice;
 
     if (i == 18) {
-        document.querySelector(".current-price").innerHTML = "रु " + (productDetails.price - (36 / 100 * productDetails.price));
+        document.querySelector(".current-price").innerHTML = "रु " + (oldPrice - (36 / 100 * oldPrice));
     }
     else {
-        document.querySelector(".current-price").innerHTML = "रु " + (productDetails.price - (50 / 100 * productDetails.price));
+        document.querySelector(".current-price").innerHTML = "रु " + (oldPrice - (50 / 100 * oldPrice));
     }
 
     // Hide the products page and show the product details page
@@ -359,3 +362,68 @@ function goBackToProducts() {
 }
 
 // --------------------------- Products detailed section ends  ------------------------------------------
+
+
+
+// Function to be executed when the page is fully loaded 
+function onDocumentReady() {
+
+    // Select all img elements on the page
+    const imgElements = document.querySelectorAll('img');
+
+    // Loop through each img element
+    imgElements.forEach(img => {
+
+        // Get the current src attribute value
+        var src = img.getAttribute('src');
+
+        // Check if the src starts with a slash
+        if (src.startsWith('../')) {
+
+            // Remove the first 3 characters
+            src = src.slice(3);
+
+            // Update the src attribute with the modified value
+            img.setAttribute('src', src);
+
+        }
+
+    });
+
+    /*
+    The common path link of images with relative link '../images/' (defined in universal.js)
+    which is written for header & footer of all the pages, is giving error on the homepage.
+    The error is fixed by, running a function which changes '../images/' to 'images/'
+    But the console shows error as 'file not found' for images.
+    So, the console is cleared here:
+    */
+    console.clear();  // (only for index.html)
+
+    console.log("\n Message from Pushkar: \n\n The common path link of images and anchor tags with relative link '../images/' (defined in universal.js) \n which is written for header & footer of all the pages, is giving error on the homepage. \n The error is fixed by running a function which changes '../images/' to 'images/' \n But the console shows error as 'file not found' for images. \n So, the console is cleared intentionally here.");
+
+    // // Select all img elements on the page
+    const allAnchorTags = document.querySelectorAll('a');
+
+    // Loop through each img element
+    allAnchorTags.forEach(tags => {
+
+        // Get the current src attribute value
+        var link = tags.getAttribute('href');
+
+        // Check if the href starts with a slash
+        if (link.startsWith('../')) {
+
+            // Remove the first 3 characters
+            link = link.slice(3);
+
+            // Update the src attribute with the modified value
+            tags.setAttribute('href', link);
+
+        }
+
+    });
+
+}
+
+// running the onDocumentReady() function once the page is fully loaded
+window.onload = onDocumentReady();

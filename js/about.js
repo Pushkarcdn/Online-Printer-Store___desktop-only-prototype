@@ -2,7 +2,11 @@ const pushkarCard = document.querySelector('#about-pushkar');
 const shreyaCard = document.querySelector('#about-shreya');
 const brijalCard = document.querySelector('#about-brijal');
 
+var currentPerson = 0;
+
 function aboutDetails(person) {
+
+    currentPerson = person;
 
     window.scrollTo({
         top: 0,

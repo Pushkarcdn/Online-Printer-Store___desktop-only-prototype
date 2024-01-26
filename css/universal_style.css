@@ -203,10 +203,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 17px 15px;
     gap: 20px;
     position: sticky;
-    top: 0;
+    top: -2px;
     z-index: 3;
     box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
 }

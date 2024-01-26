@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 1000px;
 }
 
 /* -------------  Hero Section Starts ------------- */
@@ -366,7 +367,7 @@ body {
 
 .showcase-premium-product {
     background-color: white;
-    height: 500px;
+    /* height: 500px; */
     width: 95%;
     display: flex;
     justify-content: center;
