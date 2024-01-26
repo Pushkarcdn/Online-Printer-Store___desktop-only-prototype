@@ -1,5 +1,10 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fafafa;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -336,4 +341,76 @@ a {
 .contributions-list {
     line-height: 2;
     padding: 5px 0px 0px 40px;
+}
+
+.about-section-form-div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.about-section-form-div-inner {
+    display: flex;
+}
+
+.about-section-form-div-left {
+    /* border: 2px solid red; */
+    width: 40%;
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section-form-div-right {
+    width: 60%;
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 40px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.about-section-feedback-heading {
+    font-size: 24px;
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
+    color: #06509a;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-section-form {
+    /* border: 2px solid red; */
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.abot-section-form-input-div {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 10px 5px;
+    gap: 15px;
+}
+
+.abot-section-form-input-div>input {
+    border: none;
+    outline: none;
+}
+
+.about-section-form-submit-button{
+margin-top: 20px; 
+height: 40px;
+width: 200px;
+border: none;
+border-radius: 4px;
+background-color: #0A66C2;
+color: white;
 }

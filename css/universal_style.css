@@ -652,7 +652,7 @@ footer>hr {
     white-space: wrap;
 }
 
-.empty-cart-text{
+.empty-cart-text {
     width: 100%;
     height: 100%;
     font-size: 22px;
@@ -661,7 +661,7 @@ footer>hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .cart-product {

@@ -4,6 +4,11 @@ const brijalCard = document.querySelector('#about-brijal');
 
 function aboutDetails(person) {
 
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
     if (person == 1) {
 
         if (shreyaCard.classList.contains('about-left-current-person')) {
@@ -63,3 +68,35 @@ function aboutDetails(person) {
 }
 
 aboutDetails(1);
+
+// ------------------------About section form handling ----------------
+
+for (i = 0; i < 3; i++) {
+    document.forms[i].addEventListener('submit', function (event) {
+        // Prevent the default form submission refresh behavior
+        event.preventDefault();
+    });
+}
+
+function aboutSectionFormHandle(i) {
+
+    var fullname = document.forms[i]['fullname'].value;
+
+    var email = document.forms[i]['email'].value;
+
+    var feedback = document.forms[i]['feedback'].value;
+
+    if (fullname == '' || email == '' || feedback == '') {
+        alert("Please fill out all the fields");
+    } else {
+
+        if (email.includes('@')) {
+
+            alert("Thank you for the feedback, " + fullname);
+
+        } else {
+            alert("Please enter a valid email.")
+        }
+    }
+
+}
