@@ -47,14 +47,11 @@
 
 .product-details-upper-right {
     padding: 20px 10px;
-    height: 75vh;
     min-width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    /* overflow: hidden; */
-
 }
 
 .product-general-details {
@@ -66,19 +63,19 @@
 .pr-id {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     opacity: 0.67;
-    font-size: 0.75rem;
+    font-size: 75%;
     margin-bottom: -5px;
 }
 
 .brand-name {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+    font-size: 160%;
     letter-spacing: 1px;
 }
 
 .model-name {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
-    font-size: 1.4rem;
+    font-size: 140%;
     transition: all 0.2s ease-in-out;
 }
 
@@ -94,7 +91,7 @@
 
 .description {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
+    font-size: 90%;
     font-weight: 550;
     opacity: 0.8;
     max-width: 450px;
@@ -103,7 +100,7 @@
 
 .rating-details {
     letter-spacing: 0.2px;
-    font-size: 0.8rem;
+    font-size: 80%;
     opacity: 0.67;
 }
 
@@ -121,7 +118,7 @@
 }
 
 .current-price {
-    font-size: 1.3rem;
+    font-size: 130%;
     color: red;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
@@ -129,17 +126,17 @@
 .old-price {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     text-decoration: line-through;
-    font-size: 0.8rem;
+    font-size: 80%;
 }
 
 .discount-percent {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     color: green;
-    font-size: 0.8rem;
+    font-size: 80%;
 }
 
 .tax-details {
-    font-size: 0.7rem;
+    font-size: 70%;
     opacity: 0.7;
 }
 
@@ -152,7 +149,7 @@
 
 .quantity-div span {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
+    font-size: 80%;
 }
 
 .quantity-changing-buttons {
@@ -167,7 +164,7 @@
     width: 32px;
     height: 32px;
     font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
+    font-size: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +208,7 @@
 .buy-now-button-div>input {
     outline: none;
     color: white;
-    font-size: 0.9rem;
+    font-size: 90%;
     background: transparent;
     border: none;
 }

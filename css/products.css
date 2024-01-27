@@ -3,7 +3,7 @@ html {
     background-color: #fafafa;
 }
 
-#hero-section{
+#hero-section {
     position: relative;
     z-index: 2;
 }
@@ -20,7 +20,7 @@ html {
     padding: 10px;
     margin: 40px 0px 0px 0px;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 220%;
     font-weight: 600;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
@@ -43,7 +43,7 @@ html {
     transition: all 0.3s ease-in-out;
 }
 
-.products-card:hover{
+.products-card:hover {
     scale: 1.025;
     translate: 0px -5px;
     box-shadow: rgba(147, 147, 147, 0.49) 0 1px 35px 1px;
@@ -54,7 +54,7 @@ html {
     display: flex;
     justify-content: space-between;
     letter-spacing: 0.1px;
-    font-size: 0.9rem;
+    font-size: 90%;
     text-align: center;
 }
 
@@ -86,7 +86,7 @@ html {
 .product-name {
     width: auto;
     font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 150%;
     letter-spacing: 1px;
     overflow: hidden;
     white-space: nowrap;
@@ -100,7 +100,7 @@ html {
 }
 
 .rating-text {
-    font-size: 0.8rem;
+    font-size: 80%;
     opacity: 0.6;
 }
 
@@ -110,19 +110,19 @@ html {
 }
 
 #old-price {
-    font-size: 0.8rem;
+    font-size: 80%;
     text-decoration: line-through;
     opacity: 0.9;
 }
 
 #discount {
     color: green;
-    font-size: 0.85rem;
+    font-size: 85%;
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
 }
 
 .product-price>p:last-child {
-    font-size: 0.7rem;
+    font-size: 70%;
     opacity: 0.6;
 }
 
@@ -161,17 +161,17 @@ html {
     transform: scale(1.8);
 }
 
-#compare-button-div{
+#compare-button-div {
     border-radius: 6px;
     height: 45px;
     width: 165px;
-    position: sticky; 
+    position: sticky;
     display: none;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: #f02b32;
-    bottom:  15px; 
+    bottom: 15px;
     left: 50%;
     transform: translate(-50%, 0%);
     font-size: 14px;
@@ -180,6 +180,6 @@ html {
     transition: all 0.3s ease-in-out;
 }
 
-#compare-button-div:hover{
-    background-color:#d1141b ;
+#compare-button-div:hover {
+    background-color: #d1141b;
 }
