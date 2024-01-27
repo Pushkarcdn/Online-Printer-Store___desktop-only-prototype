@@ -75,12 +75,12 @@ aboutDetails(1);
 
 // ------------------------About section form handling ----------------
 
-for (i = 0; i < 3; i++) {
-    document.forms[i].addEventListener('submit', function (event) {
-        // Prevent the default form submission refresh behavior
-        event.preventDefault();
-    });
-}
+// for (i = 0; i < 3; i++) {
+//     document.forms[i].addEventListener('submit', function (event) {
+//         // Prevent the default form submission refresh behavior
+//         event.preventDefault();
+//     });
+// }
 
 function aboutSectionFormHandle(i) {
 

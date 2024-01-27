@@ -1,4 +1,3 @@
-
 var productsSeries = [
     "IMAGE",
     "MAXIFY",
@@ -50,10 +49,33 @@ var productsPrice = [
 ];
 
 
-
 /* ------------------------------------------------------ Header Section Starts -------------------------------------------------------- */
 
 function createHeader() {
+
+    var pageName = document.title;
+    pageName = pageName.split(' ')[0];
+    pageName = pageName.toLowerCase();
+
+    if (pageName == 'home') {
+
+        var primeLogo = 'images/homepage_images/logo.png';
+        var searchIcon = 'icons/search.png';
+        var personIcon = 'icons/person.png';
+        var loggedinIcon = 'images/login_images/pushkar.png';
+        var cartIcon = 'icons/cart.png';
+        var menuIcon = 'icons/menu.png';
+
+    } else {
+
+        var primeLogo = '../images/homepage_images/logo.png';
+        var searchIcon = '../icons/search.png';
+        var personIcon = '../icons/person.png';
+        var loggedinIcon = '../images/login_images/pushkar.png';
+        var cartIcon = '../icons/cart.png';
+        var menuIcon = '../icons/menu.png';
+
+    }
 
     document.querySelector("header").innerHTML = `
 
@@ -61,7 +83,7 @@ function createHeader() {
 
         <div class="header-upper-left-section">
 
-            <img src="../images/homepage_images/logo.png" height="45px" alt="" id="header-prime-logo-class">
+            <img src="${primeLogo}" height="45px" alt="" id="header-prime-logo-class">
 
             <div class="logo-text">
                 <span>Prime</span>
@@ -73,18 +95,18 @@ function createHeader() {
         <div class="header-upper-right-section">
 
             <div class="header-search-box">
-                <img src="../icons/search.png" alt="" height="23px">
+                <img src="${searchIcon}" alt="" height="23px">
                 <input type="text" name="search" placeholder="Search Printers">
             </div>
                 
             <div class = "header-login" onclick="loginHandler()" style="display:none;">
-                <img src="../icons/person.png" alt="" height="25px">
+                <img src="${personIcon}" alt="" height="25px">
                 <span> Sign in</span>
             </div>
 
             <div class = "header-logged-in-div" style="display:none;">
 
-                <img src="../images/login_images/pushkar.png" height="40px" alt="">
+                <img src="${loggedinIcon}" height="40px" alt="">
         
                 <div class="header-logged-user-detail-div">
                     <span class="header-logged-user-detail1">Pushkar Sah</span>
@@ -96,12 +118,12 @@ function createHeader() {
             </div>
 
             <div class="header-cart" onclick="openCart()">
-                <img src="../icons/cart.png" alt="" height="20px">
+                <img src="${cartIcon}" alt="" height="20px">
                 <span>Cart (<span id="cart-items-amount">0</span>)</span>
             </div>
             
             <div class="header-menu">
-                <img src="../icons/menu.png" alt="" height="20px">
+                <img src="${menuIcon}" alt="" height="20px">
             </div>
 
         </div>
@@ -201,23 +223,50 @@ updateCartTotal();
 
 function createNavbar() {
 
+    var pageName = document.title;
+    pageName = pageName.split(' ')[0];
+    pageName = pageName.toLowerCase();
+
+    if (pageName == 'home') {
+
+        var homePageLink = 'index.html';
+        var productPageLink = 'html/products.html';
+        var blogPageLink = 'html/blog.html';
+        var researchPageLink = 'html/research.html';
+        var aboutPageLink = 'html/about.html';
+        var contactPageLink = 'html/contact.html';
+        var downArrow = 'icons/down-arrow.png';
+
+    } else {
+
+        var homePageLink = '../index.html';
+        var productPageLink = '../html/products.html';
+        var blogPageLink = '../html/blog.html';
+        var researchPageLink = '../html/research.html';
+        var aboutPageLink = '../html/about.html';
+        var contactPageLink = '../html/contact.html';
+        var downArrow = '../icons/down-arrow.png';
+
+
+    }
+
     document.querySelector("nav").innerHTML = `
 
-    <span><a id="nav-home-button" href="../index.html">Home</a></span>
+    <span><a id="nav-home-button" href="${homePageLink}">Home</a></span>
 
-    <span><a id="nav-products-button" href="../html/products.html">Products</a><img src="../icons/down-arrow.png" alt=""
+    <span><a id="nav-products-button" href="${productPageLink}">Products</a><img src="${downArrow}" alt=""
         height="20"></span>
 
-    <span><a id="nav-blog-button" href="../html/blog.html">Blog</a><img src="../icons/down-arrow.png" alt=""
+    <span><a id="nav-blog-button" href="${blogPageLink}">Blog</a><img src="${downArrow}" alt=""
         height="20"></span>
 
-    <span><a id="nav-research-button" href="../html/research.html">Research</a><img src="../icons/down-arrow.png" alt=""
+    <span><a id="nav-research-button" href="${researchPageLink}">Research</a><img src="${downArrow}" alt=""
         height="20"></span>
 
-    <span><a id="nav-about-button" href="../html/about.html">About Us</a><img src="../icons/down-arrow.png" alt=""
+    <span><a id="nav-about-button" href="${aboutPageLink}">About Us</a><img src="${downArrow}" alt=""
         height="20"></span>
 
-    <span><a id="nav-contact-button" href="../html/contact.html">Contact</a></span>
+    <span><a id="nav-contact-button" href="${contactPageLink}">Contact</a></span>
     
     `;
 
@@ -243,12 +292,32 @@ boldCurrentPageName();
 /* --------------------------------------------------- Message div section Starts ----------------------------------------------------- */
 
 // Error message div
+
+var pageName = document.title;
+pageName = pageName.split(' ')[0];
+pageName = pageName.toLowerCase();
+
+if (pageName == 'home') {
+
+    var errorIcon = 'icons/error-circle.png';
+    var successIcon = 'icons/success.png';
+    var warningicon = 'icons/warning2.png';
+
+} else {
+
+    var errorIcon = '../icons/error-circle.png';
+    var successIcon = '../icons/success.png';
+    var warningicon = '../icons/warning2.png';
+
+}
+
+
 var errorMessageDiv = document.createElement('div');
 errorMessageDiv.innerHTML = `
 
 <div class="error-message-div">
 
-    <img src = "../icons/error-circle.png" alt="" height = "60%">
+    <img src = "${errorIcon}" alt="" height = "60%">
     <p class="error-message-text">Error Message box</p>
 
 </div>
@@ -263,7 +332,7 @@ successMessageDiv.innerHTML = `
 
 <div class="success-message-div">
 
-    <img src = "../icons/success.png" alt="" height = "60%">
+    <img src = "${successIcon}" alt="" height = "60%">
     <p class="success-message-text">Success Message box</p>
 
 </div>
@@ -278,7 +347,7 @@ warningMessageDiv.innerHTML = `
 
 <div class="warning-message-div">
 
-    <img src = "../icons/warning2.png" alt="" height = "50%">
+    <img src = "${warningicon}" alt="" height = "50%">
     <p class="warning-message-text">Success Message box</p>
 
 </div>
@@ -292,6 +361,31 @@ document.body.appendChild(warningMessageDiv);
 
 
 /* ------------------------------------------------------ Footer Section Starts -------------------------------------------------------- */
+
+var pageName = document.title;
+pageName = pageName.split(' ')[0];
+pageName = pageName.toLowerCase();
+
+if (pageName == 'home') {
+
+    var primeLogo = 'images/homepage_images/logo.png';
+    var facebookIcon = 'icons/facebook.png';
+    var instagramnIcon = 'icons/insta.png';
+    var linkedinIcon = 'icons/linkedin.png';
+    var githubIcon = 'icons/github.png';
+    var feedIcon = 'icons/feed.png';
+
+} else {
+
+    var primeLogo = '../images/homepage_images/logo.png';
+    var facebookIcon = '../icons/facebook.png';
+    var instagramnIcon = '../icons/insta.png';
+    var linkedinIcon = '../icons/linkedin.png';
+    var githubIcon = '../icons/github.png';
+    var feedIcon = '../icons/feed.png';
+
+}
+
 
 document.querySelector('footer').innerHTML = `
 
@@ -351,7 +445,7 @@ document.querySelector('footer').innerHTML = `
 
     <div class="footer-logo-section">
 
-        <img src="../images/homepage_images/logo.png" alt="" width="90px">
+        <img src="${primeLogo}" alt="" width="90px">
 
         <div class="footer-comapny-details">
             <span>PRIME</span>
@@ -372,19 +466,19 @@ document.querySelector('footer').innerHTML = `
             </ul>
 
             <div class="footer-social-links">
-                <img src="../icons/facebook.png" alt="" height="20px">
-                <img src="../icons/insta.png" alt="" height="20px">
-                <img src="../icons/linkedin.png" alt="" height="20px">
-                <img src="../icons/github.png" alt="" height="23px">
-                <img src="../icons/feed.png" alt="" height="18px">
+                <img src="${facebookIcon}" alt="" height="20px">
+                <img src="${instagramnIcon}" alt="" height="20px">
+                <img src="${linkedinIcon}" alt="" height="20px">
+                <img src="${githubIcon}" alt="" height="23px">
+                <img src="${feedIcon}" alt="" height="18px">
             </div>
 
         </div>
 
         <div class="footer-subscribe-section">
             <span>SUBSCRIBE US</span>
-            <form action="">
-                <input type="email" name="Email" placeholder="YOUR EMAIL" required>
+            <form onsubmit="footerFormHandle()" name="footerForm">
+                <input type="text" name="email" placeholder="YOUR EMAIL">
                 <input type="submit" value="SUBSCRIBE">
             </form>
         </div>
@@ -402,6 +496,45 @@ document.querySelector('footer').innerHTML = `
 </div>
 
 `;
+
+function footerFormHandle() {
+
+    var email = document.forms['footerForm']['email'].value;
+
+    if (email == '') {
+
+        document.querySelector(".error-message-text").innerHTML = 'Please input your email first.';
+        document.querySelector(".error-message-div").style.display = 'flex';
+
+        setTimeout(function () {
+            document.querySelector(".error-message-div").style.display = 'none';
+        }, 3000);
+
+    } else {
+
+        if (email.includes('@')) {
+
+            document.querySelector(".success-message-text").innerHTML = 'Thank you for subscribing.';
+            document.querySelector(".success-message-div").style.display = 'flex';
+
+            setTimeout(function () {
+                document.querySelector(".success-message-div").style.display = 'none';
+            }, 3000);
+
+        } else {
+
+            document.querySelector(".error-message-text").innerHTML = 'Please input a valid email.';
+            document.querySelector(".error-message-div").style.display = 'flex';
+
+            setTimeout(function () {
+                document.querySelector(".error-message-div").style.display = 'none';
+            }, 3000);
+
+        }
+
+    }
+
+}
 
 /* ------------------------------------------------------ Footer Section Ends -------------------------------------------------------- */
 
@@ -599,10 +732,6 @@ if (typeof (Storage) !== "undefined") {
 
         loggedIn = "true";
 
-        // document.querySelector('.header-login').removeAttribute('onclick');
-
-        // document.querySelector('.header-login>span').innerHTML = 'Sign out';
-
         document.querySelector('.header-sign-out-text').addEventListener('click', function () {
 
             loggedIn = "false";
@@ -664,6 +793,22 @@ function buyNow() {
 
 /* ------------------------------------------------------ Cart detailed Section Starts -------------------------------------------------------- */
 
+var pageName = document.title;
+pageName = pageName.split(' ')[0];
+pageName = pageName.toLowerCase();
+
+if (pageName == 'home') {
+
+    var cartIcon = 'icons/cart.png';
+    var cartCloseIcon = 'icons/cross.png';
+
+} else {
+
+    var cartIcon = '../icons/cart.png';
+    var cartCloseIcon = '../icons/cross.png';
+
+}
+
 var cartSection = document.createElement('div');
 cartSection.id = 'cart-detailed-section';
 
@@ -674,11 +819,11 @@ cartSection.innerHTML = `
     <div class="cart-detailed-upper">
 
         <div class="cart-detailed-upper-left">
-            <img src="../icons/cart.png" height="22px" alt="">
+            <img src="${cartIcon}" height="22px" alt="">
             <span class="cart-detailed-title">Cart</span>
         </div>
 
-        <img src="../icons/cross.png" height="35px" alt="" onclick="closeCart()">
+        <img src="${cartCloseIcon}" height="35px" alt="" onclick="closeCart()">
 
     </div>
 
@@ -880,8 +1025,7 @@ function adjustStyles() {
 
         document.querySelector('.header-search-box').style.display = 'none';
 
-    }
-    else {
+    } else {
 
         document.querySelector('.header-search-box').style.display = 'none';
 
@@ -893,8 +1037,7 @@ function adjustStyles() {
         document.querySelector('.header-login').style.display = 'none';
         document.querySelector('#nav-home-button').style.display = 'none';
 
-    }
-    else {
+    } else {
 
         if (loggedIn == "true") {
             document.querySelector('.header-logged-in-div').style.display = 'flex';
@@ -905,8 +1048,6 @@ function adjustStyles() {
         document.querySelector('#nav-home-button').style.display = 'flex';
 
     }
-
-
 
 }
 
@@ -919,3 +1060,16 @@ window.addEventListener('resize', adjustStyles);
 
 /* ---------------------------------------------------- Responsivness Section Ends ------------------------------------------------------ */
 
+
+const allForms = document.querySelectorAll('form');
+
+for (i = 0; i < allForms.length; i++) {
+
+    allForms[i].addEventListener('submit', function (event) {
+
+        // Prevent the default form submission refresh behavior
+        event.preventDefault();
+
+    });
+
+}

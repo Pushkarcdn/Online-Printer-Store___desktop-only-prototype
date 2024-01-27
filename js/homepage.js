@@ -21,7 +21,7 @@ function sliderPrevious() {
 
 setInterval(() => {
     sliderNext();
-}, 5000);
+}, 6000);
 
 // --------------------------- Image slider section ends ------------------------------------------
 
@@ -362,68 +362,3 @@ function goBackToProducts() {
 }
 
 // --------------------------- Products detailed section ends  ------------------------------------------
-
-
-
-// Function to be executed when the page is fully loaded 
-function onDocumentReady() {
-
-    // Select all img elements on the page
-    const imgElements = document.querySelectorAll('img');
-
-    // Loop through each img element
-    imgElements.forEach(img => {
-
-        // Get the current src attribute value
-        var src = img.getAttribute('src');
-
-        // Check if the src starts with a slash
-        if (src.startsWith('../')) {
-
-            // Remove the first 3 characters
-            src = src.slice(3);
-
-            // Update the src attribute with the modified value
-            img.setAttribute('src', src);
-
-        }
-
-    });
-
-    /*
-    The common path link of images with relative link '../images/' (defined in universal.js)
-    which is written for header & footer of all the pages, is giving error on the homepage.
-    The error is fixed by, running a function which changes '../images/' to 'images/'
-    But the console shows error as 'file not found' for images.
-    So, the console is cleared here:
-    */
-    console.clear();  // (only for index.html)
-
-    console.log("\n Message from Pushkar: \n\n The common path link of images and anchor tags with relative link '../images/' (defined in universal.js) \n which is written for header & footer of all the pages, is giving error on the homepage. \n The error is fixed by running a function which changes '../images/' to 'images/' \n But the console shows error as 'file not found' for images. \n So, the console is cleared intentionally here.");
-
-    // // Select all img elements on the page
-    const allAnchorTags = document.querySelectorAll('a');
-
-    // Loop through each img element
-    allAnchorTags.forEach(tags => {
-
-        // Get the current src attribute value
-        var link = tags.getAttribute('href');
-
-        // Check if the href starts with a slash
-        if (link.startsWith('../')) {
-
-            // Remove the first 3 characters
-            link = link.slice(3);
-
-            // Update the src attribute with the modified value
-            tags.setAttribute('href', link);
-
-        }
-
-    });
-
-}
-
-// running the onDocumentReady() function once the page is fully loaded
-window.onload = onDocumentReady();
