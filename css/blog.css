@@ -105,3 +105,8 @@ section p {
 .back-button>img {
     margin: 0;
 }
+
+.article li {
+    width: 600px;
+    text-align: justify;
+}
