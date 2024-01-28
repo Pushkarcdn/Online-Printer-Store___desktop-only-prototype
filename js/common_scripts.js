@@ -82,6 +82,8 @@ function createHeader() {
 
     }
 
+
+    // adding html code to header
     document.querySelector("header").innerHTML = `
 
     <div class="header-upper-section">
@@ -178,6 +180,7 @@ function createNavbar() {
 
     }
 
+    // adding html code to nav
     document.querySelector("nav").innerHTML = `
 
     <span><a id="nav-home-button" href="${homePageLink}">Home</a></span>

@@ -3,6 +3,7 @@
 
 <head>
 
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the research page">
@@ -12,10 +13,11 @@
     <!-- Title -->
     <title>Research - Prime</title>
 
-    <!-- Stylesheets -->
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/research.css">
 
+    <!-- Internal styles -->
     <style>
         * {
             scroll-behavior: smooth;
@@ -34,22 +36,20 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="../images/homepage_images/logo.png" type="image/x-icon">
 
-
 </head>
 
 <body>
 
     <header id="header">
-
-        <!-- Content of header comes dynamically from header.html through header.js-->
-
+        <!-- Content of header comes dynamically from common_scripts.js-->
     </header>
 
     <nav id="navbar">
-
-        <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
-
+        <!-- Content of navbar comes dynamically from common_scripts.js-->
     </nav>
+
+
+    <!------------------------------------------- Research upper section starts ------------------------------------>
 
     <section id="research-upper-section" style="width: 100%; padding: 40px 25px;">
 
@@ -68,7 +68,6 @@
                 from. Also, some changes to those references has been done and records of those changes are kept here.
             </p>
 
-
             <form name="research-form" id="research-form" onSubmit="researchFeedbackForm()">
 
                 <p class="contribute-text">Want to give any feedback?</p>
@@ -83,11 +82,20 @@
 
     </section>
 
+    <!------------------------------------------- Research upper section ends ------------------------------------>
+
+
     <hr>
+
+
+    <!-------------------------------------- Research lower section starts ------------------------------------>
 
     <section id="research-lower-section">
 
         <p class="research-lower-section-title">References </p>
+
+
+        <!-- Reference 1 starts -->
 
         <div class="research-div">
 
@@ -125,6 +133,10 @@
 
         </div>
 
+        <!-- Reference 1 ends -->
+
+
+        <!-- Reference 2 starts -->
 
         <div class="research-div">
 
@@ -160,6 +172,10 @@
 
         </div>
 
+        <!-- Reference 2 ends -->
+
+
+        <!-- Reference 3 starts -->
 
         <div class="research-div">
 
@@ -197,6 +213,11 @@
 
         </div>
 
+        <!-- Reference 3 ends -->
+
+
+        <!-- Reference 4 starts -->
+
         <div class="research-div">
 
             <p class="research-index-title">Reference 4: Amazon</p>
@@ -230,6 +251,11 @@
             </div>
 
         </div>
+
+        <!-- Reference 4 ends -->
+
+
+        <!-- Reference 5 starts -->
 
         <div class="research-div">
 
@@ -265,23 +291,30 @@
 
         </div>
 
+        <!-- Reference 5 ends -->
+
+
     </section>
 
+    <!-------------------------------------- Research lower section ends ------------------------------------>
+
+
     <footer id="footer">
-
-        <!-- Content of footer comes dynamically from footer.html through footer.js-->
-
+        <!-- Content of footer comes dynamically from common_scripts.js-->
     </footer>
 
-    <!-- Scripts -->
+    <!-- External JavaScripts -->
     <script src="../js/common_scripts.js"></script>
 
+    <!-- Internal Javascripts -->
     <script>
 
+        // This function handles the form submission of reasearch page
         function researchFeedbackForm() {
 
             var feedback = document.forms["research-form"]["research-feedback"].value;
 
+            // check if the feedback is empty
             if (feedback != "") {
                 alert("Thank you for the feedback.");
             }

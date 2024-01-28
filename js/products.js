@@ -2,7 +2,9 @@
 
 // clicking on hero section down to show different products
 document.querySelector("#hero-section").addEventListener("click", function () {
+
     document.querySelector(".products-text").scrollIntoView({ behavior: 'smooth' });
+
 });
 
 // ------------------------------------ Scripts for hero section ends ---------------------------------------

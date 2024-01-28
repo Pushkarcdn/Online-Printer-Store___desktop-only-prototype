@@ -6,10 +6,10 @@ function createBestSellingSeries(i) {
     // defining different name, image, price for each printer
     var seriesName = productsSeries[i];
 
-    // selecting random image
+    // generating random image
     var image = "canon" + [i * 3 + 5];
 
-    // selecting random price
+    // generating random price
     price = (i + 1) * 24990;
 
     // creating a div for product card

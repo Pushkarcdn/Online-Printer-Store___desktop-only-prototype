@@ -13,11 +13,12 @@
     <!-- Title -->
     <title>Products - Prime</title>
 
-    <!-- Stylesheets -->
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/products.css">
     <link rel="stylesheet" href="../css/products-detail-page.css">
 
+    <!-- Internal Styles -->
     <style>
         body,
         html {
@@ -33,20 +34,23 @@
 <body>
 
     <header id="header">
-
-        <!-- Content of header comes dynamically from header.html through header.js-->
-
+        <!-- Content of header comes dynamically from common_scripts.js-->
     </header>
 
     <nav id="navbar">
-
-        <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
-
+        <!-- Content of navbar comes dynamically from common_scripts.js-->
     </nav>
+
+    <!-------------------------------------------- Hero Section Starts -------------------------------------------------->
 
     <section id="hero-section" style="position: relative; z-index: 2;">
         <img src="../images/homepage_images/cover3.png" alt="" width="100%">
     </section>
+
+    <!-------------------------------------------- Hero Section Ends -------------------------------------------------->
+
+
+    <!-------------------------------------- Products Text Section Starts ---------------------------------------------->
 
     <section>
         <div class="products-text">
@@ -56,12 +60,21 @@
         </div>
     </section>
 
+    <!-------------------------------------- Products Text Section Ends ---------------------------------------------->
+
+
+    <!-------------------------------------- Products Section Starts ---------------------------------------------->
+
     <section id="products-section">
 
         <!-- Multiple Product cards is generated dynamically with different image, name, price, rating using loop through products.js file -->
 
     </section>
 
+    <!-------------------------------------- Products Section Ends ---------------------------------------------->
+
+
+    <!-------------------------------------- Products Detailed Section Starts ---------------------------------------------->
 
     <section id="product-details-section" style="display: none;">
 
@@ -69,22 +82,19 @@
 
     </section>
 
-    <div id="message-bottom-div">
+    <!-------------------------------------- Products Detailed Section Ends ---------------------------------------------->
 
-        <!-- handled with js -->
 
-    </div>
-
+    <!-- Compare button div -->
     <div id="compare-button-div">
 
         <span id="compare-items-number"></span>
 
     </div>
 
+
     <footer id="footer">
-
-        <!-- Content of footer comes dynamically from footer.html through footer.js-->
-
+        <!-- Content of footer comes dynamically from common_scripts.js-->
     </footer>
 
     <!-- Scripts -->

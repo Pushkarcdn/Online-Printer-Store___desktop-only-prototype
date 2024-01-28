@@ -13,10 +13,11 @@
     <!-- Title -->
     <title>Contact - Prime</title>
 
-    <!-- Stylesheets -->
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/contact_style.css">
 
+    <!-- Internal Styles -->
     <style>
         body {
             background-color: #f6f6f6;
@@ -35,12 +36,14 @@
 <body>
 
     <header id="header">
-        <!-- Content of header comes dynamically from header.html through header.js-->
+        <!-- Content of header comes dynamically from common_scripts.js-->
     </header>
 
     <nav id="navbar">
-        <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
+        <!-- Content of navbar comes dynamically from common_scripts.js-->
     </nav>
+
+    <!-- Contact Section starts -->
 
     <section id="contact-section" style="width: 100%;">
 
@@ -49,7 +52,8 @@
             <p>Have Some Question ?</p>
             <p>Thank you for your interest in our products. Please fill out the form below or e-mail us at <span
                     id="contact-email">mail@primestore.com</span> and we will get back to you promptly regarding your
-                request.</p>
+                request.
+            </p>
 
         </div>
 
@@ -144,20 +148,20 @@
 
     </section>
 
+    <!-- Contact Section ends -->
+
     <footer id="footer">
-
-        <!-- Content of footer comes dynamically from footer.html through footer.js-->
-
+        <!-- Content of footer comes dynamically from common_scripts.js-->
     </footer>
 
-    <!-- Scripts -->
+    <!-- External JavaScripts -->
     <script src="../js/common_scripts.js"></script>
 
+    <!-- Internal JavaScript -->
     <script>
 
+        // This function handles form submission of contact page
         function formValidate(event) {
-
-            event.preventDefault();
 
             var fname = document.forms["contactForm"]["Fname"].value.trim();
             var lname = document.forms["contactForm"]["Lname"].value.trim();
@@ -165,22 +169,27 @@
             var email = document.forms["contactForm"]["Email"].value.trim();
             var message = document.forms["contactForm"]["Message"].value.trim();
 
+            // checks if any one of the input field is empty
             if (fname == "" || lname == "" || phone == "" || email == "" || message == "") {
 
+                // displays a message to fill all the fields
                 document.querySelector("#form-submitted-message>p").innerHTML = `Please fill out all the fields.`;
                 document.querySelector("#form-submitted-message>p").style.color = 'red';
                 document.querySelector("#form-submitted-message").style.display = "flex";
 
             } else {
 
+                // validates the entered email
                 if (email.includes('@')) {
 
+                    // displays a message that form is submitted
                     document.querySelector("#form-submitted-message>p").innerHTML = `Form submitted successfully.`;
                     document.querySelector("#form-submitted-message>p").style.color = 'green';
                     document.querySelector("#form-submitted-message").style.display = "flex";
 
                 } else {
 
+                    // displays a message to input a valid email
                     document.querySelector("#form-submitted-message>p").innerHTML = `Please input a valid email.`;
                     document.querySelector("#form-submitted-message>p").style.color = 'red';
                     document.querySelector("#form-submitted-message").style.display = "flex";
