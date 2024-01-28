@@ -1,4 +1,7 @@
+// shows the first blog section
 function blogInner1() {
+
+    // hide all the sections and shows only the first blog section
 
     var allSections = document.querySelectorAll("section");
 
@@ -10,7 +13,10 @@ function blogInner1() {
 
 }
 
+// shows the second blog section
 function blogInner2() {
+
+    // hide all the sections and shows only the second blog section
 
     var allSections = document.querySelectorAll("section");
 
@@ -22,7 +28,10 @@ function blogInner2() {
 
 }
 
+// returns to the main blog page
 function backToBlogs() {
+
+    // hide all the sections and shows only the main blog page
 
     var allSections = document.querySelectorAll("section");
 

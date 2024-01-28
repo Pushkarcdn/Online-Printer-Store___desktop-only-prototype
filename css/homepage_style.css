@@ -1,17 +1,20 @@
 /* -------------  Hero Section Starts ------------- */
 
+/* selecting element having the id 'hero-section' */
 #hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* selecting image slider container */
 #slider-container {
     position: relative;
     overflow: hidden;
     height: auto;
 }
 
+/* selecting the div containing images for sliding */
 #slider-images {
     width: 100%;
     height: auto;
@@ -19,6 +22,7 @@
     transition: transform 0.7s ease-in-out;
 }
 
+/* selecting all the images that is in the slider */
 #slider-images>img {
     height: auto;
     width: 100%;
@@ -26,6 +30,7 @@
     z-index: 0;
 }
 
+/* styling both next and previous button-div of image slider */
 .slider-button {
     width: 40px;
     height: 80px;
@@ -39,26 +44,31 @@
     align-items: center;
 }
 
+/* selecting both img (next & previous arrow) of slider buttons-div  */
 .slider-button>img {
     opacity: 0.4;
 }
 
+/* selecting slider previous button */
 #slider-previous-button {
     left: 0px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
+/* selecting slider next button */
 #slider-next-button {
     right: 0px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
+/* selecting img inside slider next button */
 #slider-next-button>img {
     transform: rotate(180deg);
 }
 
+/* selecting the swipe-up showing div on the homepage slider */
 #swipe-up-div {
     display: flex;
     flex-direction: column;
@@ -88,16 +98,15 @@
     font-weight: 900;
     text-align: center;
     background: linear-gradient(to right, red, blue);
-    /* background-image: url("/images/homepage_images/text-bg.jpeg"); */
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
-    animation: text-bg-anime 1.5s infinite alternate;
-
+    animation: text-shadow-animation 1.5s infinite alternate;
 }
 
-@keyframes text-bg-anime {
+/* Animating the color of text shadow */
+@keyframes text-shadow-animation {
     100% {
         text-shadow: 0 0 40px rgba(21, 0, 255, 0.4);
     }
@@ -108,6 +117,7 @@
 
 /* -------------  Top products Section Starts ------------- */
 
+/* selecting top products and top deals section */
 #top-products,
 #top-deal-products {
     width: 100%;
@@ -126,6 +136,7 @@
     transition: all 0.6s ease;
 }
 
+/* adding hover effect on div inside these 2 sections */
 #top-products>div:hover,
 #top-deal-products>div:hover {
     scale: 1.06;
@@ -181,6 +192,11 @@
     opacity: 0.8;
     font-size: 14px;
 }
+
+/* -------------  Top products Section Ends------------- */
+
+
+/* -------------  Products slider section starts------------- */
 
 #products-slider-section {
     margin: 50px 0px;
@@ -318,6 +334,11 @@
     font-size: 12px;
 }
 
+/* ------------- Products slider section ends ------------- */
+
+
+/* ------------- Top deals section starts ------------- */
+
 #top-deals-section {
     padding: 20px 10px 30px 10px;
     display: flex;
@@ -338,6 +359,10 @@
     letter-spacing: 1px;
 }
 
+/* ------------- Top deals section ends ------------- */
+
+
+/* ------------- Featured section starts ------------- */
 #showcase-section {
     padding: 40px 0px;
     display: flex;
@@ -357,6 +382,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     margin-bottom: 40px;
+    margin-left: 15px;
 }
 
 .showcase-premium-product {
@@ -438,3 +464,5 @@
     color: green;
     font-size: 20px;
 }
+
+/* ------------- Featured section ends ------------- */

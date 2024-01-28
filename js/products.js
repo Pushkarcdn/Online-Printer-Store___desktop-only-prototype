@@ -1,7 +1,16 @@
+// ----------------------------------- Scripts for hero section starts ---------------------------------------
+
+// clicking on hero section down to show different products
 document.querySelector("#hero-section").addEventListener("click", function () {
     document.querySelector(".products-text").scrollIntoView({ behavior: 'smooth' });
 });
 
+// ------------------------------------ Scripts for hero section ends ---------------------------------------
+
+
+// ------------------------------------ Product cards section starts ---------------------------------------
+
+// This function creates the product cards on products page
 function createProductCard(i) {
 
     // defining different name, image, price for each printer
@@ -73,22 +82,31 @@ function createProductCard(i) {
     
     `;
 
+    // addin onclick functions to the newly made product card
     card.querySelector('#product-image').setAttribute("onclick", "createProductPage(" + i + ")");
     card.querySelector('.product-lower-details').setAttribute("onclick", "createProductPage(" + i + ")");
     card.querySelector('input[type="checkbox"]').setAttribute("onclick", "updateCheckboxCount()");
 
-
+    // returns the newly made product card
     return card;
 
 }
 
+// making products card for all products exept the last one using for loop 
 for (let i = 0; i < productsName.length - 1; i++) {
 
+    // creating produt card by createProductCard() function and appending it to the div having class 'products-section'
     const productCard = createProductCard(i);
     document.getElementById('products-section').appendChild(productCard);
 
 }
 
+// ------------------------------------ Product cards section ends ---------------------------------------
+
+
+// ------------------------------------ Script for compare starts ---------------------------------------
+
+// updates the number of compare checkboxes checked
 function updateCheckboxCount() {
 
     // Get all compareCheckBoxes
@@ -99,29 +117,24 @@ function updateCheckboxCount() {
     compareCheckBoxes.forEach(function (checkbox) {
 
         if (checkbox.checked) {
-
             checkedCount++;
-
         }
 
     });
 
+    // showing the number of compare items if more than 1
     if (checkedCount <= 1) {
-
         document.querySelector("#compare-button-div").style.display = "none";
-
     }
     else {
-
         document.querySelector("#compare-items-number").innerHTML = `Compare ( ` + checkedCount + ` )`;
         document.querySelector("#compare-button-div").style.display = "flex";
-
     }
 
 }
 
+// Handling the compare button  
 document.querySelector("#compare-button-div").addEventListener("click", function () {
-
 
     if (loggedIn == "true") {
         document.querySelector('.warning-message-text').innerHTML = 'This feature is comming soon';
@@ -142,6 +155,12 @@ document.querySelector("#compare-button-div").addEventListener("click", function
 
 });
 
+// ------------------------------------ Script for compare ends ---------------------------------------
+
+
+// ------------------------------------ Product detailed section starts ---------------------------------------
+
+// creating product detailed page (but it is hidden by default)
 document.querySelector("#product-details-section").innerHTML = `
 
         <div>
@@ -232,8 +251,9 @@ document.querySelector("#product-details-section").innerHTML = `
 
         </div>
 
-        `;
+`;
 
+// This function crestes the detailed page for the clicked product
 function createProductPage(i) {
 
     clickedProductIndex = i;
@@ -269,22 +289,22 @@ function createProductPage(i) {
 
 }
 
+// returns the details of product whose index is given
 function getProductDetails(i) {
 
     var title = productsName[i];
     var price = productsPrice[i];
-    // var image = image[i];
 
     return {
 
         title: `${title}`,
         price: `${price}`,
-        // image: `${image}`,
 
     };
 
 }
 
+// increases the number of items to add to cart or to buy
 function increaseQuantity() {
 
     var quantity = parseInt(document.querySelector(".product-quantity-div").innerHTML);
@@ -293,6 +313,7 @@ function increaseQuantity() {
 
 }
 
+// decrease the number of items to add to cart or to buy
 function decreaseQuantity() {
 
     var quantity = parseInt(document.querySelector(".product-quantity-div").innerHTML);
@@ -306,23 +327,7 @@ function decreaseQuantity() {
 
 }
 
-
-// Depreciated
-function addedToCart() {
-
-    var cartItems = parseInt(document.querySelector("#cart-items-amount").innerHTML);
-
-    var numberOfItems = parseInt(document.querySelector(".product-quantity-div").innerHTML);
-
-    cartItems = cartItems + numberOfItems;
-    document.querySelector("#cart-items-amount").innerHTML = cartItems;
-
-    alert("Hehhee");
-
-}
-
-
-
+// hides the product detailed page and return to products page
 function goBackToProducts() {
 
     document.querySelector("#hero-section").style.display = "flex";
@@ -334,3 +339,5 @@ function goBackToProducts() {
     element.scrollIntoView({ behavior: "instant" });
 
 }
+
+// ------------------------------------ Product detailed section ends ---------------------------------------

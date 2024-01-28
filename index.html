@@ -13,11 +13,12 @@
     <!-- Title -->
     <title>Home - Prime Store</title>
 
-    <!-- Stylesheets -->
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="css/common_styles.css">
     <link rel="stylesheet" href="css/homepage_style.css">
     <link rel="stylesheet" href="css/products-detail-page.css">
 
+    <!-- Internal Styles -->
     <style>
         body {
             background-color: #fafafa;
@@ -33,20 +34,27 @@
 
 </head>
 
+
+<!----------------------------------------- Page Body Starts Here ---------------------------------------->
+
 <body>
 
     <header id="header">
-        <!-- Content of header comes dynamically from header.html through header.js-->
+        <!-- Content of header comes dynamically on all pages from common_scripts.js -->
     </header>
 
     <nav id="navbar">
-        <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
+        <!-- Content of nav comes dynamically on all pages from common_scripts.js -->
     </nav>
+
+    <!--------------------------------------- Hero Section Sarts ------------------------------------------->
 
     <section id="hero-section" style="width: 100%;">
 
+        <!------- Image Slider container starts -------->
         <div id="slider-container" style="width: 100%;">
 
+            <!-- this div contains all the images to be slided -->
             <div id="slider-images">
 
                 <img src="images/homepage_images/cover1.png" alt="">
@@ -58,22 +66,31 @@
 
             </div>
 
+            <!-- slider previous button -->
             <div id="slider-previous-button" class="slider-button" onclick="sliderPrevious()">
                 <img src="icons/left-arrow.png" alt="" height="30px">
             </div>
 
+            <!-- slider next button -->
             <div id="slider-next-button" class="slider-button" onclick="sliderNext()">
                 <img src="icons/left-arrow.png" alt="" height="30px">
             </div>
 
+            <!-- slider message to swipe up -->
             <div id="swipe-up-div">
                 <img src="icons/up-arrow2.png" alt="" height="12px" width="30px">
                 <span>Swipe up</span>
             </div>
 
         </div>
+        <!------- Image Slider container ends -------->
 
     </section>
+
+    <!------------------------------------------ Hero Section Ends ------------------------------------------>
+
+
+    <!----------------------------- Top Products Section Sarts -------------------------------->
 
     <section id="top-products-section">
 
@@ -81,11 +98,16 @@
 
         <div id="top-products">
 
-            <!-- individual product card comes dynamically through js -->
+            <!-- Top product cards comes dynamically through homepage.js -->
 
         </div>
 
     </section>
+
+    <!----------------------------- Top Products Section Ends -------------------------------->
+
+
+    <!----------------------------- Products Slider Section Sarts -------------------------------->
 
     <section id="products-slider-section">
 
@@ -93,11 +115,16 @@
 
         <div id="products-slider-container">
 
-            <!-- individual product card comes dynamically through js -->
+            <!-- Sliding product cards comes dynamically through homepage.js -->
 
         </div>
 
     </section>
+
+    <!----------------------------- Products Slider Section Ends -------------------------------->
+
+
+    <!----------------------------- Top Deals Section Starts -------------------------------->
 
     <section id="top-deals-section">
 
@@ -111,12 +138,18 @@
 
     </section>
 
+    <!----------------------------- Top Deals Section Ends -------------------------------->
+
+
+    <!----------------------------- Featured Section Sarts -------------------------------->
+
     <section id="showcase-section">
 
         <p class="showcase-section-title">Featured</p>
 
         <div class="showcase-premium-product">
 
+            <!-- Used Table to make this part -->
             <table class="showcase-product-table">
 
                 <tr class="row2">
@@ -187,45 +220,69 @@
 
     </section>
 
+    <!----------------------------- Featured Section Ends -------------------------------->
+
+
+    <!----------------------------- Product Detailed Section Sarts -------------------------------->
+
     <section id="product-details-section" style="display: none;">
 
-        <!-- Products details section comes dynamically through products.js file -->
+        <!-- When any product's card is clicked, Products details section is generated dynamically through homepage.js -->
 
     </section>
 
+    <!----------------------------- Product Detailed Section Ends-------------------------------->
+
+
+    <!----------------------------- Footer Sarts -------------------------------->
+
     <footer id="footer">
 
-        <!-- Content of footer comes dynamically from footer.html through footer.js-->
+        <!-- Content of footer comes dynamically on all pages from common_scripts.js-->
 
     </footer>
 
-    <!-- Scripts -->
+    <!----------------------------- Footer Ends -------------------------------->
+
+
+    <!-- External JavaScripts -->
     <script src="js/common_scripts.js"></script>
     <script src="js/homepage.js"></script>
 
+    <!-- Internal JavaScript Starts -->
     <script>
 
         // --------------------------- Image slider section starts ------------------------------------------
 
+        // selecting all the images present in image slider section
         var totalSliderImages = document.querySelectorAll("#slider-images>img").length;
+
+        // starting index from 1st image
         var sliderCurrentIndex = 0;
 
+        // function for sliding to next image
         function sliderNext() {
 
+            // updating current index to next one
             sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSliderImages;
 
+            // sliding to next image
             document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
 
         }
 
+        // function for sliding to previous image
         function sliderPrevious() {
 
+            // updating current index to previous one
             sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSliderImages) % totalSliderImages;
 
+            // sliding to previous image
             document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
 
         }
 
+        // skiding to next image every 6 seconds
         setInterval(() => {
             sliderNext();
         }, 6000);
@@ -233,6 +290,8 @@
         // --------------------------- Image slider section ends ------------------------------------------
 
     </script>
+    <!-- Internal JavaScript Ends -->
+
 
 </body>
 
