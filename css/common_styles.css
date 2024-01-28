@@ -21,14 +21,6 @@
     font-style: normal;
 }
 
-/* Font Variables */
-
-:root {
-    --body-font: Poppins;
-    --price-font: Rubik;
-    --body-bold-font: Poppins-bold;
-}
-
 /* Universal style rules */
 
 * {
@@ -36,22 +28,19 @@
     padding: 0;
     box-sizing: border-box;
     cursor: default;
-    -webkit-user-select: none;
-    user-select: none;
     -webkit-user-drag: none;
     font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
 body {
-    min-width: 300px;
     position: relative;
 }
 
 /* -------------------------------------------------- Header Section Starts ----------------------------------------------------- */
 
 header {
-    background-color: white;
     width: 100%;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,8 +208,7 @@ nav span,
 header span {
     display: flex;
     flex-wrap: nowrap;
-    font-family: var(--body-font);
-    font-size: 93%; 
+    font-size: 93%;
     align-items: center;
 }
 
@@ -250,7 +238,7 @@ nav a:hover {
 .current-page {
     opacity: 1;
     padding: 0px 5px 4px 5px;
-    font-family: 'Poppins-bold';
+    font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     color: #bd8448;
     border-bottom: 2px solid;
 }
@@ -400,7 +388,6 @@ footer>hr {
 .footer-comapny-details>span:first-child {
     font-size: 200%;
     letter-spacing: 1.5px;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .footer-comapny-details>span:nth-child(2) {
@@ -723,7 +710,6 @@ footer>hr {
 .cart-total-text {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     font-size: 22px;
-    font-family: 700;
 }
 
 .cart-detailed-lower-left {
@@ -735,7 +721,6 @@ footer>hr {
 .cart-total-price {
     font-family: Poppins-bold, Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-family: 700;
 }
 
 .cart-detailed-buy-button {

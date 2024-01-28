@@ -1,20 +1,10 @@
-body {
-    /* background-image: url('../images/contact_images/bg2.jpg'); */
-    background-color: #f6f6f6;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    min-width: 300px;
-}
-
 #contact-section {
-    width: 100%;
     margin-top: 40px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
 }
 
 #contact-upper {
@@ -35,7 +25,6 @@ body {
     margin-top: 10px;
     margin-bottom: 70px;
     font-size: 80%;
-    font-family: Poppins, Arial, Helvet;
     text-align: center;
     padding: 20px;
 }
@@ -131,11 +120,6 @@ form {
     outline: none;
     background-color: transparent;
     padding-left: 5px;
-    font-family: poppins, Arial, Helvetica, sans-serif;
-}
-
-form input::placeholder {
-    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
 form textarea {
@@ -156,7 +140,6 @@ form textarea {
     margin-right: -3px;
 }
 
-
 .form-submit-button {
     width: 100%;
     background-color: #058bed;
@@ -167,7 +150,6 @@ form textarea {
 }
 
 form p {
-    font-family: poppins, Arial, Helvetica, sans-serif;
     font-size: 65%;
     text-align: center;
     margin-top: 5px;

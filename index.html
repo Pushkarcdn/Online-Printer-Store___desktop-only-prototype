@@ -14,9 +14,19 @@
     <title>Home - Prime Store</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/universal_style.css">
+    <link rel="stylesheet" href="css/common_styles.css">
     <link rel="stylesheet" href="css/homepage_style.css">
     <link rel="stylesheet" href="css/products-detail-page.css">
+
+    <style>
+        body {
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-width: 1000px;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/homepage_images/logo.png" type="image/x-icon">
@@ -33,9 +43,9 @@
         <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
     </nav>
 
-    <section id="hero-section">
+    <section id="hero-section" style="width: 100%;">
 
-        <div id="slider-container">
+        <div id="slider-container" style="width: 100%;">
 
             <div id="slider-images">
 
@@ -188,9 +198,41 @@
         <!-- Content of footer comes dynamically from footer.html through footer.js-->
 
     </footer>
-    <script src="js/universal.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/common_scripts.js"></script>
     <script src="js/homepage.js"></script>
 
+    <script>
+
+        // --------------------------- Image slider section starts ------------------------------------------
+
+        var totalSliderImages = document.querySelectorAll("#slider-images>img").length;
+        var sliderCurrentIndex = 0;
+
+        function sliderNext() {
+
+            sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSliderImages;
+
+            document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
+
+        }
+
+        function sliderPrevious() {
+
+            sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSliderImages) % totalSliderImages;
+
+            document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
+
+        }
+
+        setInterval(() => {
+            sliderNext();
+        }, 6000);
+
+        // --------------------------- Image slider section ends ------------------------------------------
+
+    </script>
 
 </body>
 

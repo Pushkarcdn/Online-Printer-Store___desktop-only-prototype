@@ -1,24 +1,12 @@
-/* Body style rules */
-
-body {
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 1000px;
-}
-
 /* -------------  Hero Section Starts ------------- */
 
 #hero-section {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #slider-container {
-    width: 100%;
     position: relative;
     overflow: hidden;
     height: auto;
@@ -382,10 +370,10 @@ body {
 
 .showcase-product-table {
     width: 100%;
-    padding: 40px 40px 20px 50px; 
+    padding: 40px 40px 20px 50px;
 }
 
-.showcase-product-table p{
+.showcase-product-table p {
     margin-bottom: 15px;
 }
 

@@ -66,41 +66,8 @@ function aboutDetails(person) {
         document.querySelector('#about-section-pushkar').style.display = 'none';
         document.querySelector('#about-section-brijal').style.display = 'flex';
 
-
     }
 
 }
 
 aboutDetails(1);
-
-// ------------------------About section form handling ----------------
-
-// for (i = 0; i < 3; i++) {
-//     document.forms[i].addEventListener('submit', function (event) {
-//         // Prevent the default form submission refresh behavior
-//         event.preventDefault();
-//     });
-// }
-
-function aboutSectionFormHandle(i) {
-
-    var fullname = document.forms[i]['fullname'].value;
-
-    var email = document.forms[i]['email'].value;
-
-    var feedback = document.forms[i]['feedback'].value;
-
-    if (fullname == '' || email == '' || feedback == '') {
-        alert("Please fill out all the fields");
-    } else {
-
-        if (email.includes('@')) {
-
-            alert("Thank you for the feedback, " + fullname);
-
-        } else {
-            alert("Please enter a valid email.")
-        }
-    }
-
-}

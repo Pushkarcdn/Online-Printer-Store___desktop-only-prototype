@@ -14,8 +14,18 @@
     <title>Contact - Prime</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/universal_style.css">
+    <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/contact_style.css">
+
+    <style>
+        body {
+            background-color: #f6f6f6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            min-width: 300px;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../images/homepage_images/logo.png" type="image/x-icon">
@@ -32,7 +42,7 @@
         <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
     </nav>
 
-    <section id="contact-section">
+    <section id="contact-section" style="width: 100%;">
 
         <div id="contact-upper">
 
@@ -141,8 +151,47 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/universal.js"></script>
-    <script src="../js/contact.js"></script>
+    <script src="../js/common_scripts.js"></script>
+
+    <script>
+
+        function formValidate(event) {
+
+            event.preventDefault();
+
+            var fname = document.forms["contactForm"]["Fname"].value.trim();
+            var lname = document.forms["contactForm"]["Lname"].value.trim();
+            var phone = document.forms["contactForm"]["Phone"].value.trim();
+            var email = document.forms["contactForm"]["Email"].value.trim();
+            var message = document.forms["contactForm"]["Message"].value.trim();
+
+            if (fname == "" || lname == "" || phone == "" || email == "" || message == "") {
+
+                document.querySelector("#form-submitted-message>p").innerHTML = `Please fill out all the fields.`;
+                document.querySelector("#form-submitted-message>p").style.color = 'red';
+                document.querySelector("#form-submitted-message").style.display = "flex";
+
+            } else {
+
+                if (email.includes('@')) {
+
+                    document.querySelector("#form-submitted-message>p").innerHTML = `Form submitted successfully.`;
+                    document.querySelector("#form-submitted-message>p").style.color = 'green';
+                    document.querySelector("#form-submitted-message").style.display = "flex";
+
+                } else {
+
+                    document.querySelector("#form-submitted-message>p").innerHTML = `Please input a valid email.`;
+                    document.querySelector("#form-submitted-message>p").style.color = 'red';
+                    document.querySelector("#form-submitted-message").style.display = "flex";
+
+                }
+
+            }
+
+        }
+
+    </script>
 
 </body>
 

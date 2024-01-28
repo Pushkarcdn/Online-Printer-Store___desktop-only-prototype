@@ -13,8 +13,23 @@
     <title>Research - Prime</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/universal_style.css">
+    <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/research.css">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-width: 1275px;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../images/homepage_images/logo.png" type="image/x-icon">
@@ -36,7 +51,7 @@
 
     </nav>
 
-    <section id="research-upper-section">
+    <section id="research-upper-section" style="width: 100%; padding: 40px 25px;">
 
         <div id="research-upper-left" class="">
 
@@ -259,7 +274,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/universal.js"></script>
+    <script src="../js/common_scripts.js"></script>
 
     <script>
 
@@ -268,7 +283,7 @@
             var feedback = document.forms["research-form"]["research-feedback"].value;
 
             if (feedback != "") {
-                alert("Thank you for the feedback.")
+                alert("Thank you for the feedback.");
             }
             else {
                 alert("Please enter a message.");

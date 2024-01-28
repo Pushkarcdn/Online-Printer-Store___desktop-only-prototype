@@ -1,31 +1,3 @@
-// --------------------------- Image slider section starts ------------------------------------------
-
-var totalSliderImages = document.querySelectorAll("#slider-images>img").length;
-var sliderCurrentIndex = 0;
-
-function sliderNext() {
-
-    sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSliderImages;
-
-    document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
-
-}
-
-function sliderPrevious() {
-
-    sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSliderImages) % totalSliderImages;
-
-    document.querySelector("#slider-images").style.transform = `translateX(-${document.body.offsetWidth * sliderCurrentIndex}px)`;
-
-}
-
-setInterval(() => {
-    sliderNext();
-}, 6000);
-
-// --------------------------- Image slider section ends ------------------------------------------
-
-
 // --------------------------- Best selling section starts  ------------------------------------------
 
 function createBestSellingSeries(i) {

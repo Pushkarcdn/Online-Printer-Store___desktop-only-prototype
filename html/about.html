@@ -14,8 +14,23 @@
     <title>About Us</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/universal_style.css">
+    <link rel="stylesheet" href="../css/common_styles.css">
     <link rel="stylesheet" href="../css/about.css">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fafafa;
+            min-width: 1080px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../images/homepage_images/logo.png" type="image/x-icon">
@@ -32,7 +47,7 @@
         <!-- Content of nav comes dynamically from navbar.html through navbar.js-->
     </nav>
 
-    <section id="about-left-section">
+    <section id="about-left-section" style="width: 380px; height: 80%;">
 
         <div class="about-left-inner-list-div">
 
@@ -138,7 +153,7 @@
                         </div>
                     </a>
 
-                    <a href="https://projects.pushkar.com.np" target="_blank">
+                    <a href="#p-projects">
                         <div class="about-section-bio-contact">
                             <span>Projects</span>
                         </div>
@@ -331,6 +346,29 @@
 
         </div>
 
+        <div class="about-section-inner-div" id="p-projects">
+
+            <p class="about-section-inner-heading">Projects</p>
+
+            <div class="about-section-about-inner">
+
+                <p>Some of my highlighted projects:</p>
+
+                <ul class="about-section-projects-list">
+                    <li><a href="https://fsp1.pushkar.eu.org/" target="_blank">Secret Messaging service</a></li>
+                    <li><a href="https://fep4.pushkar.eu.org/" target="_blank">The 90's Simon Game</a></li>
+                    <li><a href="https://fep1.pushkar.eu.org/" target="_blank">Amazon.com clone</a></li>
+                    <span>and so on...</span>
+                </ul>
+
+
+                <p>More of my latest projects (Front-end & Back-end) can be found on: <a class="projects-web-link"
+                        href="https://projects.pushkar.com.np" target="_blank">projects.pushkar.com.np</a></p>
+
+            </div>
+
+        </div>
+
         <div class="about-section-inner-div">
 
             <p class="about-section-inner-heading">Education</p>
@@ -468,22 +506,6 @@
                     <a href="#contact-s" class="about-section-bio-contact-text">&nbsp;Contact info</a>
                 </div>
 
-                <!-- <div class="about-section-bio-buttons-div">
-    
-                        <div class="about-section-bio-hire">
-                            <span>Hire</span>
-                        </div>
-    
-                        <div class="about-section-bio-skills">
-                            <span>Skills</span>
-                        </div>
-    
-                        <div class="about-section-bio-contact">
-                            <span>Projects</span>
-                        </div>
-    
-                    </div> -->
-
             </div>
 
             <div class="about-general-details-university-card">
@@ -548,15 +570,6 @@
                     <p>Email: shreyashah@abc.xyz</p>
                     <p>College-email: np01cp4a230301@islingtoncollege.edu.np</p>
                     <p>Phone: +977 98xxxxxxxx</p>
-
-                    <!-- <div class="about-section-social-link-icons-div">
-    
-                            <img src="../icons/linkedin2.png" height="26px" alt="">
-                            <img src="../icons/github2.png" height="26px" alt="">
-                            <img src="../icons/facebook2.png" height="26px" alt="">
-                            <img src="../icons/instagram2.png" height="26px" alt="">
-    
-                        </div> -->
 
                 </div>
 
@@ -1007,8 +1020,38 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/universal.js"></script>
+    <script src="../js/common_scripts.js"></script>
     <script src="../js/about.js"></script>
+
+    <script>
+
+        function aboutSectionFormHandle(i) {
+
+            var fullname = document.forms[i]['fullname'].value;
+            var email = document.forms[i]['email'].value;
+            var feedback = document.forms[i]['feedback'].value;
+
+            if (fullname == '' || email == '' || feedback == '') {
+
+                alert("Please fill out all the fields");
+
+            } else {
+
+                if (email.includes('@')) {
+
+                    alert("Thank you for the feedback, " + fullname);
+
+                } else {
+
+                    alert("Please enter a valid email.");
+
+                }
+
+            }
+
+        }
+
+    </script>
 
 </body>
 
