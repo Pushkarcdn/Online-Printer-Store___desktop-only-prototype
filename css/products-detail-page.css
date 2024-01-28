@@ -1,3 +1,5 @@
+/*------------------------------- Products detailed section starts -----------------------------------*/
+
 #product-details-section {
     width: 100%;
     display: flex;
@@ -253,3 +255,5 @@
     z-index: 3;
     padding: 10px 20px;
 }
+
+/*------------------------------- Products detailed section ends -----------------------------------*/

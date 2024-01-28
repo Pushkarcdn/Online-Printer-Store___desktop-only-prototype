@@ -1,3 +1,5 @@
+/*------------------------------- Products section starts -----------------------------------*/
+
 #products-section {
     padding: 50px 10px 50px 10px;
     display: flex;
@@ -172,3 +174,5 @@
 #compare-button-div:hover {
     background-color: #d1141b;
 }
+
+/*------------------------------- Products section ends -----------------------------------*/

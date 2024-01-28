@@ -1,3 +1,6 @@
+/* About page left section starts */
+
+/* targetting the left navigational section */
 #about-left-section {
     padding: 0px 20px 0px 10px;
     position: fixed;
@@ -41,6 +44,11 @@
 .about-left-inner-work {
     font-size: 13px;
 }
+
+/* About page left section ends */
+
+
+/* About page main section starts */
 
 .about-section {
     width: calc(100% - 380px);
@@ -211,6 +219,11 @@
     color: #0A66C2;
 }
 
+/* About page main section ends */
+
+
+/* General divs styles start */
+
 .about-section-inner-div {
     margin-top: 20px;
     box-shadow: rgba(147, 147, 147, 0.4) 0px 1px 15px 1px;
@@ -320,7 +333,7 @@
     gap: 30px;
 }
 
-.about-section-projects-list{
+.about-section-projects-list {
     padding: 0px 30px;
 }
 
@@ -333,7 +346,7 @@
     color: #0054c3;
 }
 
-.projects-web-link{
+.projects-web-link {
     padding: 0px 0px 1px 0px;
     border-bottom: 1px solid gray;
 }
@@ -342,6 +355,11 @@
     line-height: 2;
     padding: 5px 0px 0px 40px;
 }
+
+/* General divs styles end */
+
+
+/* About page form section starts */
 
 .about-section-form-div {
     width: 100%;
@@ -410,3 +428,5 @@
     background-color: #0A66C2;
     color: white;
 }
+
+/* About page form section ends */

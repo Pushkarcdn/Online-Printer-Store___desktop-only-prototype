@@ -1,3 +1,5 @@
+/*------------------------------- Research section starts -----------------------------------*/
+
 #research-upper-section {
     display: flex;
     justify-content: space-evenly;
@@ -146,3 +148,5 @@ body>hr {
     line-height: 1.5;
     font-size: 16px;
 }
+
+/*------------------------------- Research section ends -----------------------------------*/
