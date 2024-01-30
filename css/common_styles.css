@@ -481,6 +481,7 @@ footer>hr {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
 
 .login-section-inner-left {
@@ -500,6 +501,21 @@ footer>hr {
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
+
+}
+
+.login-section-default-credentials-div {
+    /* border: 2px solid red; */
+    width: 260px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e8e8e8;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
 
 .log-in-text {
@@ -702,6 +718,18 @@ footer>hr {
     align-items: center;
     justify-content: center;
     gap: 5%;
+}
+
+.cart-detailed-clear-all {
+    height: 42px;
+    width: 140px;
+    padding: 0px 10px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .cart-total-text {

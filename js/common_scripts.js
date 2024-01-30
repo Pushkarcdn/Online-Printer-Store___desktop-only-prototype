@@ -90,7 +90,7 @@ function createHeader() {
 
         <div class="header-upper-left-section">
 
-            <img src="${primeLogo}" height="45px" alt="" id="header-prime-logo-class">
+            <img src="${primeLogo}" height="45px" alt="Error loading the image" id="header-prime-logo-class">
 
             <div class="logo-text">
                 <span>Prime</span>
@@ -102,18 +102,18 @@ function createHeader() {
         <div class="header-upper-right-section">
 
             <div class="header-search-box">
-                <img src="${searchIcon}" alt="" height="23px">
+                <img src="${searchIcon}" alt="Error loading the image" height="23px">
                 <input type="text" name="search" placeholder="Search Printers">
             </div>
                 
             <div class = "header-login" onclick="loginHandler()" style="display:none;">
-                <img src="${personIcon}" alt="" height="25px">
+                <img src="${personIcon}" alt="Error loading the image" height="25px">
                 <span> Sign in</span>
             </div>
 
             <div class = "header-logged-in-div" style="display:none;">
 
-                <img src="${loggedinIcon}" height="40px" alt="">
+                <img src="${loggedinIcon}" height="40px" alt="Error loading the image">
         
                 <div class="header-logged-user-detail-div">
                     <span class="header-logged-user-detail1">Pushkar Sah</span>
@@ -125,12 +125,12 @@ function createHeader() {
             </div>
 
             <div class="header-cart" onclick="openCart()">
-                <img src="${cartIcon}" alt="" height="20px">
+                <img src="${cartIcon}" alt="Error loading the image" height="20px">
                 <span>Cart (<span id="cart-items-amount">0</span>)</span>
             </div>
             
             <div class="header-menu">
-                <img src="${menuIcon}" alt="" height="20px">
+                <img src="${menuIcon}" alt="Error loading the image" height="20px">
             </div>
 
         </div>
@@ -185,16 +185,16 @@ function createNavbar() {
 
     <span><a id="nav-home-button" href="${homePageLink}">Home</a></span>
 
-    <span><a id="nav-products-button" href="${productPageLink}">Products</a><img src="${downArrow}" alt=""
+    <span><a id="nav-products-button" href="${productPageLink}">Products</a><img src="${downArrow}" alt="Error loading the image"
         height="20"></span>
 
-    <span><a id="nav-blog-button" href="${blogPageLink}">Blog</a><img src="${downArrow}" alt=""
+    <span><a id="nav-blog-button" href="${blogPageLink}">Blog</a><img src="${downArrow}" alt="Error loading the image"
         height="20"></span>
 
-    <span><a id="nav-research-button" href="${researchPageLink}">Research</a><img src="${downArrow}" alt=""
+    <span><a id="nav-research-button" href="${researchPageLink}">Research</a><img src="${downArrow}" alt="Error loading the image"
         height="20"></span>
 
-    <span><a id="nav-about-button" href="${aboutPageLink}">About Us</a><img src="${downArrow}" alt=""
+    <span><a id="nav-about-button" href="${aboutPageLink}">About Us</a><img src="${downArrow}" alt="Error loading the image"
         height="20"></span>
 
     <span><a id="nav-contact-button" href="${contactPageLink}">Contact</a></span>
@@ -304,7 +304,7 @@ document.querySelector('footer').innerHTML = `
 
     <div class="footer-logo-section">
 
-        <img src="${primeLogo}" alt="" width="90px">
+        <img src="${primeLogo}" alt="Error loading the image" width="90px">
 
         <div class="footer-comapny-details">
             <span>PRIME</span>
@@ -325,11 +325,11 @@ document.querySelector('footer').innerHTML = `
             </ul>
 
             <div class="footer-social-links">
-                <img src="${facebookIcon}" alt="" height="20px">
-                <img src="${instagramnIcon}" alt="" height="20px">
-                <img src="${linkedinIcon}" alt="" height="20px">
-                <img src="${githubIcon}" alt="" height="23px">
-                <img src="${feedIcon}" alt="" height="18px">
+                <img src="${facebookIcon}" alt="Error loading the image" height="20px">
+                <img src="${instagramnIcon}" alt="Error loading the image" height="20px">
+                <img src="${linkedinIcon}" alt="Error loading the image" height="20px">
+                <img src="${githubIcon}" alt="Error loading the image" height="23px">
+                <img src="${feedIcon}" alt="Error loading the image" height="18px">
             </div>
 
         </div>
@@ -517,7 +517,7 @@ errorMessageDiv.innerHTML = `
 
 <div class="error-message-div">
 
-    <img src = "${errorIcon}" alt="" height = "60%">
+    <img src = "${errorIcon}" alt="Error loading the image" height = "60%">
     <p class="error-message-text">Error Message box</p>
 
 </div>
@@ -532,7 +532,7 @@ successMessageDiv.innerHTML = `
 
 <div class="success-message-div">
 
-    <img src = "${successIcon}" alt="" height = "60%">
+    <img src = "${successIcon}" alt="Error loading the image" height = "60%">
     <p class="success-message-text">Success Message box</p>
 
 </div>
@@ -547,7 +547,7 @@ warningMessageDiv.innerHTML = `
 
 <div class="warning-message-div">
 
-    <img src = "${warningicon}" alt="" height = "50%">
+    <img src = "${warningicon}" alt="Error loading the image" height = "50%">
     <p class="warning-message-text">Success Message box</p>
 
 </div>
@@ -610,7 +610,7 @@ if (typeof (Storage) !== "undefined") {
     loggedIn = "false";
 }
 
-// if loggedIn status is true, user cart is visible on header
+// if loggedIn status is true, user card is visible on header
 if (loggedIn == "true") {
     document.querySelector('.header-logged-in-div').style.display = 'flex';
 } else {
@@ -658,10 +658,18 @@ function loginHandler() {
     <div class="login-section-inner-div">
     
         <div class="login-section-inner-left">
-            <img src="${image}" alt="" width="100%">
+            <img src="${image}" alt="Error loading the image" width="100%">
         </div>
     
         <div class="login-section-inner-right">
+
+            <div class="login-section-default-credentials-div">
+
+                <p style="margin-bottom:10px;">Login credentials for testing:<p>
+                <p>Username: <b>admin</b><p>
+                <p>Password: <b>admin</b><p>
+
+            </div>
     
             <p class="log-in-text">Log In</p>
     
@@ -671,14 +679,14 @@ function loginHandler() {
     
                     <div class="login-input-div">
     
-                        <img src="${personImage}" height="18px" alt="">
+                        <img src="${personImage}" height="18px" alt="Error loading the image">
                         <input type="text" name="login-username" class="login-input-field" placeholder="Username">
     
                     </div>
     
                     <div class="login-input-div">
     
-                        <img src="${lockedImage}" height="16px" alt="">
+                        <img src="${lockedImage}" height="16px" alt="Error loading the image">
                         <input type="password" name="login-password" class="login-input-field" placeholder="Password">
     
                     </div>
@@ -701,9 +709,9 @@ function loginHandler() {
                 <span class="login-with-text">Or login with</span>
     
                 <div class="social-login-icons-div" onclick="socialLogin()">
-                    <img src="${googleLoginImage}" alt="" height="31px">
-                    <img src="${facebookLoginImage}" alt="" height="30px">
-                    <img src="${twitterLoginImage}" alt="" height="30px">
+                    <img src="${googleLoginImage}" alt="Error loading the image" height="31px">
+                    <img src="${facebookLoginImage}" alt="Error loading the image" height="30px">
+                    <img src="${twitterLoginImage}" alt="Error loading the image" height="30px">
                 </div>
     
             </div>
@@ -853,12 +861,13 @@ if (pageName == 'home') {
 
     var cartIcon = 'icons/cart.png';
     var cartCloseIcon = 'icons/cross.png';
+    var cartClearIcon = 'icons/cart2.png';
 
 } else {
 
     var cartIcon = '../icons/cart.png';
     var cartCloseIcon = '../icons/cross.png';
-
+    var cartClearIcon = '../icons/cart2.png';
 }
 
 
@@ -874,11 +883,16 @@ cartSection.innerHTML = `
     <div class="cart-detailed-upper">
 
         <div class="cart-detailed-upper-left">
-            <img src="${cartIcon}" height="22px" alt="">
+            <img src="${cartIcon}" height="22px" alt="Error loading the image">
             <span class="cart-detailed-title">Cart</span>
         </div>
 
-        <img src="${cartCloseIcon}" height="35px" alt="" onclick="closeCart()">
+        <div class="cart-detailed-clear-all" onclick="clearCart()">
+            <img src="${cartClearIcon}" height="22px" alt="Error loading the image">
+            <span>Empty cart</span>
+        </div> 
+
+        <img src="${cartCloseIcon}" height="35px" alt="Error loading the image" onclick="closeCart()">
 
     </div>
 
@@ -914,7 +928,7 @@ cartSection.innerHTML = `
 
 document.body.appendChild(cartSection);
 
-// this function updates cart when new items are addred to cart
+// this function updates cart when new items are added to cart
 function updateCartDetails() {
 
     cartTotalPrice = 0;
@@ -938,11 +952,15 @@ function updateCartDetails() {
         
         `;
 
+        document.querySelector('.cart-detailed-clear-all').style.display = 'none';
+
         document.querySelector('.cart-detailed-lower').style.display = 'none';
 
         document.querySelector('.cart-detailed-products-list-div').style.overflowY = 'hidden';
 
     } else {
+
+        document.querySelector('.cart-detailed-clear-all').style.display = 'flex';
 
         document.querySelector('.cart-detailed-lower').style.display = 'flex';
 
@@ -995,7 +1013,7 @@ function createCartDetailedItem(i) {
 
             <div class="cart-product-detail-div">
 
-                <img src="${image}"  height="75px" alt="">
+                <img src="${image}"  height="75px" alt="Error loading the image">
 
                 <div class="cart-product-detail-inner">
 
@@ -1023,6 +1041,20 @@ function createCartDetailedItem(i) {
     // inserting the new product on top of the cart
     var firstItem = document.querySelector('.cart-detailed-products-list-div>div:first-child');
     document.querySelector('.cart-detailed-products-list-div').insertBefore(newCartItem, firstItem);
+
+}
+
+// This function clears the cart
+function clearCart() {
+
+    cartItems = [];
+    cartItemsQuantity = [];
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cartItemsQuantity', JSON.stringify(cartItemsQuantity));
+
+    updateCartTotal();
+    updateCartDetails();
 
 }
 

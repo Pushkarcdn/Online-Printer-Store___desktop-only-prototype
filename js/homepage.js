@@ -26,7 +26,7 @@ function createBestSellingSeries(i) {
                     class="top-product-old-price">${price}</span></p>
                 <p class="top-product-description">Color | Efficient <br> Heavy Load</p>
             </div>
-            <img src="images/products_images/${image}.png" alt="" height="150px">
+            <img src="images/products_images/${image}.png" alt="Error loading the image" height="150px">
         </div>
 
     `
@@ -92,13 +92,13 @@ function createSliderProducts(i) {
 
             </div>
 
-            <img src="images/products_images/${image}.png" alt="" width="170px"> 
+            <img src="images/products_images/${image}.png" alt="Error loading the image" width="170px"> 
 
             <div class="slider-product-lower">
 
                 <div>
                     <p class="product-name">${name}</p>
-                    <p class="product-rating"><img src="icons/rating-star.png" alt="" height="10px">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber * 100 + 100))}) - ${Math.floor(randomNumber * 500 + 200)} Sold</p>
+                    <p class="product-rating"><img src="icons/rating-star.png" alt="Error loading the image" height="10px">${parseFloat(randomNumber.toFixed(1)) * 2 + 3}/5(${parseFloat(Math.floor(randomNumber * 100 + 100))}) - ${Math.floor(randomNumber * 500 + 200)} Sold</p>
                 </div>
 
                 <hr>
@@ -158,7 +158,7 @@ document.querySelector("#product-details-section").innerHTML = `
 
                 <div class="product-details-upper-left">
 
-                    <img src="images/products_images/canon0.png" alt="" id="product-detail-image" width="100%">
+                    <img src="images/products_images/canon0.png" alt="Error loading the image" id="product-detail-image" width="100%">
 
                 </div>
 
@@ -181,7 +181,7 @@ document.querySelector("#product-details-section").innerHTML = `
                         Maximize productivity with cost-effective, energy-efficient printing. Elevate your workspace
                         now.</p>
 
-                    <p class="rating-details"> <img src="icons/rating-star.png" height="10px" alt=""> 4.2/5 (153
+                    <p class="rating-details"> <img src="icons/rating-star.png" height="10px" alt="Error loading the image"> 4.2/5 (153
                         reviews) -
                         216 sold</p>
 
@@ -204,12 +204,12 @@ document.querySelector("#product-details-section").innerHTML = `
                             <div class="product-quantity-div">1</div>
 
                             <div class="quantity-changing-buttons">
-                                <img src="icons/up-arrow.png" alt="" height="10px" onclick="increaseQuantity()">
-                                <img src="icons/down-arrow2.png" alt="" height="10px" onclick="decreaseQuantity()">
+                                <img src="icons/up-arrow.png" alt="Error loading the image" height="10px" onclick="increaseQuantity()">
+                                <img src="icons/down-arrow2.png" alt="Error loading the image" height="10px" onclick="decreaseQuantity()">
                             </div>
 
                             <div class="add-to-cart-div" onclick="updateCart()">
-                                <img src="icons/electricity.png" height="20px" alt="">
+                                <img src="icons/electricity.png" height="20px" alt="Error loading the image">
                                 Add to cart
                             </div>
 
@@ -219,7 +219,7 @@ document.querySelector("#product-details-section").innerHTML = `
                     </div>
 
                     <div class="buy-now-button-div" onclick="buyNow()">
-                        <img src="icons/electricity.png" width="20px" alt="">
+                        <img src="icons/electricity.png" width="20px" alt="Error loading the image">
                         <input type="button" value="Buy Now" class="">
                     </div>
 
@@ -233,7 +233,7 @@ document.querySelector("#product-details-section").innerHTML = `
 
             <div class="products-back-button-div" onclick="goBackToProducts()">
 
-                <img src="icons/back.png" alt="" height="12px">
+                <img src="icons/back.png" alt="Error loading the image" height="12px">
                 <button id="goBackToProductsButton">Products</button>
 
             </div>
